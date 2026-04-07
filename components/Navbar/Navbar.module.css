@@ -1,0 +1,199 @@
+.header {
+	@apply sticky top-0 z-50;
+	background: #ffffff;
+	box-shadow: 0 4px 12px rgb(150 160 185 / 0.2);
+}
+
+.headerInner {
+	@apply max-w-7xl mx-auto px-6 flex items-center justify-between;
+	padding-top: 18px;
+	padding-bottom: 18px;
+}
+
+.logo {
+	@apply flex-shrink-0 flex items-center gap-2;
+	text-decoration: none;
+}
+
+.logoTextGroup {
+	@apply flex flex-col leading-none;
+}
+
+.logoText {
+	@apply text-navy font-bold text-xl tracking-tight;
+}
+
+.logoSubtext {
+	@apply text-navy-300 font-medium tracking-wide;
+	font-size: 9px;
+}
+
+.divider {
+	@apply w-full h-px bg-navy-200/20;
+}
+
+/* ---- Desktop Nav (laptop+) ---- */
+
+.desktopNav {
+	@apply hidden laptop:flex items-center gap-8;
+}
+
+.navLink {
+	@apply text-navy-400 font-medium text-sm tracking-wide transition-colors duration-300;
+}
+
+.navLink:hover {
+	@apply text-brand-blue;
+}
+
+.navLinkActive {
+	@apply text-brand-blue font-semibold;
+}
+
+/* Services dropdown wrapper */
+.dropdownWrapper {
+	@apply relative;
+}
+
+.dropdownTrigger {
+	@apply flex items-center gap-1 text-navy-400 font-medium text-sm tracking-wide transition-colors duration-300 cursor-pointer;
+	background: none;
+	border: none;
+	padding: 0;
+	font-family: inherit;
+}
+
+.dropdownTrigger:hover {
+	@apply text-brand-blue;
+}
+
+.chevron {
+	@apply w-4 h-4 transition-transform duration-300;
+}
+
+.chevronOpen {
+	transform: rotate(180deg);
+}
+
+.dropdownMenu {
+	@apply absolute top-full left-1/2 mt-3 rounded-2xl py-2 min-w-[200px] z-50;
+	transform: translateX(-50%);
+	background: #ffffff;
+	box-shadow: 8px 8px 16px rgb(150 160 185 / 0.6), -8px -8px 16px rgba(255, 255, 255, 0.55);
+}
+
+.dropdownItem {
+	@apply block w-full px-5 py-2.5 text-sm text-navy-400 font-medium text-left transition-all duration-200 rounded-xl;
+}
+
+.dropdownItem:hover {
+	@apply text-brand-blue;
+	box-shadow: inset 3px 3px 6px rgb(150 160 185 / 0.5), inset -3px -3px 6px rgba(255, 255, 255, 0.45);
+}
+
+/* CTA Button */
+.ctaButton {
+	@apply bg-brand-blue text-white font-semibold text-sm tracking-wide transition-all duration-300;
+	padding: 12px 28px;
+	border-radius: 999px;
+	box-shadow: 5px 5px 12px rgba(0, 79, 156, 0.3), -4px -4px 10px rgba(255, 255, 255, 0.5);
+}
+
+.ctaButton:hover {
+	transform: translateY(-2px);
+	box-shadow: 7px 7px 16px rgba(0, 79, 156, 0.4), -6px -6px 14px rgba(255, 255, 255, 0.6);
+}
+
+.ctaButton:active {
+	transform: translateY(0.5px);
+	box-shadow: inset 4px 4px 8px rgba(0, 40, 80, 0.4), inset -4px -4px 8px rgba(80, 150, 220, 0.3);
+}
+
+.ctaButton:focus-visible {
+	@apply outline-none ring-2 ring-brand-blue ring-offset-2;
+}
+
+/* ---- Mobile Hamburger ---- */
+
+.hamburger {
+	@apply laptop:hidden flex items-center justify-center w-11 h-11 transition-all duration-300 cursor-pointer;
+	border: none;
+	border-radius: 14px;
+	background: #ffffff;
+	box-shadow: 5px 5px 10px rgb(150 160 185 / 0.6), -5px -5px 10px rgba(255, 255, 255, 0.55);
+}
+
+.hamburger:active {
+	box-shadow: inset 3px 3px 6px rgb(150 160 185 / 0.6), inset -3px -3px 6px rgba(255, 255, 255, 0.55);
+}
+
+.hamburgerIcon {
+	@apply w-6 h-6 text-navy;
+}
+
+/* ---- Mobile Menu ---- */
+
+.mobileOverlay {
+	@apply laptop:hidden fixed inset-0 z-40;
+	background: rgba(0, 7, 44, 0.2);
+	backdrop-filter: blur(2px);
+}
+
+.mobileMenu {
+	@apply laptop:hidden absolute top-full left-0 w-full z-50 px-6 pb-8 pt-4 flex flex-col gap-1;
+	background: #ffffff;
+	box-shadow: 0 10px 24px rgb(150 160 185 / 0.5);
+}
+
+.mobileLink {
+	@apply block text-navy-400 font-medium text-base py-3 px-2 rounded-xl transition-colors duration-200;
+}
+
+.mobileLink:hover {
+	@apply text-brand-blue bg-navy-50/50;
+}
+
+.mobileLinkActive {
+	@apply text-brand-blue font-semibold;
+}
+
+.mobileServicesSection {
+	@apply flex flex-col;
+}
+
+.mobileServicesToggle {
+	@apply flex items-center justify-between text-navy-400 font-medium text-base py-3 px-2 rounded-xl transition-colors duration-200 cursor-pointer;
+	background: none;
+	border: none;
+	width: 100%;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+.mobileServicesToggle:hover {
+	@apply text-brand-blue bg-navy-50/50;
+}
+
+.mobileSubLink {
+	@apply block text-navy-300 font-medium text-sm py-2.5 pl-6 pr-2 rounded-xl transition-colors duration-200;
+}
+
+.mobileSubLink:hover {
+	@apply text-brand-blue bg-navy-50/50;
+}
+
+.mobileCta {
+	@apply bg-brand-blue text-white font-semibold text-base tracking-wide text-center transition-all duration-300 mt-4;
+	padding: 14px 28px;
+	border-radius: 999px;
+	box-shadow: 5px 5px 12px rgba(0, 79, 156, 0.3), -4px -4px 10px rgba(255, 255, 255, 0.5);
+}
+
+.mobileCta:hover {
+	transform: translateY(-2px);
+	box-shadow: 7px 7px 16px rgba(0, 79, 156, 0.4), -6px -6px 14px rgba(255, 255, 255, 0.6);
+}
+
+.mobileCta:focus-visible {
+	@apply outline-none ring-2 ring-brand-blue ring-offset-2;
+}

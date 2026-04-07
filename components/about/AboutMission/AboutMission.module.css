@@ -1,0 +1,68 @@
+.mission {
+	padding: 64px 0;
+}
+
+@screen laptop {
+	.mission {
+		padding: 96px 0;
+	}
+}
+
+.missionInner {
+	@apply max-w-7xl mx-auto px-4;
+}
+
+.missionHeader {
+	@apply text-center max-w-5xl mx-auto mb-12;
+}
+
+.missionTitle {
+	@apply text-[33px] font-extrabold tracking-tight text-navy leading-tight mb-5 mx-auto;
+	
+}
+
+@screen laptop {
+	.missionTitle {
+		@apply text-4xl;
+	}
+}
+
+.missionDesc {
+	@apply text-sm font-normal leading-relaxed text-navy-400 mx-auto;
+	
+}
+
+/* ── Image Grid ── */
+.imageGrid {
+	@apply grid gap-5;
+	grid-template-columns: 1fr;
+}
+
+@screen tablet {
+	.imageGrid {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+}
+
+@screen laptop {
+	.imageGrid {
+        grid-template-columns: repeat(3, 1fr);
+		gap: 24px;
+	}
+}
+
+.imageWrap {
+	@apply overflow-hidden shadow-neu;
+	border-radius: 16px;
+}
+
+.image {
+	@apply w-full object-cover block;
+	aspect-ratio: 4 / 3;
+	transition: transform 0.4s ease;
+}
+
+.imageWrap:hover .image {
+	transform: scale(1.04);
+}

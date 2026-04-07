@@ -1,0 +1,195 @@
+.projects {
+	@apply bg-navy relative overflow-hidden;
+	padding: 64px 0;
+}
+
+@screen laptop {
+	.projects {
+		padding: 100px 0;
+	}
+}
+
+/* Ambient glow behind content */
+.ambientGlow {
+	@apply absolute pointer-events-none;
+	width: 600px;
+	height: 600px;
+	top: -100px;
+	right: -150px;
+	background: radial-gradient(circle, rgba(0, 79, 156, 0.12) 0%, transparent 70%);
+	filter: blur(80px);
+}
+
+.projectsInner {
+	@apply max-w-7xl mx-auto px-4 relative;
+	z-index: 1;
+}
+
+/* ══ Header ══ */
+.projectsHeader {
+	@apply mb-10 text-center;
+}
+
+.sectionLabel {
+	@apply flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-widest mb-4;
+	color: #4d9de0;
+}
+
+.labelDot {
+	@apply inline-block;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: #004f9c;
+	box-shadow: 0 0 8px rgba(0, 79, 156, 0.6);
+}
+
+.projectsTitle {
+	@apply text-[28px] font-extrabold tracking-tight text-white leading-tight mb-5 mx-auto;
+}
+
+.titleHighlight {
+	background: linear-gradient(135deg, #4d9de0, #99c1eb);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+@screen laptop {
+	.projectsTitle {
+		@apply text-5xl;
+	}
+}
+
+.projectsDesc {
+	@apply text-sm font-normal leading-relaxed mx-auto text-white;
+
+}
+
+/* ══ Tabs ══ */
+.tabRow {
+	@apply flex items-center justify-center gap-3 mb-10;
+}
+
+.tab {
+	@apply text-sm font-medium transition-all duration-300;
+	padding: 10px 24px;
+	border-radius: 50px;
+	color: rgba(255, 255, 255, 0.35);
+	background: transparent;
+	border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.tab:hover {
+	color: rgba(255, 255, 255, 0.6);
+	border-color: rgba(255, 255, 255, 0.12);
+}
+
+.tabActive {
+	@apply font-semibold;
+	color: #ffffff;
+	background: rgba(0, 79, 156, 0.2);
+	border-color: rgba(0, 79, 156, 0.4);
+	box-shadow:
+		0 0 12px rgba(0, 79, 156, 0.15),
+		inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* ══ Grid ══ */
+.projectsGrid {
+	@apply grid gap-7;
+	grid-template-columns: 1fr;
+}
+
+@screen tablet {
+	.projectsGrid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@screen laptop {
+	.projectsGrid {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 28px;
+	}
+}
+
+/* ══ Card — White Neumorphic ══ */
+.projectCard {
+	@apply overflow-hidden transition-all duration-300;
+	border-radius: 20px;
+	padding: 10px;
+	background: #ffffff;
+	box-shadow:
+		6px 6px 14px rgba(0, 2, 14, 0.25),
+		-6px -6px 14px rgba(0, 24, 80, 0.06);
+}
+
+.projectCard:hover {
+	transform: translateY(-6px);
+	box-shadow:
+		10px 10px 24px rgba(0, 2, 14, 0.35),
+		-10px -10px 24px rgba(0, 24, 80, 0.08),
+		0 0 16px rgba(0, 79, 156, 0.1);
+}
+
+/* ══ Image ══ */
+.projectImageWrap {
+	@apply w-full overflow-hidden relative;
+	border-radius: 14px;
+}
+
+.projectImage {
+	@apply w-full object-cover block;
+	aspect-ratio: 16 / 11;
+	transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.projectCard:hover .projectImage {
+	transform: scale(1.06);
+}
+
+.imageOverlay {
+	@apply absolute inset-0 pointer-events-none;
+	background: linear-gradient(180deg, transparent 60%, rgba(0, 7, 44, 0.25) 100%);
+	border-radius: 14px;
+}
+
+/* ══ Body ══ */
+.projectBody {
+	@apply px-3 pt-4 pb-2;
+}
+
+/* ══ Meta row ══ */
+.projectMeta {
+	@apply flex items-center justify-between text-xs font-medium mb-2;
+}
+
+.metaReviews {
+	@apply flex items-center gap-1;
+	color: #6b7280;
+}
+
+.metaIcon {
+	@apply w-3 h-3;
+	color: #004f9c;
+}
+
+.metaDate {
+	color: #6b7280;
+}
+
+/* ══ Info ══ */
+.projectName {
+	@apply font-bold text-base mb-1 transition-colors duration-200;
+	color: #0a1a3f;
+}
+
+.projectCard:hover .projectName {
+	color: #004f9c;
+}
+
+.projectAuthor {
+	@apply text-sm font-normal;
+	color: #4b5563;
+}

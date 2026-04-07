@@ -1,0 +1,63 @@
+.hero {
+	@apply bg-white text-center;
+	padding: 64px 0 0;
+}
+
+@screen laptop {
+	.hero {
+		padding: 40px 0 0;
+	}
+}
+
+.heroContent {
+	@apply max-w-5xl mx-auto px-4;
+	padding-bottom: 48px;
+}
+
+@screen laptop {
+	.heroContent {
+		padding-bottom: 40px;
+	}
+}
+
+.heroTitle {
+	@apply text-[33px] font-extrabold text-navy tracking-tight leading-tight mb-5;
+}
+
+@screen laptop {
+	.heroTitle {
+		@apply text-5xl;
+	}
+}
+
+.heroDesc {
+	@apply text-sm font-normal leading-relaxed mx-auto text-navy-400;
+	
+}
+
+.heroImageWrap {
+	@apply relative w-full overflow-hidden;
+	max-height: 480px;
+}
+
+@screen laptop {
+	.heroImageWrap {
+		max-height: 560px;
+	}
+}
+
+.heroImage {
+	@apply w-full object-cover block;
+	height: 100%;
+	min-height: 300px;
+}
+
+@screen laptop {
+	.heroImage {
+		min-height: 480px;
+	}
+}
+
+.heroImageOverlay {
+	display: none;
+}

@@ -1,0 +1,128 @@
+.vision {
+	padding: 64px 0;
+}
+
+@screen laptop {
+	.vision {
+		padding: 96px 0;
+	}
+}
+
+.visionInner {
+	@apply max-w-7xl mx-auto px-6;
+}
+
+/* ── Two-column layout ── */
+.contentGrid {
+	@apply grid;
+	grid-template-columns: 1fr;
+	gap: 40px;
+	margin-bottom: 48px;
+}
+
+@screen laptop {
+	.contentGrid {
+		grid-template-columns: 1fr 1fr;
+		gap: 64px;
+		align-items: start;
+		margin-bottom: 64px;
+	}
+}
+
+.textCol {
+	@apply flex flex-col;
+}
+
+.imageCol {
+	@apply hidden laptop:flex items-start;
+	position: sticky;
+	top: 96px;
+	align-self: start;
+}
+
+.sideImage {
+	@apply w-full object-cover rounded-2xl;
+	height: 520px;
+	box-shadow: 9px 9px 16px rgb(150 160 185 / 0.5), -9px -9px 16px rgba(255, 255, 255, 0.6);
+}
+
+/* ── Content blocks ── */
+.block {
+	margin-bottom: 40px;
+}
+
+@screen laptop {
+	.block {
+		margin-bottom: 48px;
+	}
+}
+
+.block:last-child {
+	margin-bottom: 0;
+}
+
+.blockTitle {
+	@apply text-2xl font-extrabold tracking-tight text-navy leading-tight;
+	margin-bottom: 16px;
+}
+
+@screen laptop {
+	.blockTitle {
+		font-size: 28px;
+	}
+}
+
+.blockText {
+	@apply text-sm font-normal leading-relaxed text-navy-400;
+	margin-bottom: 12px;
+}
+
+.blockText:last-child {
+	margin-bottom: 0;
+}
+
+/* ── Stats Row ── */
+.statsRow {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+	margin-top: 48px;
+}
+
+@screen mobile {
+	.statsRow {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+}
+
+.statItem {
+	text-align: left;
+	padding: 28px 24px;
+	border-radius: 16px;
+	background: #f0f2f8;
+	box-shadow: 6px 6px 12px rgb(150 160 185 / 0.45), -6px -6px 12px rgba(255, 255, 255, 0.8);
+	transition: box-shadow 0.25s;
+}
+
+.statItem:hover {
+	box-shadow: 8px 8px 16px rgb(150 160 185 / 0.55), -8px -8px 16px rgba(255, 255, 255, 0.9);
+}
+
+.statValue {
+	@apply font-extrabold text-navy tracking-tight;
+	font-size: 36px;
+	margin-bottom: 4px;
+	line-height: 1.1;
+}
+
+@screen laptop {
+	.statValue {
+		font-size: 44px;
+	}
+}
+
+.statLabel {
+	@apply text-sm font-normal text-navy-400;
+	max-width: 140px;
+}

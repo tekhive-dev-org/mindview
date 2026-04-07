@@ -1,0 +1,115 @@
+.whyChoose {
+	@apply max-w-7xl mx-auto !px-4;
+	padding: 64px 0;
+}
+
+@screen laptop {
+	.whyChoose {
+		padding: 96px 0;
+	}
+}
+
+.whyChooseTitle {
+	@apply text-3xl font-extrabold tracking-tight text-navy text-center mb-4;
+}
+
+@screen laptop {
+	.whyChooseTitle {
+		@apply text-5xl;
+	}
+}
+
+.whyChooseSubtitle {
+	@apply text-center text-navy-400 font-medium mb-14;
+}
+
+/* Steps row */
+
+.stepsRow {
+	@apply grid gap-8 mb-16 text-center;
+	grid-template-columns: 1fr;
+}
+
+@screen laptop {
+	.stepsRow {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0;
+	}
+}
+
+.stepItem {
+	@apply flex flex-col items-center text-center relative;
+}
+
+.stepCircle {
+	@apply w-16 h-16 rounded-full flex items-center justify-center mb-5 shadow-neu;
+	background: #ffffff;
+}
+
+.stepNumber {
+	@apply text-brand-blue font-bold text-lg;
+}
+
+.stepConnector {
+	@apply hidden;
+}
+
+@screen laptop {
+	.stepConnector {
+		@apply block absolute;
+		top: 32px;
+		left: calc(50% + 42px);
+		width: calc(100% - 84px);
+		height: 2px;
+		background: linear-gradient(90deg, #004f9c 0%, #99c1eb 50%, #004f9c 100%);
+	}
+
+	.stepConnector::after {
+		content: "";
+		@apply absolute right-0 top-1/2;
+		transform: translateY(-50%);
+		border: 6px solid transparent;
+		border-left-color: #004f9c;
+	}
+}
+
+.stepTitle {
+	@apply text-navy font-bold text-base mb-2;
+}
+
+.stepDesc {
+	@apply text-navy-400 text-sm font-normal leading-relaxed max-w-xs;
+}
+
+/* Stats row */
+
+.statsRow {
+	@apply grid gap-8 text-center;
+	grid-template-columns: 1fr;
+}
+
+@screen tablet {
+	.statsRow {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@screen laptop {
+	.statsRow {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.statItem {
+	@apply py-8 shadow-neu-sm;
+	background: #ffffff;
+	border-radius: 24px;
+}
+
+.statValue {
+	@apply text-5xl font-extrabold text-navy tracking-tight mb-1;
+}
+
+.statLabel {
+	@apply text-navy-400 text-sm font-medium;
+}

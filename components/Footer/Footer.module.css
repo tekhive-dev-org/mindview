@@ -1,0 +1,278 @@
+.footer {
+	@apply bg-navy;
+}
+
+/* ══════════════════════════════════
+   CTA Banner
+   ══════════════════════════════════ */
+
+.ctaBanner {
+	@apply relative overflow-hidden;
+	background: linear-gradient(135deg, #004f9c 0%, #00072c 100%);
+}
+
+.ctaInner {
+	@apply max-w-7xl mx-auto px-6 flex flex-col gap-6 items-center text-center;
+	padding: 48px 24px;
+}
+
+@screen laptop {
+	.ctaInner {
+		@apply flex-row text-left justify-between;
+		padding: 56px 24px;
+	}
+}
+
+.ctaContent {
+	@apply flex flex-col gap-2;
+}
+
+.ctaTitle {
+	@apply text-white font-bold text-2xl tracking-tight;
+}
+
+@screen laptop {
+	.ctaTitle {
+		@apply text-3xl;
+	}
+}
+
+.ctaDesc {
+	@apply font-normal;
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 15px;
+}
+
+.ctaButton {
+	@apply inline-flex items-center gap-2 text-sm font-semibold text-navy transition-all duration-300;
+	background: #ffffff;
+	padding: 14px 32px;
+	border-radius: 50px;
+	white-space: nowrap;
+}
+
+.ctaButton:hover {
+	background: #f0f4f8;
+	transform: translateY(-2px);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.ctaArrow {
+	@apply w-4 h-4;
+	transition: transform 0.25s ease;
+}
+
+.ctaButton:hover .ctaArrow {
+	transform: translateX(4px);
+}
+
+/* ══════════════════════════════════
+   Main Footer
+   ══════════════════════════════════ */
+
+.footerMain {
+	padding: 56px 0 0;
+}
+
+@screen laptop {
+	.footerMain {
+		padding: 72px 0 0;
+	}
+}
+
+.footerInner {
+	@apply max-w-7xl mx-auto px-6;
+}
+
+/* ── Brand ── */
+
+.footerLogo {
+	@apply mb-5 flex items-center gap-3;
+}
+
+.footerLogoTextGroup {
+	@apply flex flex-col leading-none;
+}
+
+.footerLogoText {
+	@apply text-white font-bold text-xl tracking-tight;
+}
+
+.footerLogoSubtext {
+	@apply font-medium tracking-wide;
+	font-size: 10px;
+	color: rgba(255, 255, 255, 0.4);
+	margin-top: 2px;
+}
+
+/* ── Grid ── */
+
+.topGrid {
+	@apply grid gap-10 pb-14;
+	grid-template-columns: 1fr;
+}
+
+@screen tablet {
+	.topGrid {
+		grid-template-columns: 1fr 1fr;
+		gap: 40px;
+	}
+}
+
+@screen laptop {
+	.topGrid {
+		grid-template-columns: 1.5fr 0.7fr 0.7fr 1fr;
+		gap: 48px;
+	}
+}
+
+/* ── Brand column ── */
+
+.brandCol {
+	@apply flex flex-col;
+}
+
+.description {
+	@apply text-base font-normal leading-relaxed;
+	color: rgba(255, 255, 255, 0.5);
+	max-width: 360px;
+}
+
+/* ── Social icons ── */
+
+.socials {
+	@apply flex items-center gap-3 mt-7;
+}
+
+.socialIcon {
+	@apply w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300;
+	background: rgba(255, 255, 255, 0.06);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.socialIcon:hover {
+	background: #004f9c;
+	border-color: #004f9c;
+	transform: translateY(-2px);
+}
+
+.socialIcon svg {
+	@apply w-4 h-4 text-white;
+}
+
+/* ── Link columns ── */
+
+.linkCol {
+	@apply flex flex-col;
+}
+
+.columnHeading {
+	@apply text-white font-semibold text-base mb-5;
+	letter-spacing: 0.02em;
+}
+
+.linkList {
+	@apply flex flex-col gap-3;
+}
+
+.footerLink {
+	@apply flex items-center gap-2 text-sm font-normal transition-all duration-200;
+	color: rgba(255, 255, 255, 0.45);
+}
+
+.footerLink:hover {
+	color: #ffffff;
+	transform: translateX(3px);
+}
+
+.linkArrow {
+	@apply text-xs transition-colors duration-200;
+	color: rgba(255, 255, 255, 0.2);
+}
+
+.footerLink:hover .linkArrow {
+	color: #004f9c;
+}
+
+/* ── Contact column ── */
+
+.contactList {
+	@apply flex flex-col gap-4;
+}
+
+.contactItem {
+	@apply flex items-center gap-3 transition-colors duration-200;
+	text-decoration: none;
+}
+
+.contactItem:hover .contactText {
+	color: #ffffff;
+}
+
+.contactIconWrap {
+	@apply w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0;
+	background: rgba(0, 79, 156, 0.15);
+}
+
+.contactIconWrap svg {
+	@apply w-4 h-4;
+	color: #4d9de0;
+}
+
+.contactItem:hover .contactIconWrap {
+	background: rgba(0, 79, 156, 0.25);
+}
+
+.contactText {
+	@apply text-sm font-normal transition-colors duration-200;
+	color: rgba(255, 255, 255, 0.45);
+}
+
+/* ══════════════════════════════════
+   Bottom Bar
+   ══════════════════════════════════ */
+
+.divider {
+	@apply w-full max-w-7xl mx-auto;
+	height: 1px;
+	background: linear-gradient(
+		90deg,
+		transparent 0%,
+		rgba(255, 255, 255, 0.08) 20%,
+		rgba(255, 255, 255, 0.08) 80%,
+		transparent 100%
+	);
+}
+
+.bottomBar {
+	@apply flex flex-col gap-4 py-6 px-6 max-w-7xl mx-auto;
+}
+
+@screen laptop {
+	.bottomBar {
+		@apply flex-row items-center justify-between;
+	}
+}
+
+.copyright {
+	@apply text-sm font-normal;
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.legalLinks {
+	@apply flex items-center gap-0;
+}
+
+.legalLink {
+	@apply text-sm font-normal transition-colors duration-200;
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.legalLink:hover {
+	color: #ffffff;
+}
+
+.legalSeparator {
+	@apply mx-4 text-sm select-none;
+	color: rgba(255, 255, 255, 0.12);
+}

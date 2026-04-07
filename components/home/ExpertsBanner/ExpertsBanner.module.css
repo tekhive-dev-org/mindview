@@ -1,0 +1,42 @@
+.expertsBanner {
+	@apply relative overflow-hidden;
+	padding: 80px 0;
+}
+
+@screen laptop {
+	.expertsBanner {
+		padding: 120px 0;
+	}
+}
+
+.expertsBannerBg {
+	@apply absolute inset-0;
+	background: #0a1628;
+}
+
+.expertsBannerOverlay {
+	@apply absolute inset-0;
+	background: linear-gradient(
+		to bottom,
+		rgba(0, 7, 44, 0.75),
+		rgba(0, 79, 156, 0.35)
+	);
+}
+
+.expertsBannerContent {
+	@apply relative z-10 max-w-3xl mx-auto px-6 text-center;
+}
+
+.expertsTitle {
+	@apply text-3xl font-extrabold text-white tracking-tight leading-tight mb-5;
+}
+
+@screen laptop {
+	.expertsTitle {
+		@apply text-5xl;
+	}
+}
+
+.expertsDesc {
+	@apply text-navy-200 text-base font-normal leading-relaxed max-w-xl mx-auto;
+}

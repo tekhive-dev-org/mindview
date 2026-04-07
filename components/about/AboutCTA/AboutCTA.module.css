@@ -1,0 +1,71 @@
+.cta {
+	@apply bg-navy;
+	padding: 72px 0 0;
+}
+
+@screen laptop {
+	.cta {
+		padding: 96px 0 0;
+	}
+}
+
+.ctaInner {
+	@apply max-w-4xl mx-auto px-6 text-center;
+	padding-bottom: 64px;
+}
+
+/* ── Text ── */
+.heading {
+	@apply text-white font-extrabold tracking-tight leading-tight mb-5;
+	font-size: 28px;
+}
+
+@screen laptop {
+	.heading {
+		font-size: 40px;
+	}
+}
+
+.highlight {
+	@apply text-brand-blue-300;
+}
+
+.description {
+	@apply text-gray-300 text-base font-normal leading-relaxed mb-8 mx-auto;
+	max-width: 480px;
+}
+
+.ctaButton {
+	@apply inline-flex items-center justify-center text-white text-sm font-semibold transition-all duration-300;
+	padding: 12px 32px;
+	border: 2px solid rgba(255, 255, 255, 0.4);
+	border-radius: 50px;
+}
+
+.ctaButton:hover {
+	@apply bg-white text-navy;
+	border-color: #fff;
+}
+
+/* ── Full-width image ── */
+.imageWrap {
+	@apply w-full overflow-hidden;
+	max-height: 400px;
+}
+
+@screen laptop {
+	.imageWrap {
+		max-height: 480px;
+	}
+}
+
+.ctaImage {
+	@apply w-full object-cover block;
+	min-height: 280px;
+}
+
+@screen laptop {
+	.ctaImage {
+		min-height: 400px;
+	}
+}

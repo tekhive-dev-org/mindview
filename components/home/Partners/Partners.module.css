@@ -1,0 +1,37 @@
+.partners {
+	@apply max-w-7xl mx-auto px-6 pb-12 text-center;
+}
+
+@screen laptop {
+	.partners {
+		@apply pb-16;
+	}
+}
+
+.partnersLabel {
+	@apply text-sm text-navy-300 font-medium mb-8;
+}
+
+.partnersLogos {
+	@apply flex flex-wrap items-center justify-center gap-8;
+}
+
+@screen laptop {
+	.partnersLogos {
+		@apply gap-14;
+	}
+}
+
+.partnerIcon {
+	@apply select-none transition-all duration-200;
+	object-fit: contain;
+	height: 36px;
+	width: auto;
+	filter: grayscale(0);
+	opacity: 0.85;
+}
+
+.partnerIcon:hover {
+	opacity: 1;
+	transform: scale(1.05);
+}
