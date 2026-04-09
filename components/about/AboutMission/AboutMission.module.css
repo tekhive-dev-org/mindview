@@ -1,5 +1,5 @@
 .mission {
-	padding: 64px 0;
+	padding: 20px 0 10px;
 }
 
 @screen laptop {
@@ -17,7 +17,7 @@
 }
 
 .missionTitle {
-	@apply text-[33px] font-extrabold tracking-tight text-navy leading-tight mb-5 mx-auto;
+	@apply text-[25px] font-extrabold tracking-tight text-navy leading-tight mb-5 mx-auto;
 	
 }
 
@@ -36,6 +36,12 @@
 .imageGrid {
 	@apply grid gap-5;
 	grid-template-columns: 1fr;
+}
+
+@screen mobile {
+	.imageGrid {
+		display: none;
+	}
 }
 
 @screen tablet {

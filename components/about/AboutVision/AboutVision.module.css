@@ -1,5 +1,5 @@
 .vision {
-	padding: 64px 0;
+	padding: 10px 0 30px;
 }
 
 @screen laptop {
@@ -48,6 +48,7 @@
 
 /* ── Content blocks ── */
 .block {
+	@apply text-center;
 	margin-bottom: 40px;
 }
 
@@ -59,6 +60,24 @@
 
 .block:last-child {
 	margin-bottom: 0;
+}
+
+/* Mobile-only image per block */
+.blockImg {
+	display: block;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 16px;
+	aspect-ratio: 4 / 3;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	box-shadow: 6px 6px 12px rgb(150 160 185 / 0.4), -6px -6px 12px rgba(255, 255, 255, 0.7);
+}
+
+@screen laptop {
+	.blockImg {
+		display: none;
+	}
 }
 
 .blockTitle {
@@ -97,7 +116,7 @@
 }
 
 .statItem {
-	text-align: left;
+	@apply text-center;
 	padding: 28px 24px;
 	border-radius: 16px;
 	background: #f0f2f8;
@@ -110,7 +129,7 @@
 }
 
 .statValue {
-	@apply font-extrabold text-navy tracking-tight;
+	@apply font-extrabold text-navy tracking-tight text-center;
 	font-size: 36px;
 	margin-bottom: 4px;
 	line-height: 1.1;
@@ -123,6 +142,6 @@
 }
 
 .statLabel {
-	@apply text-sm font-normal text-navy-400;
+	@apply text-sm font-normal text-navy-400 text-center mx-auto;
 	max-width: 140px;
 }

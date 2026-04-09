@@ -21,7 +21,7 @@
 }
 
 .heroTitle {
-	@apply text-[33px] font-extrabold text-navy tracking-tight leading-tight mb-5;
+	@apply text-[25px] font-extrabold text-navy tracking-tight leading-tight mb-5;
 }
 
 @screen laptop {
