@@ -1,35 +1,35 @@
-import { useState } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import styles from "./AboutTestimonials.module.css";
 
 const TESTIMONIALS = [
 	{
-		text: "We envision a world where geographical boundaries are mere lines on a map, where teams seamlessly come together to innovate, create, and conquer. Our vision is to be the driving force behind this transformation – to empower teams of all sizes",
+		text: "We needed one delivery partner that could understand the site, recommend the right solution, and execute without drama. Mindview brought structure, clarity, and follow-through from start to handover.",
 		author: "Chidi British",
-		role: "Senior product designer",
+		role: "Site operations lead",
 		avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=80",
 	},
 	{
-		text: "Mindview has completely transformed how our team approaches product development. The mentorship and collaborative tools have bridged the gap between remote teams across three continents.",
+		text: "Mindview has completely transformed how we manage our facility systems. The handover was smooth, the team was responsive, and the final solution feels practical rather than over-engineered.",
 		author: "Sara Mitchell",
-		role: "Product Manager",
+		role: "Facilities manager",
 		avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&q=80",
 	},
 	{
-		text: "The platform gave our startup the structure and skills we needed to scale. From onboarding to leadership, Mindview’s resources are second to none in the industry.",
+		text: "Their team handled planning, installation, and training with real attention to detail. We now have a coordinated setup instead of separate systems that used to create confusion.",
 		author: "James Okafor",
-		role: "Tech Lead",
+		role: "Operations director",
 		avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80",
 	},
 	{
-		text: "I joined Mindview with zero tech background. Within six months I had certified skills, a portfolio, and a job offer. The learning experience is world-class and genuinely life-changing.",
+		text: "The final result is intuitive enough for the whole team to use. Mindview focused on what would actually work in our environment instead of pushing a one-size-fits-all setup.",
 		author: "Amara Diallo",
-		role: "Frontend Developer",
+		role: "Homeowner",
 		avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&q=80",
 	},
 	{
-		text: "Our organization partnered with Mindview for a workforce upskilling programme. The results exceeded every KPI we set — engagement, completion rate, and skill transfer have all been outstanding.",
+		text: "We partnered with Mindview for a mixed office and facility rollout. Their team understood the operational constraints and delivered exactly what was required without unnecessary complexity.",
 		author: "Tunde Fashola",
-		role: "HR Director",
+		role: "Project consultant",
 		avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&q=80",
 	},
 ];
@@ -39,12 +39,38 @@ const STAR_PATH = "M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.9
 export default function AboutTestimonials() {
 	const [active, setActive] = useState(0);
 	const total = TESTIMONIALS.length;
+	const paused = useRef(false);
+	const touchStartX = useRef(null);
+
+	const next = useCallback(() => setActive((a) => (a + 1) % total), [total]);
+	const prev = useCallback(() => setActive((a) => (a - 1 + total) % total), [total]);
+
+	// Auto-slide every 4 s
+	useEffect(() => {
+		const id = setInterval(() => {
+			if (!paused.current) next();
+		}, 4000);
+		return () => clearInterval(id);
+	}, [next]);
+
+	// Touch swipe handlers
+	const handleTouchStart = (e) => {
+		touchStartX.current = e.touches[0].clientX;
+		paused.current = true;
+	};
+	const handleTouchEnd = (e) => {
+		if (touchStartX.current === null) return;
+		const delta = touchStartX.current - e.changedTouches[0].clientX;
+		if (Math.abs(delta) > 40) delta > 0 ? next() : prev();
+		touchStartX.current = null;
+		paused.current = false;
+	};
 
 	// returns stack position: 0=front, 1=middle, 2=back, >=3 hidden
 	const getPos = (i) => (i - active + total) % total;
 
 	return (
-		<section className={styles.testimonials}>
+		<section id="testimonials" className={styles.testimonials}>
 			<div className={styles.inner}>
 				<div className={styles.layout}>
 					{/* ── Left ── */}
@@ -53,10 +79,9 @@ export default function AboutTestimonials() {
 							What Our Clients Say About Us.
 						</h2>
 						<p className={styles.subtitle}>
-							We envision a world where geographical boundaries are mere lines
-							on a map, where teams seamlessly come together to innovate,
-							create, and conquer. Our vision is to be the driving force
-							behind this transformation – to empower teams of all sizes
+							We deliver practical technology systems that are thoughtfully
+							designed, carefully installed, and dependable after handover. Here
+							is what clients say after working with the Mindview team.
 						</p>
 
 						<div className={styles.ratingBlock}>
@@ -89,15 +114,21 @@ export default function AboutTestimonials() {
 										<path d={STAR_PATH} fill="url(#half)" />
 									</svg>
 								</div>
-								<p className={styles.happyCount}><strong>1,500+</strong> Happy Students</p>
-								<p className={styles.ratingsCount}><strong>365</strong> (Ratings)</p>
+								<p className={styles.happyCount}><strong>1,500+</strong> Customer review</p>
+								<p className={styles.ratingsCount}><strong>365</strong> Five star rate</p>
 							</div>
 						</div>
 					</div>
 
 					{/* ── Right: stacked cards ── */}
 					<div className={styles.right}>
-						<div className={styles.cardStack}>
+						<div
+							className={styles.cardStack}
+							onMouseEnter={() => { paused.current = true; }}
+							onMouseLeave={() => { paused.current = false; }}
+							onTouchStart={handleTouchStart}
+							onTouchEnd={handleTouchEnd}
+						>
 							{TESTIMONIALS.map((t, i) => {
 								const pos = getPos(i);
 								if (pos >= 3) return null;

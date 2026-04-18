@@ -1,0 +1,157 @@
+/* ── What We Do Section ── */
+
+.section {
+	@apply bg-white;
+	padding: 64px 0;
+}
+
+@screen laptop {
+	.section {
+		padding: 100px 0;
+	}
+}
+
+.inner {
+	@apply max-w-7xl mx-auto px-4;
+}
+
+/* ── Header ── */
+.header {
+	@apply text-center mb-16;
+}
+
+.sectionLabel {
+	@apply inline-block text-xs font-semibold text-brand-blue tracking-wide rounded-full mb-6 shadow-neu-sm;
+	padding: 10px 22px;
+	background: #ffffff;
+}
+
+.title {
+	@apply text-[28px] font-extrabold tracking-tight text-navy leading-tight mb-5;
+}
+
+@screen laptop {
+	.title {
+		@apply text-5xl;
+	}
+}
+
+.subtitle {
+	@apply text-sm text-navy-400 font-normal leading-relaxed mx-auto;
+	max-width: 640px;
+}
+
+/* ── Service Rows ── */
+.servicesList {
+	@apply flex flex-col;
+	gap: 64px;
+}
+
+@screen laptop {
+	.servicesList {
+		gap: 80px;
+	}
+}
+
+.serviceRow {
+	@apply grid gap-10 items-center;
+	grid-template-columns: 1fr;
+}
+
+@screen laptop {
+	.serviceRow {
+		grid-template-columns: 1fr 1fr;
+		gap: 56px;
+	}
+}
+
+.serviceRowReverse {
+	direction: ltr;
+}
+
+@screen laptop {
+	.serviceRowReverse .serviceImageWrap {
+		order: 2;
+	}
+	.serviceRowReverse .serviceContent {
+		order: 1;
+	}
+}
+
+/* ── Image ── */
+.serviceImageWrap {
+	@apply relative overflow-hidden;
+	border-radius: 10px;
+}
+
+.serviceImage {
+	@apply w-full object-cover;
+	aspect-ratio: 4 / 3;
+	border-radius: 10px;
+}
+
+/* ── Content ── */
+.serviceContent {
+	@apply flex flex-col;
+}
+
+.serviceTitle {
+	@apply text-2xl font-bold text-navy mb-4 flex items-center gap-2;
+}
+
+@screen laptop {
+	.serviceTitle {
+		@apply text-3xl;
+	}
+}
+
+.serviceIconWrap {
+	@apply inline-flex items-center justify-center;
+	width: 40px;
+	height: 40px;
+	border-radius: 10px;
+	background: #e8f1fb;
+	color: #004f9c;
+	flex-shrink: 0;
+}
+
+.serviceTitleIcon {
+	font-size: 22px !important;
+}
+
+.serviceDesc {
+	@apply text-sm text-navy-400 leading-relaxed mb-6;
+	max-width: 480px;
+}
+
+/* ── Bullet list ── */
+.bulletList {
+	@apply flex flex-col gap-3 mb-8;
+}
+
+.bulletItem {
+	@apply flex items-center gap-3 text-sm text-navy-400;
+}
+
+.bulletIcon {
+	color: #004f9c;
+	flex-shrink: 0;
+}
+
+/* ── Read More button ── */
+.readMore {
+	@apply self-start bg-brand-blue text-white font-semibold text-sm transition-all duration-300;
+	padding: 12px 28px;
+	border-radius: 999px;
+	box-shadow: 6px 6px 14px rgba(0, 79, 156, 0.35), -4px -4px 10px rgba(255, 255, 255, 0.5);
+}
+
+.readMore:hover {
+	transform: translateY(-2px);
+	box-shadow: 8px 8px 18px rgba(0, 79, 156, 0.45), -6px -6px 14px rgba(255, 255, 255, 0.6);
+}
+
+.readMore:active {
+	transform: translateY(0.5px);
+	box-shadow: inset 4px 4px 8px rgba(0, 40, 80, 0.4), inset -4px -4px 8px rgba(80, 150, 220, 0.3);
+}

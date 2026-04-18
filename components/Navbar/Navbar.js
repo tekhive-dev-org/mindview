@@ -11,13 +11,18 @@ const NAV_LINKS = [
 		label: "Services",
 		href: "/services",
 		children: [
-			{ label: "Consulting", href: "/services#consulting" },
-			{ label: "Development", href: "/services#development" },
-			{ label: "Strategy", href: "/services#strategy" },
+			{label: "All Services", href: "/services"},
+			{ label: "Engineering Services", href: "/engineering" },
+			{ label: "Automation Solutions", href: "/automation" },
+			{ label: "Security Systems", href: "/security" },
+			{ label: "Vertical Transport & Access", href: "/vertical-transport" },
+			{ label: "Energy Solutions", href: "/energy" },
+			// { label: "Consultancy & Integration", href: "/services#consultancy-integration" },
 		],
 	},
 	{ label: "Blog", href: "/blog" },
-	{ label: "Testimonials", href: "/testimonials" },
+	// { label: "Contact Us", href: "/contact" },
+	{ label: "Testimonials", href: "/#testimonials" },
 ];
 
 export default function Navbar() {
@@ -131,7 +136,7 @@ export default function Navbar() {
 
 				{/* CTA Button — desktop */}
 				<div className="hidden laptop:block">
-					<button className={styles.ctaButton}>Get Quote</button>
+					<Link href="/contact" className={styles.ctaButton}>Get Quote</Link>
 				</div>
 
 				{/* Mobile Hamburger */}

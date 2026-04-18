@@ -1,0 +1,113 @@
+.section {
+	background: linear-gradient(180deg, #f6f8fc 0%, #edf2f8 52%, #f8fafd 100%);
+	padding-top: 10px;
+	padding-bottom: 84px;
+}
+
+.inner {
+	@apply max-w-7xl mx-auto px-6;
+}
+
+.layout {
+	@apply md:grid md:grid-cols-2 flex flex-col-reverse items-start;
+	gap: 24px;
+}
+
+@screen laptop {
+	.layout {
+		gap: 42px;
+	}
+}
+
+.stepsCol {
+	@apply grid gap-4;
+}
+
+.stepCard {
+	@apply rounded-neu-sm bg-white shadow-neu-sm;
+	padding: 22px 22px 20px;
+	border: 1px solid rgba(255, 255, 255, 0.78);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stepCard:hover {
+	@apply shadow-neu-hover;
+	transform: translateY(-3px);
+}
+
+.stepNumber {
+	@apply inline-flex items-center justify-center rounded-full shadow-neu-inset-sm;
+	min-width: 68px;
+	padding: 10px 14px;
+	font-size: 1.45rem;
+	font-weight: 800;
+	letter-spacing: -0.04em;
+	line-height: 1;
+	color: #004f9c;
+	background: #eef3f9;
+}
+
+.stepTitle {
+	@apply mt-[16px] text-base font-bold;
+	color: #00072c;
+}
+
+.stepDesc {
+	margin-top: 8px;
+	font-size: 0.88rem;
+	line-height: 1.7;
+	color: #5d6b84;
+}
+
+.summaryCol {
+	@apply relative rounded-neu bg-white shadow-neu;
+	padding: 30px 28px;
+	border: 1px solid rgba(255, 255, 255, 0.82);
+}
+
+@screen laptop {
+	.summaryCol {
+		padding: 38px 36px;
+	}
+}
+
+.summaryBadge {
+	@apply inline-flex items-center justify-center rounded-full bg-white px-4 py-2 text-[0.72rem] font-bold text-brand-blue shadow-neu-sm;
+	border: 1px solid rgba(255, 255, 255, 0.78);
+}
+
+.summaryTitle {
+	@apply mt-[18px] font-extrabold tracking-[-0.04em] text-navy;
+	font-size: clamp(1.8rem, 4vw, 3.05rem);
+	line-height: 1.04;
+}
+
+.summaryDesc {
+	@apply mt-[14px] max-w-[470px] text-[0.95rem] leading-[1.72] text-navy-400;
+}
+
+.summaryButton {
+	@apply mt-6 inline-flex items-center justify-center rounded-full px-[18px] py-[11px] text-[0.82rem] font-bold text-white transition-[transform,box-shadow] duration-300;
+	background: linear-gradient(135deg, #004f9c 0%, #003165 100%);
+	box-shadow: 5px 5px 12px rgba(0, 79, 156, 0.3), -4px -4px 10px rgba(255, 255, 255, 0.5);
+}
+
+.summaryButton:hover {
+	transform: translateY(-2px);
+	box-shadow: 7px 7px 16px rgba(0, 79, 156, 0.38), -6px -6px 14px rgba(255, 255, 255, 0.62);
+}
+
+.summaryButton:active {
+	transform: translateY(0);
+	box-shadow: inset 4px 4px 8px rgba(0, 40, 80, 0.35), inset -4px -4px 8px rgba(80, 150, 220, 0.24);
+}
+
+@media (max-width: 640px) {
+	.summaryCol {
+		padding: 24px 20px;
+	}
+
+	.stepCard {
+		padding: 20px 18px 18px;
+	}
+}

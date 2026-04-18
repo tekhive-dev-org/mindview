@@ -151,8 +151,23 @@
 
 .imageOverlay {
 	@apply absolute inset-0 pointer-events-none;
-	background: linear-gradient(180deg, transparent 60%, rgba(0, 7, 44, 0.25) 100%);
+	background: linear-gradient(180deg, transparent 50%, rgba(0, 7, 44, 0.45) 100%);
 	border-radius: 14px;
+}
+
+/* ══ Image meta overlay ══ */
+.imageMeta {
+	@apply absolute bottom-0 left-0 right-0 flex items-center justify-between px-4 pb-3 z-10;
+}
+
+.imageMetaReviews {
+	@apply text-xs font-medium;
+	color: rgba(255, 255, 255, 0.85);
+}
+
+.imageMetaDate {
+	@apply text-xs font-medium;
+	color: rgba(255, 255, 255, 0.85);
 }
 
 /* ══ Body ══ */

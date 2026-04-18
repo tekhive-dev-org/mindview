@@ -37,14 +37,21 @@
 
 .ctaButton {
 	@apply inline-flex items-center justify-center text-white text-sm font-semibold transition-all duration-300;
-	padding: 12px 32px;
-	border: 2px solid rgba(255, 255, 255, 0.4);
+	padding: 14px 34px;
+	border: none;
 	border-radius: 50px;
+	background: rgba(255, 255, 255, 0.08);
+	box-shadow:
+		5px 5px 12px rgba(0, 0, 0, 0.35),
+		-5px -5px 12px rgba(255, 255, 255, 0.06);
 }
 
 .ctaButton:hover {
 	@apply bg-white text-navy;
-	border-color: #fff;
+	transform: translateY(-2px);
+	box-shadow:
+		6px 6px 18px rgba(0, 0, 0, 0.4),
+		-6px -6px 14px rgba(255, 255, 255, 0.1);
 }
 
 /* ── Full-width image ── */

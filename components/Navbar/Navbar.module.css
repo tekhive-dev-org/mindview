@@ -76,7 +76,7 @@
 }
 
 .dropdownMenu {
-	@apply absolute top-full left-1/2 mt-3 rounded-2xl py-2 min-w-[200px] z-50;
+	@apply absolute top-full left-1/2 mt-3 rounded-2xl py-2 min-w-[250px] z-50;
 	transform: translateX(-50%);
 	background: #ffffff;
 	box-shadow: 8px 8px 16px rgb(150 160 185 / 0.6), -8px -8px 16px rgba(255, 255, 255, 0.55);
@@ -142,7 +142,9 @@
 .mobileMenu {
 	@apply laptop:hidden absolute top-full left-0 w-full z-50 px-6 pb-8 pt-4 flex flex-col gap-1;
 	background: #ffffff;
-	box-shadow: 0 10px 24px rgb(150 160 185 / 0.5);
+	box-shadow:
+		8px 8px 20px rgb(150 160 185 / 0.45),
+		-8px -8px 20px rgba(255, 255, 255, 0.5);
 }
 
 .mobileLink {

@@ -1,0 +1,264 @@
+.hero {
+	padding: 30px 0 30px;
+	background: linear-gradient(180deg, #f8fafd 0%, #eef3f9 100%);
+}
+
+@screen laptop {
+	.hero {
+	
+		padding: 0px 0 34px;
+		 height: 100dvh;
+        display: flex;
+        justify-content: center;
+		align-items: center
+	}
+}
+
+.heroGrid {
+	@apply max-w-7xl mx-auto mobile:px-4 justify-between grid items-center;
+	gap: 34px;
+	grid-template-columns: 1fr;
+}
+
+@screen laptop {
+	.heroGrid {
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1.06fr);
+		gap: 84px;
+	}
+}
+
+.textCol {
+	@apply flex flex-col rounded-neu bg-white shadow-neu h-fit;
+	align-items: flex-start;
+	padding: 30px 26px;
+	border: 1px solid rgba(255, 255, 255, 0.82);
+}
+
+.heroTitle {
+	@apply  mobile:!text-[28px];
+	font-size: clamp(2rem, 4vw, 2.7rem);
+	line-height: 0.96;
+	font-weight: 800;
+	letter-spacing: -0.05em;
+	color: #09153f;
+	max-width: 520px;
+}
+
+.heroDescWrap {
+	@apply mobile:!p-2;
+	position: relative;
+	margin-top: 18px;
+	max-width: 515px;
+	padding: 16px 18px 16px 24px;
+	border-radius: 18px;
+	background: #eef3f9;
+	box-shadow: inset 5px 5px 10px rgba(150, 160, 185, 0.16), inset -5px -5px 10px rgba(255, 255, 255, 0.8);
+}
+
+.heroDescWrap::before {
+	@apply mobile:hidden;
+	content: "";
+	position: absolute;
+	left: 10px;
+	top: 12px;
+	bottom: 12px;
+	width: 4px;
+	border-radius: 999px;
+	background: #004f9c;
+	box-shadow: 0 0 10px rgba(0, 79, 156, 0.24);
+}
+
+.heroDesc {
+	@apply  mobile:!text-[14px];
+	font-size: 0.99rem;
+	line-height: 1.58;
+	color: #465673;
+}
+
+.heroCtas {
+	@apply flex items-center mobile:justify-center mobile:mx-auto;
+	gap: 8px;
+	margin-top: 18px;
+	flex-wrap: wrap;
+}
+
+.ctaPrimary,
+.ctaSecondary {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 9px 18px;
+	border-radius: 999px;
+	font-size: 0.77rem;
+	font-weight: 600;
+	transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.ctaPrimary {
+	color: #ffffff;
+	background: linear-gradient(135deg, #004f9c 0%, #003165 100%);
+	box-shadow: 5px 5px 12px rgba(0, 79, 156, 0.3), -4px -4px 10px rgba(255, 255, 255, 0.5);
+}
+
+.ctaSecondary {
+	color: #42536f;
+	background: #ffffff;
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	box-shadow: 5px 5px 10px rgba(150, 160, 185, 0.35), -5px -5px 10px rgba(255, 255, 255, 0.82);
+}
+
+.ctaPrimary:hover,
+.ctaSecondary:hover {
+	transform: translateY(-2px);
+}
+
+.reviewCard {
+	@apply mobile:!px-2 mobile:!py-3 mobile:mx-auto;
+	display: inline-flex;
+	align-items: center;
+	gap: 18px;
+	margin-top: 66px;
+	padding: 14px 28px 14px 18px;
+	border-radius: 999px;
+	border: 1px solid rgba(255, 255, 255, 0.82);
+	background: #ffffff;
+	box-shadow: 8px 8px 18px rgba(150, 160, 185, 0.3), -8px -8px 18px rgba(255, 255, 255, 0.84);
+}
+
+.avatarGroup {
+	display: flex;
+	align-items: center;
+	/* padding-left: 10px; */
+}
+
+.avatar {
+	width: 46px !important;
+	height: 46px !important;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 2px solid #ffffff;
+	margin-left: -13px;
+	box-shadow: 0 6px 12px rgba(12, 35, 74, 0.08);
+}
+
+.avatar:first-child {
+	margin-left: 0;
+}
+
+.reviewCopy {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	padding-right: 10px;
+}
+
+.reviewCopy strong {
+	font-size: 1rem;
+	font-weight: 800;
+	color: #0b1738;
+}
+
+.reviewCopy span {
+	@apply mobile:!text-[10px];
+	font-size: 0.82rem;
+	letter-spacing: 0.01em;
+	color: #667388;
+}
+
+.visualCol {
+	@apply relative md:h-[656px];
+
+}
+
+.visualWrap {
+	position: relative;
+	width: min(100%, 560px);
+	min-height: 470px;
+	margin: auto;
+}
+
+@screen laptop {
+	.visualWrap {
+		margin-left: auto;
+	}
+}
+
+.mainPhoto,
+.topPhoto,
+.bottomPhoto {
+	position: absolute;
+	overflow: hidden;
+	border-radius: 22px;
+	padding: 8px;
+	background: #eef3f9;
+	box-shadow: 10px 10px 22px rgba(150, 160, 185, 0.28), -10px -10px 22px rgba(255, 255, 255, 0.78);
+}
+
+.mainPhoto img,
+.topPhoto img,
+.bottomPhoto img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	border-radius: 16px;
+}
+
+.mainPhoto {
+	right: 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	height: 656px;
+	z-index: 2;
+}
+
+.topPhoto {
+	right: -28px;
+	top: 42px;
+	width: 176px;
+	height: 138px;
+	z-index: 3;
+}
+
+.bottomPhoto {
+	left: -86px;
+	bottom: -90px;
+	width: 144px;
+	height: 140px;
+	z-index: 3;
+}
+
+@media (max-width: 767px) {
+	.visualWrap {
+		min-height: 390px;
+	}
+
+	.mainPhoto {
+		position: relative;
+		right: auto;
+		top: auto;
+		width: 100%;
+		height: 300px;
+		margin-left: auto;
+	}
+
+	.topPhoto {
+		right: -2px;
+		top: 8px;
+		width: 132px;
+		height: 102px;
+	}
+
+	.bottomPhoto {
+		left: 8px;
+		bottom: 40px;
+		width: 128px;
+		height: 110px;
+	}
+
+	.reviewCard {
+		max-width: 100%;
+		margin-top: 36px;
+	}
+}

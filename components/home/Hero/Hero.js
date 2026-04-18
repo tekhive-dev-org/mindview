@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
@@ -23,8 +24,8 @@ export default function Hero() {
 						hand, start your journey with us today!
 					</p>
 					<div className={styles.heroCtas}>
-						<button className={styles.ctaPrimary}>Get a Quote</button>
-						<button className={styles.ctaSecondary}>Whatsapp Us</button>
+						<Link href="/contact" className={styles.ctaPrimary}>Get a Quote</Link>
+						<a href="https://wa.me/2349130410677" target="_blank" rel="noopener noreferrer" className={styles.ctaSecondary}>Whatsapp Us</a>
 					</div>
 				</div>
 

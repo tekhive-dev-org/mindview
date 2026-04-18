@@ -1,10 +1,11 @@
 import Head from "next/head";
 import Hero from "@/components/home/Hero/Hero";
+import WhatWeDo from "@/components/home/WhatWeDo/WhatWeDo";
 import Partners from "@/components/home/Partners/Partners";
 import Projects from "@/components/home/Projects/Projects";
 import ExpertsBanner from "@/components/home/ExpertsBanner/ExpertsBanner";
 import WhyChooseUs from "@/components/home/WhyChooseUs/WhyChooseUs";
-import Testimonials from "@/components/home/Testimonials/Testimonials";
+import AboutTestimonials from "@/components/about/AboutTestimonials/AboutTestimonials";
 
 export default function Home() {
 	return (
@@ -18,11 +19,12 @@ export default function Home() {
 			</Head>
 
 			<Hero />
-			<Partners />
+			<WhatWeDo />
 			<Projects />
 			<ExpertsBanner />
 			<WhyChooseUs />
-			<Testimonials />
+			<AboutTestimonials />
+			<Partners />
 		</>
 	);
 }

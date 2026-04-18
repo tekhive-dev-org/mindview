@@ -10,10 +10,12 @@ const PARTNERS = [
 	{ name: "zoom", icon: "/assets/icons/zoom.png" },
 ];
 
-export default function Partners() {
+export default function Partners({ label }) {
 	return (
 		<section className={styles.partners}>
-			<p className={styles.partnersLabel}>Companies We Partner With</p>
+			<p className={styles.partnersLabel}>
+				{label || "Companies We Partner With"}
+			</p>
 			<div className={styles.partnersLogos}>
 				{PARTNERS.map((p) => (
 					<Image

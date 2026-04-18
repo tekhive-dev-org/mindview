@@ -13,25 +13,34 @@
 }
 
 .partnersLogos {
-	@apply flex flex-wrap items-center justify-center gap-8;
+	@apply flex flex-wrap items-center justify-center gap-6;
 }
 
 @screen laptop {
 	.partnersLogos {
-		@apply gap-14;
+		@apply gap-6;
 	}
 }
 
 .partnerIcon {
-	@apply select-none transition-all duration-200;
+	@apply select-none transition-all duration-300 ;
 	object-fit: contain;
-	height: 36px;
+	
 	width: auto;
 	filter: grayscale(0);
 	opacity: 0.85;
+	padding: 14px 20px;
+	border-radius: 14px;
+	background: #f8f9fc;
+	box-shadow:
+		4px 4px 10px rgb(150 160 185 / 0.2),
+		-4px -4px 10px rgba(255, 255, 255, 0.65);
 }
 
 .partnerIcon:hover {
 	opacity: 1;
-	transform: scale(1.05);
+	/* transform: translateY(-3px); */
+	box-shadow:
+		6px 6px 14px rgb(150 160 185 / 0.3),
+		-6px -6px 14px rgba(255, 255, 255, 0.75);
 }

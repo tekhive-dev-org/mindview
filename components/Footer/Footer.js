@@ -1,18 +1,40 @@
+import { useState } from "react";
 import Image from "next/image";
 import styles from "./Footer.module.css";
 
+const FAQS = [
+	{
+		question: "What industries do you serve?",
+		answer: "We serve a wide range of industries including oil & gas, real estate, manufacturing, logistics, hospitality, and residential sectors — delivering tailored engineering, automation, and security solutions.",
+	},
+	{
+		question: "Do you handle both small & large projects?",
+		answer: "Yes. From single residential installations to large-scale industrial projects, we have the expertise and resources to deliver at any scale.",
+	},
+	{
+		question: "Do you provide customised solutions?",
+		answer: "Absolutely. Every project begins with a thorough consultation so we can design and deliver solutions that are perfectly tailored to your specific requirements and budget.",
+	},
+	{
+		question: "Do you offer end to end services?",
+		answer: "Yes — we handle everything from initial consultation and design through to installation, commissioning, and ongoing maintenance and support.",
+	},
+];
+
 const USEFUL_LINKS = [
-	{ label: "About Us", href: "#about" },
-	{ label: "Testimonial", href: "#testimonials" },
-	{ label: "Blog", href: "#blog" },
-	{ label: "Careers", href: "#careers" },
+	{ label: "About Us", href: "/about" },
+	{ label: "Services", href: "/services" },
+	{ label: "Contact Us", href: "/contact" },
+	{ label: "Blog", href: "/blog" },
 ];
 
 const SERVICES = [
-	{ label: "Smart Automation", href: "#" },
-	{ label: "Security Systems", href: "#" },
-	{ label: "Product Design", href: "#" },
-	{ label: "Data Analytics", href: "#" },
+	{ label: "Engineering Services", href: "/engineering" },
+	{ label: "Automation Solutions", href: "/automation" },
+	{ label: "Security Systems", href: "/security" },
+	{ label: "Vertical Transport & Access", href: "/vertical-transport" },
+	{ label: "Energy Solutions", href: "/energy" },
+	// { label: "Consultancy & Integration", href: "/services#consultancy-integration" },
 ];
 
 const CONTACT_INFO = [
@@ -27,23 +49,23 @@ const CONTACT_INFO = [
 				/>
 			</svg>
 		),
-		text: "+234 81 602 32 043",
-		href: "tel:+2348160232043",
+		text: "+234 701 825 4622",
+		href: "tel:+2347018254622",
 	},
-	{
-		icon: (
-			<svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-				<path
-					strokeLinecap="round"
-					strokeLinejoin="round"
-					strokeWidth={1.5}
-					d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-				/>
-			</svg>
-		),
-		text: "contact@mindview.com",
-		href: "mailto:contact@mindview.com",
-	},
+	// {
+	// 	icon: (
+	// 		<svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+	// 			<path
+	// 				strokeLinecap="round"
+	// 				strokeLinejoin="round"
+	// 				strokeWidth={1.5}
+	// 				d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+	// 			/>
+	// 		</svg>
+	// 	),
+	// 	text: "contact@mindview.com",
+	// 	href: "mailto:contact@mindview.com",
+	// },
 	{
 		icon: (
 			<svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -61,8 +83,8 @@ const CONTACT_INFO = [
 				/>
 			</svg>
 		),
-		text: "Lagos, Nigeria",
-		href: "#",
+		text: "12 Brown Lane, off Kadiri St, Fadeyi, Lagos",
+		href: "https://maps.google.com/?q=12+Brown+Lane+off+Kadiri+Street+Fadeyi+Lagos",
 	},
 ];
 
@@ -97,8 +119,47 @@ const SOCIALS = [
 ];
 
 export default function Footer() {
+	const [openFaq, setOpenFaq] = useState(null);
+
+	const toggleFaq = (index) => {
+		setOpenFaq(openFaq === index ? null : index);
+	};
+
 	return (
-		<footer className={styles.footer}>
+		<footer id="contact" className={styles.footer}>
+			{/* FAQ Section */}
+			<div className={styles.faqSection}>
+				<div className={styles.faqInner}>
+					<div className={styles.faqHeader}>
+						<h2 className={styles.faqTitle}>Frequently Asked Questions</h2>
+					</div>
+					<div className={styles.faqList}>
+						{FAQS.map((faq, i) => (
+							<div
+								key={i}
+								className={`${styles.faqItem} ${openFaq === i ? styles.faqItemOpen : ""}`}
+							>
+								<button
+									className={styles.faqQuestion}
+									onClick={() => toggleFaq(i)}
+									aria-expanded={openFaq === i}
+								>
+									<span>{faq.question}</span>
+									<span className={styles.faqIcon}>
+										{openFaq === i ? "−" : "+"}
+									</span>
+								</button>
+								{openFaq === i && (
+									<div className={styles.faqAnswer}>
+										<p>{faq.answer}</p>
+									</div>
+								)}
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
+
 			{/* CTA Banner */}
 			<div className={styles.ctaBanner}>
 				<div className={styles.ctaInner}>
@@ -110,7 +171,7 @@ export default function Footer() {
 							Let&apos;s build something extraordinary together.
 						</p>
 					</div>
-					<a href="#contact" className={styles.ctaButton}>
+					<a href="/contact" className={styles.ctaButton}>
 						Get Started
 						<svg
 							fill="none"

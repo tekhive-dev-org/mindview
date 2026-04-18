@@ -1,4 +1,5 @@
 .testimonials {
+	@apply border-t-[0.5px] border-navy-500;
 	padding: 64px 0;
 }
 
@@ -174,6 +175,9 @@
 	z-index: 10;
 	transform: translate(0, 0) scale(1);
 	opacity: 1;
+	box-shadow:
+		8px 8px 20px rgba(0, 40, 100, 0.4),
+		-8px -8px 20px rgba(0, 100, 200, 0.1);
 }
 
 /* One behind */
@@ -183,6 +187,9 @@
 	transform: translate(16px, 12px) scale(0.98);
 	opacity: 0;
 	pointer-events: none;
+	box-shadow:
+		6px 6px 16px rgba(0, 30, 80, 0.35),
+		-6px -6px 16px rgba(0, 80, 160, 0.08);
 }
 
 /* Two behind */
@@ -192,6 +199,9 @@
 	transform: translate(28px, 22px) scale(0.96);
 	opacity: 0;
 	pointer-events: none;
+	box-shadow:
+		4px 4px 12px rgba(0, 20, 60, 0.3),
+		-4px -4px 12px rgba(0, 60, 130, 0.06);
 }
 
 @screen laptop {
