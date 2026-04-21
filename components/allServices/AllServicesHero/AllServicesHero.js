@@ -1,12 +1,16 @@
+import Image from "next/image";
 import styles from "./AllServicesHero.module.css";
 
 export default function AllServicesHero() {
 	return (
 		<section className={styles.hero}>
-			<img
+			<Image
 				src="/assets/images/mindviewHero.webp"
 				alt="Smart infrastructure and engineering building"
 				className={styles.heroBg}
+				fill
+				sizes="100vw"
+				priority
 			/>
 			<div className={styles.heroOverlay} />
 			<div className={styles.heroInner}>

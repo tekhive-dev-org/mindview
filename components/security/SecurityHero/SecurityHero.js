@@ -1,11 +1,12 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./SecurityHero.module.css";
 
 const REVIEWERS = [
-	"https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&q=80",
-	"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&q=80",
-	"https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&q=80",
-	"https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&q=80",
+	"/assets/test/5.jpg",
+	"/assets/test/2.avif",
+	"/assets/test/3.webp",
+	"/assets/test/4.jpg",
 ];
 
 export default function SecurityHero() {
@@ -44,11 +45,14 @@ export default function SecurityHero() {
 					<div className={styles.reviewCard}>
 						<div className={styles.avatarGroup}>
 							{REVIEWERS.map((reviewer, index) => (
-								<img
+								<Image
 									key={reviewer}
 									src={reviewer}
 									alt="Mindview security client"
 									className={styles.avatar}
+									width={46}
+									height={46}
+									sizes="46px"
 									style={{ zIndex: REVIEWERS.length - index }}
 								/>
 							))}
@@ -63,21 +67,31 @@ export default function SecurityHero() {
 				<div className={styles.visualCol}>
 					<div className={styles.visualWrap}>
 						<div className={styles.mainPhoto}>
-							<img
-								src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=1400&q=80"
+							<Image
+								src="/assets/images/security1.webp"
 								alt="Security bollards protecting an access point"
+								width={1400}
+								height={1200}
+								sizes="(min-width: 1024px) 560px, 100vw"
+								priority
 							/>
 						</div>
 						<div className={styles.topPhoto}>
-							<img
-								src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=80"
+							<Image
+								src="/assets/images/security2.webp"
 								alt="Perimeter security system at an entry gate"
+								width={900}
+								height={700}
+								sizes="176px"
 							/>
 						</div>
 						<div className={styles.bottomPhoto}>
-							<img
-								src="https://images.unsplash.com/photo-1558002038-1055907df827?w=900&q=80"
+							<Image
+								src="/assets/images/security.jpg"
 								alt="Smart access control device"
+								width={900}
+								height={700}
+								sizes="144px"
 							/>
 						</div>
 					</div>

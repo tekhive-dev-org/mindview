@@ -64,8 +64,8 @@ const FAQS = [
 const USEFUL_LINKS = [
 	{ label: "About Us", href: "/about" },
 	{ label: "Services", href: "/services" },
+	{ label: "Blog", href: "/blog" },
 	{ label: "Contact Us", href: "/contact" },
-	// { label: "Blog", href: "/blog" },
 ];
 
 const SERVICES = [

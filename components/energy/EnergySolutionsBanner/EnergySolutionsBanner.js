@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./EnergySolutionsBanner.module.css";
 
@@ -13,7 +14,7 @@ const OFFERINGS = [
 			"Backup-ready system design for outages",
 		],
 		image:
-			"https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=1200&q=80",
+			"/assets/images/solar.webp",
 		alt: "Technician cleaning rooftop solar panels",
 	},
 	{
@@ -27,7 +28,7 @@ const OFFERINGS = [
 			"Backup optimization for homes and offices",
 		],
 		image:
-			"https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=1200&q=80",
+			"/assets/images/inverter.avif",
 		alt: "Battery backup and inverter installation",
 	},
 	{
@@ -41,7 +42,7 @@ const OFFERINGS = [
 			"Maintenance support and performance checks",
 		],
 		image:
-			"https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=1200&q=80",
+			"/assets/images/commercial.png",
 		alt: "Commercial solar energy installation",
 	},
 ];
@@ -67,7 +68,14 @@ export default function EnergySolutionsBanner() {
 							className={`${styles.row} ${index % 2 === 1 ? styles.rowReverse : ""}`}
 						>
 							<div className={styles.media}>
-								<img src={offering.image} alt={offering.alt} className={styles.image} />
+								<Image
+									src={offering.image}
+									alt={offering.alt}
+									className={styles.image}
+									width={1200}
+									height={900}
+									sizes="(min-width: 1024px) 50vw, 100vw"
+								/>
 							</div>
 							<div className={styles.content}>
 								<h3 className={styles.cardTitle}>{offering.title}</h3>

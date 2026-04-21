@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState, useEffect, useRef, useCallback } from "react";
 import styles from "./AboutTestimonials.module.css";
 
@@ -87,11 +88,14 @@ export default function AboutTestimonials() {
 						<div className={styles.ratingBlock}>
 							<div className={styles.avatarRow}>
 								{TESTIMONIALS.slice(0, 4).map((testimonial, i) => (
-									<img
+									<Image
 										key={testimonial.author}
 										src={testimonial.avatar}
 										alt=""
 										className={styles.avatar}
+										width={40}
+										height={40}
+										sizes="40px"
 										style={{ zIndex: 4 - i }}
 									/>
 								))}
@@ -143,7 +147,14 @@ export default function AboutTestimonials() {
 											</>
 										)}
 										<div className={styles.cardFooter}>
-											<img src={t.avatar} alt="" className={styles.authorAvatar} />
+											<Image
+												src={t.avatar}
+												alt=""
+												className={styles.authorAvatar}
+												width={40}
+												height={40}
+												sizes="40px"
+											/>
 											<div>
 												<p className={styles.authorName}>{t.author}</p>
 												<p className={styles.authorRole}>{t.role}</p>

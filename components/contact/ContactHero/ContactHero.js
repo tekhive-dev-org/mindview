@@ -1,12 +1,16 @@
+import Image from "next/image";
 import styles from "./ContactHero.module.css";
 
 export default function ContactHero() {
 	return (
 		<section className={styles.hero}>
-			<img
+			<Image
 				src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=80"
 				alt="Smart infrastructure"
 				className={styles.heroBg}
+				fill
+				sizes="100vw"
+				priority
 			/>
 			<div className={styles.heroOverlay} />
 			<div className={styles.heroInner}>

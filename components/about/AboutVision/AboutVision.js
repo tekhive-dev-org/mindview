@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./AboutVision.module.css";
 
 const BLOCKS = [
@@ -63,7 +64,14 @@ export default function AboutVision() {
               className={`${styles.row} ${index % 2 === 1 ? styles.rowReverse : ""}`}
             >
               <div className={styles.media}>
-                <img src={block.image} alt={block.alt} className={styles.image} />
+                <Image
+                  src={block.image}
+                  alt={block.alt}
+                  className={styles.image}
+                  width={1200}
+                  height={900}
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                />
               </div>
               <div className={styles.content}>
                 <h3 className={styles.cardTitle}>{block.title}</h3>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./WhatWeDo.module.css";
 import Link from "next/link";
 import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
@@ -75,10 +76,13 @@ export default function WhatWeDo() {
 							}`}
 						>
 							<div className={styles.serviceImageWrap}>
-								<img
+								<Image
 									src={service.image}
 									alt={service.title}
 									className={styles.serviceImage}
+									width={1200}
+									height={900}
+									sizes="(min-width: 1024px) 50vw, 100vw"
 								/>
 							</div>
 

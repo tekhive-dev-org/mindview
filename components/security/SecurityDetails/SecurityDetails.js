@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./SecurityDetails.module.css";
 
@@ -13,7 +14,7 @@ const OFFERINGS = [
 			"Integrated monitoring systems for checkpoints",
 		],
 		image:
-			"https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1200&q=80",
+			"/assets/images/security3.avif",
 		alt: "Luggage scanner system in a screening area",
 	},
 	{
@@ -27,7 +28,7 @@ const OFFERINGS = [
 			"Night visibility cameras for schools and sites",
 		],
 		image:
-			"https://images.unsplash.com/photo-1557324232-b8917d3c3dcb?w=1200&q=80",
+			"/assets/images/security.jpg",
 		alt: "Mounted surveillance camera for perimeter monitoring",
 	},
 ];
@@ -53,7 +54,14 @@ export default function SecurityDetails() {
 							className={`${styles.row} ${index % 2 === 1 ? styles.rowReverse : ""}`}
 						>
 							<div className={styles.media}>
-								<img src={offering.image} alt={offering.alt} className={styles.image} />
+								<Image
+									src={offering.image}
+									alt={offering.alt}
+									className={styles.image}
+									width={1200}
+									height={900}
+									sizes="(min-width: 1024px) 50vw, 100vw"
+								/>
 							</div>
 							<div className={styles.content}>
 								<h3 className={styles.cardTitle}>{offering.title}</h3>

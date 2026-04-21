@@ -1,11 +1,12 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./AutomationHero.module.css";
 
 const REVIEWERS = [
-	"https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&q=80",
-	"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&q=80",
-	"https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&q=80",
-	"https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&q=80",
+	"/assets/test/5.jpg",
+	"/assets/test/2.avif",
+	"/assets/test/3.webp",
+	"/assets/test/4.jpg",
 ];
 
 export default function AutomationHero() {
@@ -45,11 +46,14 @@ export default function AutomationHero() {
 					<div className={styles.reviewCard}>
 						<div className={styles.avatarGroup}>
 							{REVIEWERS.map((reviewer, index) => (
-								<img
+								<Image
 									key={reviewer}
 									src={reviewer}
 									alt="Mindview automation client"
 									className={styles.avatar}
+									width={46}
+									height={46}
+									sizes="46px"
 									style={{ zIndex: REVIEWERS.length - index }}
 								/>
 							))}
@@ -64,21 +68,29 @@ export default function AutomationHero() {
 				<div className={styles.visualCol}>
 					<div className={styles.visualWrap}>
 						<div className={styles.mainPhoto}>
-							<img
-								src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1400&q=80"
-								alt="Remote home automation control"
+							<Image
+								src="/assets/images/automation2.jpg"
+								width={1400}
+								height={1200}
+								sizes="(min-width: 1024px) 560px, 100vw"
+								priority
 							/>
 						</div>
 						<div className={styles.topPhoto}>
-							<img
-								src="https://images.unsplash.com/photo-1567789884554-0b844b597180?w=900&q=80"
-								alt="Industrial automation interface"
+							<Image
+								src="/assets/images/automation4.jpg"
+								width={900}
+								height={700}
+								sizes="176px"
 							/>
 						</div>
 						<div className={styles.bottomPhoto}>
-							<img
-								src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=900&q=80"
+							<Image
+								src="/assets/images/automation3.jpg"
 								alt="Automation engineers at work"
+								width={900}
+								height={700}
+								sizes="144px"
 							/>
 						</div>
 					</div>

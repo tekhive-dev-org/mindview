@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./AutomationServicesList.module.css";
 
@@ -5,14 +6,14 @@ const SERVICES = [
 	{
 		title: "Gate automation",
 		image:
-			"https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=1200&q=80",
+			"/assets/images/automation5.webp",
 		description:
 			"Secure and automate estate gates with remote access, timing logic, and dependable operator systems.",
 	},
 	{
 		title: "Door automation",
 		image:
-			"https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?w=1200&q=80",
+			"/assets/images/control.jpg",
 		description:
 			"Enable sensor-driven and access-controlled door systems for residential and commercial spaces.",
 	},
@@ -26,21 +27,21 @@ const SERVICES = [
 	{
 		title: "Revolving Doors",
 		image:
-			"https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&q=80",
+			"/assets/images/automation6.jpg",
 		description:
 			"Install premium entrance automation that blends aesthetics, safety, and high-traffic flow control.",
 	},
 	{
 		title: "Advanced elevator",
 		image:
-			"https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80",
+			"/assets/images/elevator2.webp",
 		description:
 			"Upgrade lift systems with intelligent access, monitoring, and integration for modern buildings.",
 	},
 	{
 		title: "Home Automation",
 		image:
-			"https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1200&q=80",
+			"/assets/images/automation.webp",
 		description:
 			"Connect lighting, entertainment, security, and utilities into a seamless home control experience.",
 	},
@@ -71,7 +72,14 @@ export default function AutomationServicesList() {
 					{SERVICES.map((service) => (
 						<article key={service.title} className={styles.card}>
 							<div className={styles.imageFrame}>
-								<img src={service.image} alt={service.title} className={styles.image} />
+								<Image
+									src={service.image}
+									alt={service.title}
+									className={styles.image}
+									width={1200}
+									height={800}
+									sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+								/>
 							</div>
 							<div className={styles.cardBody}>
 								<h3 className={styles.cardTitle}>{service.title}</h3>

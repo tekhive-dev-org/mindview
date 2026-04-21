@@ -1,12 +1,16 @@
+import Image from "next/image";
 import styles from "./AboutHero.module.css";
 
 export default function AboutHero() {
 	return (
 		<section className={styles.hero}>
-			<img
+			<Image
 				src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1600&q=80"
 				alt="Technical team working on industrial systems"
 				className={styles.heroBg}
+				fill
+				sizes="100vw"
+				priority
 			/>
 			<div className={styles.heroOverlay} />
 			<div className={styles.heroInner}>

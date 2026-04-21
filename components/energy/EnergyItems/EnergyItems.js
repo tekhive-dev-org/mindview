@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./EnergyItems.module.css";
 
@@ -14,35 +15,35 @@ const PROJECTS = [
 		description:
 			"Panel cleaning, inspection, and performance checks that keep solar assets operating efficiently over time.",
 		image:
-			"https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=1200&q=80",
+			"/assets/images/solar-maintenance.jpg",
 	},
 	{
 		title: "Renewable Energy Design",
 		description:
 			"Energy layouts that combine generation, storage, and backup planning for practical long-term performance.",
 		image:
-			"https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&q=80",
+			"/assets/images/renewable.avif",
 	},
 	{
 		title: "Inverter And Storage Integration",
 		description:
 			"Coordinated inverter and battery systems that support stable backup and smoother energy switching.",
 		image:
-			"https://images.unsplash.com/photo-1624397640148-949b1732bb0a?w=1200&q=80",
+			"/assets/images/storage.jpg",
 	},
 	{
 		title: "Power Room Retrofit",
 		description:
 			"Utility-room upgrades that improve protection, energy routing, and maintainability for installed systems.",
 		image:
-			"https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1200&q=80",
+			"/assets/images/retrofit.webp",
 	},
 	{
 		title: "Hybrid Backup Systems",
 		description:
 			"Hybrid solutions for homes and facilities that balance solar generation, storage, and grid or generator backup.",
 		image:
-			"https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=1200&q=80",
+			"/assets/images/backup.webp",
 	},
 ];
 
@@ -71,7 +72,14 @@ export default function EnergyItems() {
 					{PROJECTS.map((project) => (
 						<article key={project.title} className={styles.card}>
 							<div className={styles.imageFrame}>
-								<img src={project.image} alt={project.title} className={styles.image} />
+								<Image
+									src={project.image}
+									alt={project.title}
+									className={styles.image}
+									width={1200}
+									height={800}
+									sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+								/>
 							</div>
 							<div className={styles.cardBody}>
 								<h3 className={styles.cardTitle}>{project.title}</h3>

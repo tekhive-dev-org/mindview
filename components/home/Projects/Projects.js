@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./Projects.module.css";
 
 const PROJECTS = [
@@ -75,10 +76,13 @@ export default function Projects() {
 					{PROJECTS.map((project, i) => (
 						<div key={i} className={styles.projectCard}>
 							<div className={styles.projectImageWrap}>
-								<img
+								<Image
 									src={project.image}
 									alt={project.title}
 									className={styles.projectImage}
+									width={1200}
+									height={825}
+									sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
 								/>
 							</div>
 							<div className={styles.projectBody}>

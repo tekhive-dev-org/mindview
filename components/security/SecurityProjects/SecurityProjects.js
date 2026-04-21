@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./SecurityProjects.module.css";
 
@@ -7,42 +8,42 @@ const PROJECTS = [
 		description:
 			"Deploy biometric, RFID, and credential-based systems that control movement into sensitive spaces.",
 		image:
-			"https://images.unsplash.com/photo-1558002038-1055907df827?w=1200&q=80",
+			"/assets/images/control.jpg",
 	},
 	{
 		title: "Alarm Systems Installation",
 		description:
 			"Install connected alarm systems with reliable triggers, response workflows, and central visibility.",
 		image:
-			"https://images.unsplash.com/photo-1582139329536-e7284fece509?w=1200&q=80",
+			"/assets/images/alarm.webp",
 	},
 	{
 		title: "Bollards",
 		description:
 			"Protect high-risk entry points with fixed or automatic bollards engineered for perimeter control.",
 		image:
-			"https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=1200&q=80",
+			"/assets/images/bollard.jpg",
 	},
 	{
 		title: "CCTV/Cameras",
 		description:
 			"Build complete camera coverage with indoor and outdoor systems for monitoring and evidence review.",
 		image:
-			"https://images.unsplash.com/photo-1557324232-b8917d3c3dcb?w=1200&q=80",
+			"/assets/images/cctv.jpg",
 	},
 	{
 		title: "Luggage Scanners",
 		description:
 			"Screen carried items efficiently with dependable scanner installations at controlled checkpoints.",
 		image:
-			"https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1200&q=80",
+			"/assets/images/security3.avif",
 	},
 	{
 		title: "Surveillance Cameras",
 		description:
 			"Coordinate visible deterrence and remote oversight through carefully placed surveillance endpoints.",
 		image:
-			"https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80",
+			"/assets/images/surveillance.jpg",
 	},
 ];
 
@@ -71,7 +72,14 @@ export default function SecurityProjects() {
 					{PROJECTS.map((project) => (
 						<article key={project.title} className={styles.card}>
 							<div className={styles.imageFrame}>
-								<img src={project.image} alt={project.title} className={styles.image} />
+								<Image
+									src={project.image}
+									alt={project.title}
+									className={styles.image}
+									width={1200}
+									height={800}
+									sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+								/>
 							</div>
 							<div className={styles.cardBody}>
 								<h3 className={styles.cardTitle}>{project.title}</h3>

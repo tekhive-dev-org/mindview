@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./AllServicesCatalog.module.css";
 
@@ -90,10 +91,24 @@ function ServiceRow({ item }) {
 		<div className={`${styles.serviceRow} ${item.reverse ? styles.serviceRowReverse : ""}`}>
 			<div className={styles.mediaWrap}>
 				<div className={styles.imageCard}>
-					<img src={item.image} alt={item.title} className={styles.image} />
+					<Image
+						src={item.image}
+						alt={item.title}
+						className={styles.image}
+						width={1200}
+						height={900}
+						sizes="(min-width: 1024px) 50vw, 100vw"
+					/>
 				</div>
 				<div className={`${styles.accentBubble} ${item.reverse ? styles.accentBubbleLeft : styles.accentBubbleRight}`}>
-					<img src={item.accentImage} alt="" className={styles.accentImage} />
+					<Image
+						src={item.accentImage}
+						alt=""
+						className={styles.accentImage}
+						width={220}
+						height={220}
+						sizes="110px"
+					/>
 				</div>
 			</div>
 
@@ -162,7 +177,14 @@ export default function AllServicesCatalog() {
 
 				<div id="consultancy-integration" className={styles.engineeringPanel}>
 					<div className={styles.engineeringImageWrap}>
-						<img src={ENGINEERING.image} alt={ENGINEERING.title} className={styles.engineeringImage} />
+						<Image
+							src={ENGINEERING.image}
+							alt={ENGINEERING.title}
+							className={styles.engineeringImage}
+							width={1200}
+							height={900}
+							sizes="(min-width: 1024px) 45vw, 100vw"
+						/>
 					</div>
 					<div className={styles.engineeringContent}>
 						<h3 className={styles.engineeringTitle}>{ENGINEERING.title}</h3>

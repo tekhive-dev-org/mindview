@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./AutomationBooking.module.css";
 
@@ -13,7 +14,7 @@ const OFFERINGS = [
 			"Energy usage visibility across devices",
 		],
 		image:
-			"https://images.unsplash.com/photo-1558002038-1055907df827?w=1200&q=80",
+			"/assets/images/automation.webp",
 		alt: "Smart lock controlled from a mobile phone",
 	},
 	{
@@ -27,7 +28,7 @@ const OFFERINGS = [
 			"Control panels and Industry 4.0 integration",
 		],
 		image:
-			"https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1200&q=80",
+			"/assets/images/engineering.webp",
 		alt: "Automation specialists collaborating on-site",
 	},
 ];
@@ -53,7 +54,14 @@ export default function AutomationBooking() {
 							className={`${styles.row} ${index % 2 === 1 ? styles.rowReverse : ""}`}
 						>
 							<div className={styles.media}>
-								<img src={offering.image} alt={offering.alt} className={styles.image} />
+								<Image
+									src={offering.image}
+									alt={offering.alt}
+									className={styles.image}
+									width={1200}
+									height={900}
+									sizes="(min-width: 1024px) 50vw, 100vw"
+								/>
 							</div>
 							<div className={styles.content}>
 								<h3 className={styles.cardTitle}>{offering.title}</h3>

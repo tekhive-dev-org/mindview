@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./ServicesItems.module.css";
 
@@ -7,7 +8,7 @@ const PROJECTS = [
 		description:
 			"Rotating equipment support, alignment, fabrication review, and plant mechanical interventions.",
 		image:
-			"https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1200&q=80",
+			"/assets/images/engineering3.webp",
 	},
 	{
 		title: "Electrical Engineering",
@@ -21,28 +22,28 @@ const PROJECTS = [
 		description:
 			"Loop checks, signal integrity, control interface review, and instrumentation coordination.",
 		image:
-			"https://images.unsplash.com/photo-1581093458791-9d09ddf2f2b7?w=1200&q=80",
+			"/assets/images/engineering4.jpg",
 	},
 	{
 		title: "Operation and Maintenance",
 		description:
 			"Planned maintenance delivery, field servicing, shutdown preparation, and asset support.",
 		image:
-			"https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1200&q=80",
+			"/assets/images/engineering5.jpg",
 	},
 	{
 		title: "Advanced Elevator",
 		description:
 			"Vertical transport system engineering, inspection support, and modernization coordination.",
 		image:
-			"https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80",
+			"/assets/images/engineering6.jpg",
 	},
 	{
 		title: "Field Engineering",
 		description:
 			"Site supervision, technical reporting, engineering liaison, and hands-on field execution.",
 		image:
-			"https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80",
+			"/assets/images/engineering1.webp",
 	},
 ];
 
@@ -71,7 +72,14 @@ export default function ServicesItems() {
 					{PROJECTS.map((project) => (
 						<article key={project.title} className={styles.card}>
 							<div className={styles.imageFrame}>
-								<img src={project.image} alt={project.title} className={styles.image} />
+								<Image
+									src={project.image}
+									alt={project.title}
+									className={styles.image}
+									width={1200}
+									height={800}
+									sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+								/>
 							</div>
 							<div className={styles.cardBody}>
 								<h3 className={styles.cardTitle}>{project.title}</h3>

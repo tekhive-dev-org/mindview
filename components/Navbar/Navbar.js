@@ -20,7 +20,7 @@ const NAV_LINKS = [
 			// { label: "Consultancy & Integration", href: "/services#consultancy-integration" },
 		],
 	},
-	// { label: "Blog", href: "/blog" },
+	{ label: "Blog", href: "/blog" },
 	// { label: "Contact Us", href: "/contact" },
 	{ label: "Testimonials", href: "/#testimonials" },
 ];

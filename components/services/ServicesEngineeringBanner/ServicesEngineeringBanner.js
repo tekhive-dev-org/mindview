@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./ServicesEngineeringBanner.module.css";
 
@@ -41,7 +42,7 @@ const OFFERINGS = [
 			"Testing, commissioning, and cable system review",
 		],
 		image:
-			"https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1200&q=80",
+			"/assets/images/engineering2.webp",
 		alt: "Electrical field engineer at work",
 	},
 ];
@@ -67,7 +68,14 @@ export default function ServicesEngineeringBanner() {
 							className={`${styles.row} ${index % 2 === 1 ? styles.rowReverse : ""}`}
 						>
 							<div className={styles.media}>
-								<img src={offering.image} alt={offering.alt} className={styles.image} />
+								<Image
+									src={offering.image}
+									alt={offering.alt}
+									className={styles.image}
+									width={1200}
+									height={900}
+									sizes="(min-width: 1024px) 50vw, 100vw"
+								/>
 							</div>
 							<div className={styles.content}>
 								<h3 className={styles.cardTitle}>{offering.title}</h3>

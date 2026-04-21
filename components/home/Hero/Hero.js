@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./Hero.module.css";
 
@@ -30,10 +31,14 @@ export default function Hero() {
 				</div>
 
 				<div className={styles.heroImageWrapper}>
-					<img
+					<Image
 						src="/assets/images/mindviewHero.webp"
 						alt="Engineering and technical planning team"
 						className={styles.heroImage}
+						width={1400}
+						height={1200}
+						sizes="(min-width: 1024px) 50vw, 100vw"
+						priority
 					/>
 					<div className={styles.heroStatsBadge}>
 						<span className={styles.statsNumber}>50+</span>

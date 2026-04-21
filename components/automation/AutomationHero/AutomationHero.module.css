@@ -36,7 +36,7 @@
 
 .heroTitle {
     @apply  mobile:!text-[28px];
-	font-size: clamp(2rem, 4vw, 2.7rem);
+	font-size: clamp(2rem, 3vw, 2.3rem);
 	line-height: 0.96;
 	font-weight: 800;
 	letter-spacing: -0.05em;

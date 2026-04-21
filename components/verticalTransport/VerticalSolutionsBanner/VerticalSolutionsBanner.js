@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./VerticalSolutionsBanner.module.css";
 
@@ -13,7 +14,7 @@ const OFFERINGS = [
 			"Safe installation review and commissioning",
 		],
 		image:
-			"https://images.unsplash.com/photo-1460317442991-0ec209397118?w=1200&q=80",
+			"/assets/images/elevator2.webp",
 		alt: "Lift shaft construction and passenger elevator installation",
 	},
 	{
@@ -27,7 +28,7 @@ const OFFERINGS = [
 			"Maintenance-ready integration and testing",
 		],
 		image:
-			"https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&q=80",
+			"/assets/images/vertical.jpg",
 		alt: "Escalator system in a public building",
 	},
 ];
@@ -53,7 +54,14 @@ export default function VerticalSolutionsBanner() {
 							className={`${styles.row} ${index % 2 === 1 ? styles.rowReverse : ""}`}
 						>
 							<div className={styles.media}>
-								<img src={offering.image} alt={offering.alt} className={styles.image} />
+								<Image
+									src={offering.image}
+									alt={offering.alt}
+									className={styles.image}
+									width={1200}
+									height={900}
+									sizes="(min-width: 1024px) 50vw, 100vw"
+								/>
 							</div>
 							<div className={styles.content}>
 								<h3 className={styles.cardTitle}>{offering.title}</h3>
