@@ -8,40 +8,40 @@ import EngineeringRoundedIcon from "@mui/icons-material/EngineeringRounded";
 const SERVICES = [
 	{
 		icon: <SecurityRoundedIcon className={styles.serviceTitleIcon} />,
-		title: "Security",
-		image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80",
-		desc: "We provide end-to-end security solutions — from CCTV and IP surveillance to access control, alarm systems, and perimeter protection for facilities of all sizes.",
+		title: "Security Systems",
+		image: "/assets/images/security.jpg",
+		desc: "We design and install layered security systems for homes, offices, facilities, and industrial environments where visibility, access control, and response speed matter.",
 		reverse: false,
 		bullets: [
-			"CCTV and IP surveillance systems with remote monitoring and recording capabilities.",
-			"Access control systems including biometrics, RFID, and smart card solutions.",
-			"Integrated alarm systems with real-time alerts and response protocols.",
+			"CCTV and IP surveillance systems with live monitoring, recording, and incident visibility.",
+			"Access control setups using biometrics, RFID, intercoms, and controlled entry points.",
+			"Integrated alarm, detection, and perimeter systems tailored to real site conditions.",
 		],
 		href: "/security",
 	},
 	{
 		icon: <SmartToyRoundedIcon className={styles.serviceTitleIcon} />,
-		title: "Automation",
-		image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
-		desc: "Our home and industrial automation solutions bring intelligent control to lighting, climate, security, manufacturing, and access — tailored to your environment.",
+		title: "Automation Systems",
+		image: "/assets/images/automation.webp",
+		desc: "Our automation work improves control, convenience, and operational efficiency across residential, commercial, and industrial environments.",
 		reverse: true,
 		bullets: [
-			"Intelligent home automation systems for lighting, climate, security, and entertainment.",
-			"Industrial automation systems for manufacturing, logistics, and process plants.",
-			"Gate and door automation for residential, commercial, and industrial entries.",
+			"Smart home and building automation for lighting, climate, access, and coordinated control.",
+			"Industrial automation support for process improvement, monitoring, and dependable operations.",
+			"Gate, door, and entrance automation for secure and efficient movement across sites.",
 		],
 		href: "/automation",
 	},
 	{
 		icon: <EngineeringRoundedIcon className={styles.serviceTitleIcon} />,
-		title: "Infrastructure",
-		image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80",
-		desc: "From mechanical and electrical engineering to instrumentation, control systems, and ongoing maintenance — we deliver infrastructure built for industry.",
+		title: "Engineering Support",
+		image: "/assets/images/engineering.png",
+		desc: "From engineering support to energy and vertical transport coordination, we help clients deliver technical systems that are practical to install, run, and maintain.",
 		reverse: false,
 		bullets: [
-			"Mechanical engineering design, fabrication, and integration for industrial and commercial applications.",
-			"Electrical engineering covering power distribution, control panels, and low-voltage systems.",
-			"Instrumentation & control solutions for precise process monitoring and automation.",
+			"Mechanical, electrical, and instrumentation support for facilities and live operations.",
+			"Solar energy and backup power systems designed around reliability and site demand.",
+			"Vertical transport and access infrastructure planned for safe daily use and uptime.",
 		],
 		href: "/engineering",
 	},
@@ -54,15 +54,15 @@ export default function WhatWeDo() {
 				<div className={styles.header}>
 					<span className={styles.sectionLabel}>What We Do</span>
 					<h2 className={styles.title}>
-						Transform Business Ideas Into
+						Core Systems We Design,
 						<br />
-						Digital Solutions With Mindview
+						Install, And Support
 					</h2>
 					<p className={styles.subtitle}>
-						Welcome to Mindview digital solutions — where learning, mentorship,
-						and technology meet to build the future! We offer cohort-based
-						programs, professional courses, and hands-on mentorship to help you
-						thrive in today&apos;s digital world. Let us and make your transformation count!
+						Mindview delivers practical security, automation, engineering, energy,
+						and vertical transport solutions for residential, commercial, and
+						industrial environments. Our work is built around site conditions,
+						reliability, safe execution, and long-term performance after handover.
 					</p>
 				</div>
 

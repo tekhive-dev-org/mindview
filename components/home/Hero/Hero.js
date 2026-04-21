@@ -7,21 +7,21 @@ export default function Hero() {
 			<div className={styles.heroGrid}>
 				<div>
 					<span className={styles.heroBadge}>
-						Welcome to Mindview Digital Solutions
+						Smart Infrastructure And Technical Solutions
 					</span>
 					<h1 className={styles.heroTitle}>
-						From Mindview To Solutions -{" "}
+						Built For Smarter
+						<br />
 						<span className={styles.heroHighlight}>
-							We bridge the gap
+							Systems And Safer Operations
 						</span>
 					</h1>
 					<p className={styles.heroDesc}>
-						Welcome to Mindview digital solutions, where innovation meets
-						opportunity! We empower businesses with tailored tech solutions,
-						upskill workforces through corporate training, and prepare aspiring
-						professionals for industry-ready careers through our cohort-based
-						learning programs. At Mindview, vision and transformation go hand in
-						hand, start your journey with us today!
+						Mindview delivers security systems, automation, engineering support,
+						energy solutions, and vertical transport services for homes,
+						commercial facilities, and industrial environments. We design,
+						install, and support dependable systems that improve safety,
+						efficiency, uptime, and day-to-day operational control.
 					</p>
 					<div className={styles.heroCtas}>
 						<Link href="/contact" className={styles.ctaPrimary}>Get a Quote</Link>
@@ -31,8 +31,8 @@ export default function Hero() {
 
 				<div className={styles.heroImageWrapper}>
 					<img
-						src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80"
-						alt="Team collaborating on digital solutions"
+						src="/assets/images/mindviewHero.webp"
+						alt="Engineering and technical planning team"
 						className={styles.heroImage}
 					/>
 					<div className={styles.heroStatsBadge}>

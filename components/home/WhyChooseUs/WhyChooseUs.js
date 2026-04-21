@@ -3,18 +3,36 @@ import styles from "./WhyChooseUs.module.css";
 const STEPS = [
 	{
 		num: "1",
-		title: "Trust",
-		desc: "Select from our mentorship programs, cohort-based learning, or advisory services tailored to your career or business needs.",
+		title: "Assessment",
+		desc: "We start by understanding the site, the operating constraints, and the exact system requirement before recommending a solution.",
 	},
 	{
 		num: "2",
-		title: "Equity",
-		desc: "Get matched with experienced mentors, trainers, or industry professionals who guide you with practical insights and proven strategies.",
+		title: "Execution",
+		desc: "Our team handles planning, installation, integration, and commissioning with attention to safety, coordination, and delivery quality.",
 	},
 	{
 		num: "3",
-		title: "Diversity",
-		desc: "Engage in hands-on training, gain real-world insights, and track your programs with tools, feedback, and certifications that validate your journey.",
+		title: "Support",
+		desc: "After handover, we stay involved through testing, maintenance guidance, and ongoing support so the system performs as expected.",
+	},
+];
+
+const HIGHLIGHTS = [
+	{
+		tag: "Delivery",
+		value: "End-to-End",
+		label: "From technical review and design through installation and handover",
+	},
+	{
+		tag: "Coordination",
+		value: "Integrated",
+		label: "Security, automation, engineering, energy, and access considered together",
+	},
+	{
+		tag: "Support",
+		value: "Aftercare",
+		label: "Support that continues beyond commissioning into real daily use",
 	},
 ];
 
@@ -22,9 +40,12 @@ export default function WhyChooseUs() {
 	return (
 		<section className={styles.whyChoose}>
 			<h2 className={styles.whyChooseTitle}>
-				Why Choose Us: built around you
+				Why Teams Choose Mindview
 			</h2>
-			<p className={styles.whyChooseSubtitle}>&nbsp;</p>
+			<p className={styles.whyChooseSubtitle}>
+				We focus on technical fit, disciplined delivery, and dependable support
+				instead of generic packages that ignore how a site actually operates.
+			</p>
 
 			<div className={styles.stepsRow}>
 				{STEPS.map((step, i) => (
@@ -42,18 +63,13 @@ export default function WhyChooseUs() {
 			</div>
 
 			<div className={styles.statsRow}>
-				<div className={styles.statItem}>
-					<p className={styles.statValue}>500+</p>
-					<p className={styles.statLabel}>Delivered projects</p>
-				</div>
-				<div className={styles.statItem}>
-					<p className={styles.statValue}>50+</p>
-					<p className={styles.statLabel}>Trusted partners</p>
-				</div>
-				<div className={styles.statItem}>
-					<p className={styles.statValue}>4.7/5</p>
-					<p className={styles.statLabel}>Average rating</p>
-				</div>
+				{HIGHLIGHTS.map((highlight) => (
+					<div key={highlight.value} className={styles.statItem}>
+						<span className={styles.statTag}>{highlight.tag}</span>
+						<h3 className={styles.statValue}>{highlight.value}</h3>
+						<p className={styles.statLabel}>{highlight.label}</p>
+					</div>
+				))}
 			</div>
 		</section>
 	);

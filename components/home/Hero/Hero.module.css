@@ -2,16 +2,15 @@
 
 .hero {
 	@apply max-w-7xl mx-auto px-4;
+	display: flex;
+	align-items: center;
 	padding-top: 48px;
 	padding-bottom: 64px;
+	min-height: calc(100vh - 77px);
+	min-height: calc(100svh - 77px);
 }
 
-@screen laptop {
-	.hero {
-		padding-top: 72px;
-		padding-bottom: 80px;
-	}
-}
+
 
 .heroGrid {
 	@apply grid gap-10 items-center text-center;
@@ -120,7 +119,7 @@
 	@apply w-full mobile:!min-h-full overflow-hidden shadow-neu object-cover;
 	border-radius: 14px;
 	display: block;
-	min-height: 651px;
+	min-height: 556px;
 	height: 100%;
 }
 

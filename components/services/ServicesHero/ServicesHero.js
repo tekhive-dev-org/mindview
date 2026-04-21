@@ -14,18 +14,17 @@ export default function ServicesHero() {
 			<div className={styles.heroGrid}>
 				<div className={styles.textCol}>
 					<h1 className={styles.heroTitle}>
-						Top-Notch Engineering
+						Engineering Support
 						<br />
-						Services Made Easy
+						For Critical Operations
 					</h1>
 					<div className={styles.heroDescWrap}>
 						<p className={styles.heroDesc}>
-							Mindview Engineering Services supports facilities, production
-							operations, and critical infrastructure with dependable mechanical,
-							electrical, instrumentation, and maintenance expertise. From design
-							review and field execution to shutdown support and long-term asset
-							care, we help teams keep systems safe, efficient, and ready for
-							continuous performance.
+							Mindview delivers mechanical, electrical, instrumentation, and
+							operations support for industrial plants, commercial facilities, and
+							utility environments. From field execution and troubleshooting to
+							maintenance planning and system review, we help teams keep assets
+							safe, efficient, and ready for continuous performance.
 						</p>
 					</div>
 					<div className={styles.heroCtas}>

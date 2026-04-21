@@ -14,18 +14,17 @@ export default function VerticalHero() {
 			<div className={styles.heroGrid}>
 				<div className={styles.textCol}>
 					<h1 className={styles.heroTitle}>
-						A Journey Of Smarter
+						Vertical Transport Systems
 						<br />
-						Vertical Mobility
+						Built For Safe Daily Movement
 					</h1>
 					<div className={styles.heroDescWrap}>
 						<p className={styles.heroDesc}>
-							Mindview delivers vertical transport solutions for commercial,
-							residential, and public environments where passenger movement,
-							accessibility, and uptime matter every day. From passenger lifts
-							and freight elevators to escalators, moving walkways, and access
-							infrastructure, we help clients plan, install, and maintain systems
-							that move people safely and reliably.
+							Mindview provides elevators, escalators, moving walkways, freight
+							lifts, and access infrastructure for buildings where passenger
+							movement, accessibility, and uptime matter every day. We help
+							clients plan, install, modernize, and maintain systems that move
+							people and goods safely, comfortably, and reliably.
 						</p>
 					</div>
 					<div className={styles.heroCtas}>

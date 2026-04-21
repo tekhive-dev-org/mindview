@@ -14,20 +14,18 @@ export default function AutomationHero() {
 			<div className={styles.heroGrid}>
 				<div className={styles.textCol}>
 					<h1 className={styles.heroTitle}>
-						Seamless Automation
-						
-						For Every Home
+						Automation Systems
+						<br />
+						For Homes And Facilities
 					</h1>
 					<div className={styles.heroDescWrap}>
 						<p className={styles.heroDesc}>
-							Founded by mindview began as a training initiative for young
-							professionals. Today, it has grown into a dynamic ecosystem
-							&apos; empowering individuals to build meaningful careers, guiding
-							startups and organizations with tailored solutions, and fostering
-							mentorship that inspires clarity, confidence, and growth. More
-							than a training hub, Mindview is a movement committed to
-							transforming people, businesses, and communities through skills,
-							innovation, and technology.
+							Mindview designs and installs automation solutions that improve
+							comfort, access, control, and operational efficiency across homes,
+							offices, and industrial sites. From smart home integration and gate
+							automation to door systems, connected controls, and industrial
+							automation workflows, we deliver systems that are practical,
+							dependable, and easy to manage.
 						</p>
 					</div>
 					<div className={styles.heroCtas}>
@@ -50,7 +48,7 @@ export default function AutomationHero() {
 								<img
 									key={reviewer}
 									src={reviewer}
-									alt="Mindview customer"
+									alt="Mindview automation client"
 									className={styles.avatar}
 									style={{ zIndex: REVIEWERS.length - index }}
 								/>

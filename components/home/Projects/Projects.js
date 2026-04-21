@@ -1,12 +1,42 @@
 import styles from "./Projects.module.css";
 
 const PROJECTS = [
-	{ name: "Automated workflow", author: "British Chidi", reviews: "20k reviews", date: "Dec 2025", image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80" },
-	{ name: "Automated workflow", author: "British Chidi", reviews: "20k reviews", date: "Dec 2025", image: "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=600&q=80" },
-	{ name: "3D engineering", author: "British Chidi", reviews: "10k reviews", date: "Oct 2025", image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=80" },
-	{ name: "Digital illustration", author: "Kelvin British Chidi", reviews: "20k reviews", date: "Dec 2025", image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&q=80" },
-	{ name: "Advanced elevator", author: "British Chidi", reviews: "20k reviews", date: "Dec 2025", image: "https://images.unsplash.com/photo-1563770660941-20978e870e26?w=600&q=80" },
-	{ name: "Automated workflow", author: "British Chidi", reviews: "20k reviews", date: "Nov 2025", image: "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=600&q=80" },
+	{
+		title: "Operation Maintenance",
+		description: "Integrated maintenance planning for industrial facilities with faster diagnostics, uptime tracking, and support workflows.",
+		date: "Dec 2025",
+		image: "/assets/images/maintenance.jpg",
+	},
+	{
+		title: "Vertical Transport Systems",
+		description: "Lift and escalator solutions designed for safe movement, reliable performance, and long-term building efficiency.",
+		date: "Dec 2025",
+		image: "/assets/images/vertical.jpg",
+	},
+	{
+		title: "Solar Energy",
+		description: "Solar installations tailored for commercial and residential sites with efficient power delivery and scalable output.",
+		date: "Oct 2025",
+		image: "/assets/images/solar.webp",
+	},
+	{
+		title: "Engineering",
+		description: "Structural and systems engineering support that turns project requirements into practical, build-ready execution.",
+		date: "Dec 2025",
+		image: "/assets/images/engineering.webp",
+	},
+	{
+		title: "CCTV and Surveillance",
+		description: "Smart monitoring systems built to improve site visibility, incident response, and everyday operational security.",
+		date: "Dec 2025",
+		image: "/assets/images/cctv.jpg",
+	},
+	{
+		title: "Access Control Systems",
+		description: "Controlled entry solutions that combine security hardware, identity access, and dependable site management.",
+		date: "Nov 2025",
+		image: "/assets/images/control.jpg",
+	},
 ];
 
 export default function Projects() {
@@ -29,7 +59,10 @@ export default function Projects() {
 						</span>
 					</h2>
 					<p className={styles.projectsDesc}>
-					Mindview digital solutions is an holistic platform that connects learning with real world impact. The platform designed to equip individuals with in-depth knowledge and practical skills in data analytics, product management, product design and related fields. Mindview offers structured engineering, smart security systems, and industry-based infrastructure.
+					These case-study snapshots reflect Mindview work across engineering
+					support, security systems, solar energy, surveillance, and vertical
+					transport. Each project is approached around site needs,
+					installation quality, system reliability, and long-term use.
 					</p>
 				</div>
 
@@ -44,18 +77,14 @@ export default function Projects() {
 							<div className={styles.projectImageWrap}>
 								<img
 									src={project.image}
-									alt={project.name}
+									alt={project.title}
 									className={styles.projectImage}
 								/>
-								<div className={styles.imageOverlay} />
-								<div className={styles.imageMeta}>
-									<span className={styles.imageMetaReviews}>{project.reviews}</span>
-									<span className={styles.imageMetaDate}>{project.date}</span>
-								</div>
 							</div>
 							<div className={styles.projectBody}>
-								<h3 className={styles.projectName}>{project.name}</h3>
-								<p className={styles.projectAuthor}>{project.author}</p>
+								<p className={styles.projectDate}>{project.date}</p>
+								<h3 className={styles.projectName}>{project.title}</h3>
+								<p className={styles.projectDescription}>{project.description}</p>
 							</div>
 						</div>
 					))}

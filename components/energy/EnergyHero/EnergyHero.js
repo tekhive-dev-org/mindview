@@ -14,18 +14,18 @@ export default function EnergyHero() {
 			<div className={styles.heroGrid}>
 				<div className={styles.textCol}>
 					<h1 className={styles.heroTitle}>
-						Easy Energy Conversion
+						Solar And Backup Energy
 						<br />
-						With Mindview
+						Built For Daily Reliability
 					</h1>
 					<div className={styles.heroDescWrap}>
 						<p className={styles.heroDesc}>
-							From rooftop solar and inverter backup to hybrid power systems for
-							commercial facilities, Mindview designs practical energy solutions
-							that reduce grid dependence and keep essential operations running.
-							We assess your load profile, recommend the right generation and
-							storage mix, and deliver installations that are safe, efficient,
-							and built for long-term reliability.
+							From rooftop solar and inverter backup to hybrid systems for homes,
+							offices, and commercial facilities, Mindview builds practical
+							energy infrastructure that reduces grid dependence and protects
+							critical loads. We assess your demand, recommend the right
+							generation and storage mix, and deliver installations built for
+							safe, efficient, long-term performance.
 						</p>
 					</div>
 					<div className={styles.heroCtas}>

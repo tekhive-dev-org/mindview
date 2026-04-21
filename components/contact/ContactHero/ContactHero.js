@@ -11,12 +11,12 @@ export default function ContactHero() {
 			<div className={styles.heroOverlay} />
 			<div className={styles.heroInner}>
 				<h1 className={styles.heroTitle}>
-					A Journey Of Automation &amp; Technology
+					Request A Project Quote
 				</h1>
 				<p className={styles.heroDesc}>
-					To bridge the gap between learning and industry by empowering
-					individuals and organizations with practical tech skills, transformative
-					digital solutions, and collaborative smart infrastructures.
+					Share your project scope, timeline, and service needs so the Mindview
+					team can review the opportunity and respond with the right next steps
+					for delivery, site assessment, or commercial discussion.
 				</p>
 			</div>
 		</section>

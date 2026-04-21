@@ -3,34 +3,34 @@ import styles from "./AboutTestimonials.module.css";
 
 const TESTIMONIALS = [
 	{
-		text: "We needed one delivery partner that could understand the site, recommend the right solution, and execute without drama. Mindview brought structure, clarity, and follow-through from start to handover.",
-		author: "Chidi British",
-		role: "Site operations lead",
-		avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=80",
+		text: "Mindview helped us consolidate surveillance and access control into one practical setup. The installation was clean, the team was responsive, and the final system fits how our site actually operates.",
+		author: "Operations Manager",
+		role: "Commercial security project",
+		avatar: "/assets/test/1.jpg",
 	},
 	{
-		text: "Mindview has completely transformed how we manage our facility systems. The handover was smooth, the team was responsive, and the final solution feels practical rather than over-engineered.",
-		author: "Sara Mitchell",
-		role: "Facilities manager",
-		avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&q=80",
+		text: "The automation upgrade made daily control much easier for our team. Mindview focused on what we needed, not on adding unnecessary features that would complicate operations.",
+		author: "Facility Supervisor",
+		role: "Automation systems project",
+		avatar: "/assets/test/2.avif",
 	},
 	{
-		text: "Their team handled planning, installation, and training with real attention to detail. We now have a coordinated setup instead of separate systems that used to create confusion.",
-		author: "James Okafor",
-		role: "Operations director",
-		avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80",
+		text: "Their engineering support was practical from the start. We got clear technical guidance, solid execution on site, and better coordination across the work than we had with previous contractors.",
+		author: "Project Coordinator",
+		role: "Engineering support engagement",
+		avatar: "/assets/test/3.webp",
 	},
 	{
-		text: "The final result is intuitive enough for the whole team to use. Mindview focused on what would actually work in our environment instead of pushing a one-size-fits-all setup.",
-		author: "Amara Diallo",
-		role: "Homeowner",
-		avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&q=80",
+		text: "Our solar and backup setup is far more dependable now. Mindview assessed the real load properly and delivered a solution that supports critical use without constant power anxiety.",
+		author: "Property Owner",
+		role: "Energy solutions project",
+		avatar: "/assets/test/4.jpg",
 	},
 	{
-		text: "We partnered with Mindview for a mixed office and facility rollout. Their team understood the operational constraints and delivered exactly what was required without unnecessary complexity.",
-		author: "Tunde Fashola",
-		role: "Project consultant",
-		avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&q=80",
+		text: "Mindview approached the lift work with attention to safety, finish quality, and long-term performance. The result feels reliable in daily use and the handover process was handled professionally.",
+		author: "Site Administrator",
+		role: "Vertical transport project",
+		avatar: "/assets/test/5.jpg",
 	},
 ];
 
@@ -86,16 +86,16 @@ export default function AboutTestimonials() {
 
 						<div className={styles.ratingBlock}>
 							<div className={styles.avatarRow}>
-								{[
-									"https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&q=80",
-									"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=80",
-									"https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&q=80",
-									"https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80",
-								].map((src, i) => (
-									<img key={i} src={src} alt="" className={styles.avatar} />
+								{TESTIMONIALS.slice(0, 4).map((testimonial, i) => (
+									<img
+										key={testimonial.author}
+										src={testimonial.avatar}
+										alt=""
+										className={styles.avatar}
+										style={{ zIndex: 4 - i }}
+									/>
 								))}
 							</div>
-
 							<div className={styles.ratingInfo}>
 								<div className={styles.stars}>
 									{[0, 1, 2, 3].map((i) => (
@@ -103,7 +103,6 @@ export default function AboutTestimonials() {
 											<path d={STAR_PATH} />
 										</svg>
 									))}
-									{/* half star */}
 									<svg className={styles.star} viewBox="0 0 20 20">
 										<defs>
 											<linearGradient id="half">
@@ -114,8 +113,8 @@ export default function AboutTestimonials() {
 										<path d={STAR_PATH} fill="url(#half)" />
 									</svg>
 								</div>
-								<p className={styles.happyCount}><strong>1,500+</strong> Customer review</p>
-								<p className={styles.ratingsCount}><strong>365</strong> Five star rate</p>
+								<p className={styles.happyCount}><strong>Client feedback</strong> across core Mindview service lines</p>
+								<p className={styles.ratingsCount}><strong>Security, automation, engineering, energy, and lifts</strong></p>
 							</div>
 						</div>
 					</div>
@@ -144,7 +143,7 @@ export default function AboutTestimonials() {
 											</>
 										)}
 										<div className={styles.cardFooter}>
-											<img src={t.avatar} alt={t.author} className={styles.authorAvatar} />
+											<img src={t.avatar} alt="" className={styles.authorAvatar} />
 											<div>
 												<p className={styles.authorName}>{t.author}</p>
 												<p className={styles.authorRole}>{t.role}</p>

@@ -1,29 +1,64 @@
 .cta {
-	@apply bg-navy;
-	padding: 72px 0 0;
+	padding: 8px 0 88px;
+	background: linear-gradient(180deg, #f7f9fc 0%, #eef3f9 100%);
 }
 
 @screen laptop {
 	.cta {
-		padding: 96px 0 0;
+		padding: 8px 0 96px;
 	}
 }
 
-.ctaInner {
-	@apply max-w-4xl mx-auto px-6 text-center;
-	padding-bottom: 64px;
+.inner {
+	@apply max-w-7xl mx-auto px-6;
 }
 
-/* ── Text ── */
-.heading {
-	@apply text-white font-extrabold tracking-tight leading-tight mb-5;
-	font-size: 28px;
+.panel {
+	display: grid;
+	grid-template-columns: 1fr;
+	overflow: hidden;
+	border-radius: 30px;
+	background: linear-gradient(135deg, #00072c 0%, #001530 55%, #004f9c 100%);
+	box-shadow: 14px 14px 30px rgba(150, 160, 185, 0.32), -14px -14px 28px rgba(255, 255, 255, 0.82);
 }
 
 @screen laptop {
-	.heading {
-		font-size: 40px;
+	.panel {
+		grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
 	}
+}
+
+.content {
+	padding: 34px 26px;
+	background: linear-gradient(135deg, rgba(0, 7, 44, 0.28), rgba(0, 79, 156, 0.12));
+	box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+@screen laptop {
+	.content {
+		padding: 42px 40px;
+	}
+}
+
+.pill {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 9px 18px;
+	border-radius: 999px;
+	border: 1px solid rgba(255, 255, 255, 0.16);
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: #d9e6ff;
+	background: rgba(255, 255, 255, 0.08);
+}
+
+.heading {
+	@apply text-white font-extrabold tracking-tight leading-tight;
+	margin-top: 22px;
+	font-size: clamp(2rem, 4vw, 3.2rem);
 }
 
 .highlight {
@@ -31,16 +66,19 @@
 }
 
 .description {
-	@apply text-gray-300 text-base font-normal leading-relaxed mb-8 mx-auto;
-	max-width: 480px;
+	margin-top: 16px;
+	margin-bottom: 28px;
+	max-width: 520px;
+	color: rgba(232, 241, 251, 0.82);
+	font-size: 0.98rem;
+	line-height: 1.72;
 }
 
 .ctaButton {
 	@apply inline-flex items-center justify-center text-white text-sm font-semibold transition-all duration-300;
-	padding: 14px 34px;
-	border: none;
-	border-radius: 50px;
-	background: rgba(255, 255, 255, 0.08);
+	padding: 13px 24px;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.1);
 	box-shadow:
 		5px 5px 12px rgba(0, 0, 0, 0.35),
 		-5px -5px 12px rgba(255, 255, 255, 0.06);
@@ -54,20 +92,15 @@
 		-6px -6px 14px rgba(255, 255, 255, 0.1);
 }
 
-/* ── Full-width image ── */
 .imageWrap {
-	@apply w-full overflow-hidden;
-	max-height: 400px;
-}
-
-@screen laptop {
-	.imageWrap {
-		max-height: 480px;
-	}
+	min-height: 300px;
+	padding: 10px;
+	background: rgba(216, 223, 235, 0.08);
 }
 
 .ctaImage {
-	@apply w-full object-cover block;
+	@apply w-full h-full object-cover block;
+	border-radius: 20px;
 	min-height: 280px;
 }
 

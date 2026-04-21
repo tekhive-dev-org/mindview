@@ -12,7 +12,7 @@ export default function About() {
 				<title>About — Mindview Digital Solutions</title>
 				<meta
 					name="description"
-					content="Learn about Mindview Digital Solutions — bridging the gap between vision and solution."
+					content="Learn about Mindview Digital Solutions, a technical systems company delivering security, automation, engineering, energy, and vertical transport solutions for homes, facilities, and industrial environments."
 				/>
 			</Head>
 

@@ -14,17 +14,17 @@ export default function SecurityHero() {
 			<div className={styles.heroGrid}>
 				<div className={styles.textCol}>
 					<h1 className={styles.heroTitle}>
-						Ensuring Your Safety
+						Integrated Security Systems
 						<br />
-						With Our Smart Security
+						For Safer Facilities
 					</h1>
 					<div className={styles.heroDescWrap}>
 						<p className={styles.heroDesc}>
-							Protect people, facilities, and critical assets with security
-							systems designed for real operating environments. Mindview delivers
-							CCTV, surveillance, access control, screening equipment, and
-							perimeter protection solutions that help teams monitor better,
-							respond faster, and secure every point that matters.
+							Protect people, facilities, and critical assets with CCTV,
+							surveillance, access control, screening equipment, and perimeter
+							protection designed for live environments. Mindview helps teams
+							improve visibility, control entry points, and respond faster across
+							commercial, residential, and industrial sites.
 						</p>
 					</div>
 					<div className={styles.heroCtas}>

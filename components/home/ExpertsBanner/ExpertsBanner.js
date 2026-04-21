@@ -4,18 +4,18 @@ export default function ExpertsBanner() {
 	return (
 		<section className={styles.expertsBanner}>
 			<div className={styles.expertsBannerBg}>
-				{/* PLACEHOLDER — replace with background image */}
+				{/* Background handled by section styles */}
 			</div>
 			<div className={styles.expertsBannerOverlay} />
 			<div className={styles.expertsBannerContent}>
 				<h2 className={styles.expertsTitle}>
-					Guided by Experts,<br />
-					Designed for Your Growth
+					Built Around Real Sites,<br />
+					Not Generic Specifications
 				</h2>
 				<p className={styles.expertsDesc}>
-					Our engineers and trainers are seasoned professionals, passionate about
-					guiding you with the same strategies and insights they use to create
-					value in their fields.
+					Mindview approaches every project with technical review, careful system
+					selection, disciplined installation, and practical after-support so the
+					final result works reliably in the environment it was built for.
 				</p>
 			</div>
 		</section>

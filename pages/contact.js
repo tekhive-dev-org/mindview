@@ -7,10 +7,10 @@ export default function Contact() {
 	return (
 		<>
 			<Head>
-				<title>Contact Us — Mindview Digital Solutions</title>
+				<title>Request a Quote — Mindview Digital Solutions</title>
 				<meta
 					name="description"
-					content="Get in touch with Mindview — request a quote, chat with our team, or visit our office."
+					content="Request a project quote from Mindview for security, automation, engineering, energy, and vertical transport solutions."
 				/>
 			</Head>
 

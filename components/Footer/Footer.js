@@ -5,19 +5,59 @@ import styles from "./Footer.module.css";
 const FAQS = [
 	{
 		question: "What industries do you serve?",
-		answer: "We serve a wide range of industries including oil & gas, real estate, manufacturing, logistics, hospitality, and residential sectors — delivering tailored engineering, automation, and security solutions.",
+		answer: "We serve residential, commercial, and industrial clients across sectors including real estate, manufacturing, healthcare, and corporate facilities.",
 	},
 	{
-		question: "Do you handle both small & large projects?",
-		answer: "Yes. From single residential installations to large-scale industrial projects, we have the expertise and resources to deliver at any scale.",
+		question: "Do you handle both small and large projects?",
+		answer: "Yes. From single home installations to large-scale industrial systems, we tailor solutions to your needs.",
 	},
 	{
-		question: "Do you provide customised solutions?",
-		answer: "Absolutely. Every project begins with a thorough consultation so we can design and deliver solutions that are perfectly tailored to your specific requirements and budget.",
+		question: "Do you provide customized solutions?",
+		answer: "Absolutely. Every project is designed based on your specific requirements, environment, and budget.",
 	},
 	{
-		question: "Do you offer end to end services?",
-		answer: "Yes — we handle everything from initial consultation and design through to installation, commissioning, and ongoing maintenance and support.",
+		question: "Do you offer end-to-end services?",
+		answer: "Yes. We handle everything from design and supply to installation, commissioning, and maintenance.",
+	},
+	{
+		question: "How long does installation take?",
+		answer: "It depends on the project's size, but timelines are clearly defined before project kickoff.",
+	},
+	{
+		question: "Can you upgrade existing systems?",
+		answer: "Yes. We specialize in upgrading and integrating new technology with existing infrastructure.",
+	},
+	{
+		question: "Do you offer maintenance services?",
+		answer: "Yes. We provide flexible maintenance plans including preventive and emergency support.",
+	},
+	{
+		question: "What happens if a system fails?",
+		answer: "Our support team is available for rapid response and troubleshooting to minimize downtime.",
+	},
+	{
+		question: "Are your systems reliable and secure?",
+		answer: "Yes. We use industry-standard, tested, and secure technologies to ensure reliability and safety.",
+	},
+	{
+		question: "Can I monitor my systems remotely?",
+		answer: "Yes. Many of our solutions come with mobile and web-based monitoring capabilities.",
+	},
+	{
+		question: "Will your solutions help reduce energy costs?",
+		answer: "Yes. Our systems are designed for efficiency, especially our automation and solar solutions.",
+	},
+	{
+		question: "Do you provide consultations before pricing?",
+		answer: "Yes. We assess your needs and provide detailed recommendations before giving a quote.",
+	},
+	{
+		question: "Do you provide training after installation?",
+		answer: "Yes. We ensure that users are fully trained to operate and manage the systems.",
+	},
+	{
+		question: "Is there a warranty on installations?",
+		answer: "Yes. All installations come with warranties depending on the system and components used.",
 	},
 ];
 
@@ -25,7 +65,7 @@ const USEFUL_LINKS = [
 	{ label: "About Us", href: "/about" },
 	{ label: "Services", href: "/services" },
 	{ label: "Contact Us", href: "/contact" },
-	{ label: "Blog", href: "/blog" },
+	// { label: "Blog", href: "/blog" },
 ];
 
 const SERVICES = [
@@ -295,15 +335,6 @@ export default function Footer() {
 				<p className={styles.copyright}>
 					&copy; {new Date().getFullYear()} Mindview. All Rights Reserved.
 				</p>
-				<div className={styles.legalLinks}>
-					<a href="#" className={styles.legalLink}>
-						Terms &amp; Conditions
-					</a>
-					<span className={styles.legalSeparator}>|</span>
-					<a href="#" className={styles.legalLink}>
-						Privacy Policy
-					</a>
-				</div>
 			</div>
 		</footer>
 	);

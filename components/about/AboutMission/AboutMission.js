@@ -1,51 +1,53 @@
+import Link from "next/link";
 import styles from "./AboutMission.module.css";
 
-const IMAGES = [
-	{
-		src: "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=500&q=80",
-		alt: "Industrial machinery",
-	},
-	{
-		src: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=500&q=80",
-		alt: "Engineering workspace",
-	},
-	{
-		src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&q=80",
-		alt: "Team collaboration",
-	},
-];
+const FEATURE_IMAGE = {
+	src: "/assets/about/mission.jpeg",
+	alt: "Industrial systems and engineering environment",
+};
 
 export default function AboutMission() {
 	return (
-		<section className={styles.mission}>
-			<div className={styles.missionInner}>
-				<div className={styles.missionHeader}>
-					<h2 className={styles.missionTitle}>
-						Mindview Digital Solutions – Bridging the Gap between Vision &amp;
-						Solution
-					</h2>
-					<p className={styles.missionDesc}>
-						Founded by mindview began as a training initiative for young
-						professionals. Today, it has grown into a dynamic ecosystem —
-						empowering individuals to build meaningful careers, guiding startups
-						and organizations with tailored solutions, and fostering mentorship
-						that inspires clarity, confidence, and growth. More than a training
-						hub, Mindview is a movement committed to transforming people,
-						businesses, and communities through skills, innovation, and
-						technology.
+		<section className={styles.section}>
+			<div className={styles.inner}>
+				<div className={styles.header}>
+					<span className={styles.pill}>Who we are</span>
+					<h2 className={styles.title}>Built Around Delivery Quality And Site Reality</h2>
+					<p className={styles.subtitle}>
+						Mindview works as a delivery partner for clients that need more than
+						generic recommendations. We plan around operating conditions,
+						installation quality, maintainability, and how each system will
+						perform after handover.
 					</p>
 				</div>
 
-				<div className={styles.imageGrid}>
-					{IMAGES.map((img, i) => (
-						<div key={i} className={styles.imageWrap}>
+				<div className={styles.row}>
+					<div className={styles.media}>
+						<div className={styles.imageWrap}>
 							<img
-								src={img.src}
-								alt={img.alt}
+								src={FEATURE_IMAGE.src}
+								alt={FEATURE_IMAGE.alt}
 								className={styles.image}
 							/>
 						</div>
-					))}
+					</div>
+
+					<div className={styles.content}>
+						<h3 className={styles.cardTitle}>How Mindview Approaches Every Project</h3>
+						<p className={styles.cardText}>
+							Our team combines engineering support, coordinated execution, and
+							cross-system thinking to deliver technical solutions that fit the
+							client&apos;s environment instead of forcing a one-size-fits-all setup.
+						</p>
+						<ul className={styles.list}>
+							<li className={styles.listItem}>Security, automation, energy, and access systems planned around actual operational needs</li>
+							<li className={styles.listItem}>Installations delivered with attention to safety, reliability, and maintainability</li>
+							<li className={styles.listItem}>Support that extends beyond commissioning into optimization and long-term use</li>
+						</ul>
+						<Link href="/services" className={styles.linkButton}>
+							Explore Services
+						</Link>
+					</div>
 				</div>
 			</div>
 		</section>

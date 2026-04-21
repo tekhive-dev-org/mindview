@@ -149,62 +149,29 @@
 	transform: scale(1.06);
 }
 
-.imageOverlay {
-	@apply absolute inset-0 pointer-events-none;
-	background: linear-gradient(180deg, transparent 50%, rgba(0, 7, 44, 0.45) 100%);
-	border-radius: 14px;
-}
-
-/* ══ Image meta overlay ══ */
-.imageMeta {
-	@apply absolute bottom-0 left-0 right-0 flex items-center justify-between px-4 pb-3 z-10;
-}
-
-.imageMetaReviews {
-	@apply text-xs font-medium;
-	color: rgba(255, 255, 255, 0.85);
-}
-
-.imageMetaDate {
-	@apply text-xs font-medium;
-	color: rgba(255, 255, 255, 0.85);
-}
-
 /* ══ Body ══ */
 .projectBody {
-	@apply px-3 pt-4 pb-2;
+	@apply px-3 pt-4 pb-3;
 }
 
-/* ══ Meta row ══ */
-.projectMeta {
-	@apply flex items-center justify-between text-xs font-medium mb-2;
-}
-
-.metaReviews {
-	@apply flex items-center gap-1;
-	color: #6b7280;
-}
-
-.metaIcon {
-	@apply w-3 h-3;
-	color: #004f9c;
-}
-
-.metaDate {
+.projectDate {
+	@apply text-xs font-medium mb-2;
 	color: #6b7280;
 }
 
 /* ══ Info ══ */
 .projectName {
-	@apply font-bold text-base mb-1 transition-colors duration-200;
+	@apply font-bold text-base mb-2 transition-colors duration-200;
 	color: #0a1a3f;
+	line-height: 1.35;
 }
 
 .projectCard:hover .projectName {
 	color: #004f9c;
 }
 
-.projectAuthor {
-	@apply text-sm font-normal;
+
+.projectDescription {
+	@apply text-sm font-normal leading-relaxed;
 	color: #4b5563;
 }

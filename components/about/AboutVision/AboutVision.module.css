@@ -1,10 +1,11 @@
 .vision {
-	padding: 10px 0 30px;
+	padding: 10px 0 72px;
+	background: linear-gradient(180deg, #f7f9fc 0%, #eef3f9 100%);
 }
 
 @screen laptop {
 	.vision {
-		padding: 96px 0;
+		padding: 8px 0 88px;
 	}
 }
 
@@ -12,95 +13,156 @@
 	@apply max-w-7xl mx-auto px-6;
 }
 
-/* ── Two-column layout ── */
-.contentGrid {
-	@apply grid;
+.header {
+	@apply md:text-center;
+	max-width: 760px;
+	margin: 0 auto 52px;
+}
+
+.pill {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 9px 18px;
+	border-radius: 999px;
+	border: 1px solid rgba(255, 255, 255, 0.82);
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: #004f9c;
+	background: #ffffff;
+	box-shadow: 5px 5px 12px rgba(150, 160, 185, 0.28), -5px -5px 12px rgba(255, 255, 255, 0.82);
+}
+
+.title {
+	margin-top: 24px;
+	font-size: clamp(2rem, 4vw, 3.35rem);
+	line-height: 1.05;
+	font-weight: 800;
+	letter-spacing: -0.04em;
+	color: #081639;
+}
+
+.subtitle {
+	margin-top: 14px;
+	font-size: 0.98rem;
+	line-height: 1.7;
+	color: #5d6b84;
+}
+
+.stack {
+	display: grid;
+	gap: 34px;
+}
+
+.row {
+	display: grid;
 	grid-template-columns: 1fr;
-	gap: 40px;
-	margin-bottom: 48px;
+	gap: 28px;
+	align-items: center;
+	padding: 24px;
+	border-radius: 28px;
+	background: #eef3f9;
+	box-shadow: 12px 12px 24px rgba(150, 160, 185, 0.3), -12px -12px 24px rgba(255, 255, 255, 0.9);
+}
+
+.rowReverse .media {
+	order: 0;
 }
 
 @screen laptop {
-	.contentGrid {
-		grid-template-columns: 1fr 1fr;
-		gap: 64px;
-		align-items: start;
-		margin-bottom: 64px;
+	.row {
+		grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+		gap: 48px;
+	}
+
+	.rowReverse {
+		grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+	}
+
+	.rowReverse .media {
+		order: 2;
+	}
+
+	.rowReverse .content {
+		order: 1;
 	}
 }
 
-.textCol {
-	@apply flex flex-col;
+.media {
+	position: relative;
+	overflow: hidden;
+	border-radius: 22px;
+	padding: 8px;
+	background: #eef3f9;
+	box-shadow: 8px 8px 18px rgba(150, 160, 185, 0.24), -8px -8px 18px rgba(255, 255, 255, 0.78);
 }
 
-.imageCol {
-	@apply hidden laptop:flex items-start;
-	position: sticky;
-	top: 96px;
-	align-self: start;
-}
-
-.sideImage {
-	@apply w-full object-cover rounded-2xl;
-	height: 520px;
-	box-shadow: 9px 9px 16px rgb(150 160 185 / 0.5), -9px -9px 16px rgba(255, 255, 255, 0.6);
-}
-
-/* ── Content blocks ── */
-.block {
-	@apply text-center;
-	margin-bottom: 40px;
-}
-
-@screen laptop {
-	.block {
-		margin-bottom: 48px;
-	}
-}
-
-.block:last-child {
-	margin-bottom: 0;
-}
-
-/* Mobile-only image per block */
-.blockImg {
+.image {
 	display: block;
 	width: 100%;
+	height: 100%;
+	min-height: 320px;
 	object-fit: cover;
 	border-radius: 16px;
-	aspect-ratio: 4 / 3;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	box-shadow: 6px 6px 12px rgb(150 160 185 / 0.4), -6px -6px 12px rgba(255, 255, 255, 0.7);
 }
 
-@screen laptop {
-	.blockImg {
-		display: none;
-	}
+.content {
+	max-width: 520px;
+	padding: 24px;
+	border-radius: 24px;
+	background: #eef3f9;
+	box-shadow: inset 5px 5px 10px rgba(150, 160, 185, 0.16), inset -5px -5px 10px rgba(255, 255, 255, 0.8);
 }
 
-.blockTitle {
-	@apply text-2xl font-extrabold tracking-tight text-navy leading-tight;
-	margin-bottom: 16px;
+.cardTitle {
+	font-size: clamp(1.5rem, 3.5vw, 2.6rem);
+	line-height: 1.08;
+	font-weight: 800;
+	letter-spacing: -0.03em;
+	color: #0b1738;
 }
 
-@screen laptop {
-	.blockTitle {
-		font-size: 28px;
-	}
+.cardText {
+	margin-top: 16px;
+	font-size: 0.95rem;
+	line-height: 1.72;
+	color: #586782;
 }
 
-.blockText {
-	@apply text-sm font-normal leading-relaxed text-navy-400;
-	margin-bottom: 12px;
+.list {
+	display: grid;
+	gap: 12px;
+	margin-top: 22px;
 }
 
-.blockText:last-child {
-	margin-bottom: 0;
+.listItem {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	font-size: 0.92rem;
+	line-height: 1.55;
+	color: #0b1738;
 }
 
-/* ── Stats Row ── */
+.listIcon {
+	flex-shrink: 0;
+	width: 24px;
+	height: 24px;
+	margin-top: 2px;
+	padding: 2px;
+	border-radius: 999px;
+	color: #004f9c;
+	background: #ffffff;
+	box-shadow: inset 3px 3px 6px rgba(150, 160, 185, 0.22), inset -3px -3px 6px rgba(255, 255, 255, 0.86);
+}
+
+.listIcon svg {
+	width: 100%;
+	height: 100%;
+}
+
 .statsRow {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);

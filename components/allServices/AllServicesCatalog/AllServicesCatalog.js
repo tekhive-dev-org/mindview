@@ -14,8 +14,8 @@ const SECURITY_AND_AUTOMATION = [
 		],
 		href: "/security",
 		cta: "View More",
-		image: "https://images.unsplash.com/photo-1558002038-1055907df827?w=1200&q=80",
-		accentImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&q=80",
+		image: "/assets/images/security.jpg",
+		accentImage: "/assets/images/security2.webp",
 		reverse: false,
 	},
 	{
@@ -30,8 +30,8 @@ const SECURITY_AND_AUTOMATION = [
 		],
 		href: "/automation",
 		cta: "View More",
-		image: "https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=1200&q=80",
-		accentImage: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&q=80",
+		image: "/assets/images/automation.webp",
+		accentImage: "/assets/images/automation1.webp",
 		reverse: true,
 	},
 ];
@@ -49,8 +49,8 @@ const ENERGY_AND_VERTICAL = [
 		],
 		href: "/vertical-transport",
 		cta: "View More",
-		image: "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=1200&q=80",
-		accentImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&q=80",
+		image: "/assets/images/elevator2.webp",
+		accentImage: "/assets/images/elevator1.webp",
 		reverse: false,
 	},
 	{
@@ -65,8 +65,8 @@ const ENERGY_AND_VERTICAL = [
 		],
 		href: "/energy",
 		cta: "View More",
-		image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&q=80",
-		accentImage: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&q=80",
+		image: "/assets/images/solar.webp",
+		accentImage: "/assets/images/solar1.jpeg",
 		reverse: true,
 	},
 ];
@@ -82,7 +82,7 @@ const ENGINEERING = {
 	],
 	href: "/engineering",
 	cta: "View More",
-	image: "https://images.unsplash.com/photo-1541976590-713941681591?w=1200&q=80",
+	image: "/assets/images/engineering.webp",
 };
 
 function ServiceRow({ item }) {

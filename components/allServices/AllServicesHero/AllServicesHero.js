@@ -4,7 +4,7 @@ export default function AllServicesHero() {
 	return (
 		<section className={styles.hero}>
 			<img
-				src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1800&q=80"
+				src="/assets/images/mindviewHero.webp"
 				alt="Smart infrastructure and engineering building"
 				className={styles.heroBg}
 			/>

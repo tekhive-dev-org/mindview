@@ -1,92 +1,96 @@
 import styles from "./AboutVision.module.css";
 
-const BLOCK_IMAGES = [
-  "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=500&q=80",
-  "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=500&q=80",
-  "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&q=80",
+const BLOCKS = [
+  {
+    title: "Practical Recommendations From The Start",
+    text: "Every Mindview project begins with a clear understanding of site conditions, usage demands, and the systems that already exist. That helps us recommend solutions that are realistic to install, operate, and maintain.",
+    bullets: [
+      "Recommendations shaped by site constraints and operating requirements",
+      "Technical planning that prioritizes safety, uptime, and maintainability",
+      "Delivery decisions based on performance, not unnecessary complexity",
+    ],
+    image: "/assets/about/machine.jpeg",
+    alt: "Industrial machinery",
+  },
+  {
+    title: "Integrated Expertise Across Critical Systems",
+    text: "Mindview works across security, automation, engineering support, energy, and vertical transport, giving clients one team that understands how technical systems interact across a property or facility.",
+    bullets: [
+      "Cross-functional delivery across multiple infrastructure categories",
+      "Better coordination between design, installation, and support teams",
+      "Solutions that fit homes, commercial spaces, and operational facilities",
+    ],
+    image: "/assets/about/workspace.jpeg",
+    alt: "Engineering workspace",
+  },
+  {
+    title: "Support That Continues After Handover",
+    text: "Our involvement does not end once a system is installed. We help clients through commissioning, optimization, maintenance planning, and practical handover so the delivered solution remains dependable over time.",
+    bullets: [
+      "Commissioning and performance checks before operational handover",
+      "Guidance for long-term maintenance and day-to-day system use",
+      "Ongoing support that improves confidence after project delivery",
+    ],
+    image: "/assets/about/collaboration.avif",
+    alt: "Team collaboration",
+  },
 ];
 
 const STATS = [
-  { value: "500+", label: "Learners from 10+ countries" },
-  { value: "50+", label: "Industry mentors and Tutors" },
-  { value: "4.7/5", label: "Average course rating" },
+  { value: "500+", label: "Delivered projects" },
+  { value: "50+", label: "Trusted partners" },
+  { value: "4.7/5", label: "Average client rating" },
 ];
 
 export default function AboutVision() {
   return (
     <section className={styles.vision}>
       <div className={styles.visionInner}>
-        <div className={styles.contentGrid}>
-          {/* Left: text blocks */}
-          <div className={styles.textCol}>
-            {/* Block 1: text then image */}
-            <div className={styles.block}>
-              <img
-                src={BLOCK_IMAGES[0]}
-                alt="Industrial machinery"
-                className={styles.blockImg}
-              />
-              <h2 className={styles.blockTitle}>
-                A World United by Collaboration
-              </h2>
-              <p className={styles.blockText}>
-                We envision a world where geographical boundaries are mere lines
-                on a map, where teams seamlessly come together to innovate,
-                create, and conquer.
-              </p>
-              <p className={styles.blockText}>
-                Our vision is to become the go-to platform where aspiring
-                professionals, startups, and organizations access world-class
-                training, mentorship, and technology services that drive growth
-                and innovation.
-              </p>
-            </div>
-
-            {/* Block 2: image then text */}
-            <div className={styles.block}>
-              <img
-                src={BLOCK_IMAGES[1]}
-                alt="Engineering workspace"
-                className={styles.blockImg}
-              />
-              <h2 className={styles.blockTitle}>Empower, Connect, Transform</h2>
-              <p className={styles.blockText}>
-                Our mission is simple yet profound: To bridge the gap between
-                learning and industry by empowering individuals and
-                organizations with practical tech skills, transformative digital
-                solutions, and collaborative learning experiences.
-              </p>
-            </div>
-
-            {/* Block 3: text then image */}
-            <div className={styles.block}>
-              <img
-                src={BLOCK_IMAGES[2]}
-                alt="Team collaboration"
-                className={styles.blockImg}
-              />
-              <h2 className={styles.blockTitle}>
-                Fostering a Culture of Collaboration
-              </h2>
-              <p className={styles.blockText}>
-                Perhaps one of the most significant impacts of SaaS-powered
-                communication and collaboration is the shift in organizational
-                culture.
-              </p>
-            </div>
-          </div>
-
-          {/* Right: image */}
-          <div className={styles.imageCol}>
-            <img
-              src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80"
-              alt="Team collaboration"
-              className={styles.sideImage}
-            />
-          </div>
+        <div className={styles.header}>
+          <span className={styles.pill}>How we work</span>
+          <h2 className={styles.title}>The Standards Behind Every Mindview Project</h2>
+          <p className={styles.subtitle}>
+            The same pattern drives our work across service lines: understand the
+            environment, recommend the right fit, execute carefully, and support
+            the system after delivery.
+          </p>
         </div>
 
-        {/* Stats Row */}
+        <div className={styles.stack}>
+          {BLOCKS.map((block, index) => (
+            <div
+              key={block.title}
+              className={`${styles.row} ${index % 2 === 1 ? styles.rowReverse : ""}`}
+            >
+              <div className={styles.media}>
+                <img src={block.image} alt={block.alt} className={styles.image} />
+              </div>
+              <div className={styles.content}>
+                <h3 className={styles.cardTitle}>{block.title}</h3>
+                <p className={styles.cardText}>{block.text}</p>
+                <ul className={styles.list}>
+                  {block.bullets.map((bullet) => (
+                    <li key={bullet} className={styles.listItem}>
+                      <span className={styles.listIcon} aria-hidden="true">
+                        <svg viewBox="0 0 20 20" fill="none">
+                          <path
+                            d="M5 10.5l3 3 7-7"
+                            stroke="currentColor"
+                            strokeWidth="1.8"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </span>
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+
         <div className={styles.statsRow}>
           {STATS.map((stat) => (
             <div key={stat.label} className={styles.statItem}>

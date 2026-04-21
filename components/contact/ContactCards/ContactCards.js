@@ -42,8 +42,8 @@ export default function ContactCards() {
 		<section className={styles.section}>
 			<div className={styles.inner}>
 				<div className={styles.header}>
-					<h2 className={styles.title}>We&apos;d love to hear from you</h2>
-					<p className={styles.subtitle}>Chat to our friendly team</p>
+					<h2 className={styles.title}>Need A Faster Route To Our Team?</h2>
+					<p className={styles.subtitle}>Use any of these channels for urgent commercial or site discussions.</p>
 				</div>
 				<div className={styles.cards}>
 					{CARDS.map((card) => (

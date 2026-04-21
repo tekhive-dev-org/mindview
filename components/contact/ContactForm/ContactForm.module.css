@@ -58,20 +58,58 @@
 	@apply text-sm text-navy-400 font-normal mb-8;
 }
 
-/* Fields */
-.row {
-	@apply grid gap-4 mb-4;
-	grid-template-columns: 1fr;
+.statusMessage {
+	margin-bottom: 20px;
+	padding: 14px 16px;
+	border-radius: 14px;
+	font-size: 0.9rem;
+	line-height: 1.6;
+	border: 1px solid transparent;
 }
 
-@screen tablet {
-	.row {
-		grid-template-columns: 1fr 1fr;
-	}
+.statusSuccess {
+	color: #0f5132;
+	background: #e9f8ef;
+	border-color: #b8e2c7;
 }
+
+.statusError {
+	color: #842029;
+	background: #fbeaec;
+	border-color: #efc6cb;
+}
+
+.formSection {
+	margin-bottom: 20px;
+}
+
+.sectionTitle {
+	@apply text-lg font-extrabold tracking-tight text-navy;
+}
+
+.sectionText {
+	@apply text-sm text-navy-400 font-normal leading-relaxed;
+	margin-top: 6px;
+}
+
+/* Fields */
+.row {
+	@apply grid md:grid-cols-2 gap-4 mb-4;
+	
+}
+
+
 
 .field {
 	@apply flex flex-col mb-4;
+}
+
+.helperText {
+	margin-top: -2px;
+	margin-bottom: 8px;
+	font-size: 0.8rem;
+	line-height: 1.55;
+	color: #6b7a91;
 }
 
 .label {
@@ -101,6 +139,20 @@
 		inset 3px 3px 6px rgb(150 160 185 / 0.35),
 		inset -3px -3px 6px rgba(255, 255, 255, 0.8),
 		0 0 0 2px rgba(0, 79, 156, 0.15);
+}
+
+.controlInvalid {
+	box-shadow:
+		inset 3px 3px 6px rgba(183, 61, 75, 0.12),
+		inset -3px -3px 6px rgba(255, 255, 255, 0.8),
+		0 0 0 2px rgba(183, 61, 75, 0.22);
+}
+
+.errorText {
+	margin-top: 8px;
+	font-size: 0.8rem;
+	line-height: 1.5;
+	color: #b73d4b;
 }
 
 .select {
@@ -147,6 +199,37 @@
 	right: 14px;
 }
 
+.honeypot {
+	position: absolute;
+	left: -9999px;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.consentRow {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	margin-top: 4px;
+	padding: 14px 16px;
+	border-radius: 16px;
+	background: #f0f2f7;
+	box-shadow:
+		inset 3px 3px 6px rgb(150 160 185 / 0.18),
+		inset -3px -3px 6px rgba(255, 255, 255, 0.72);
+}
+
+.consentInput {
+	margin-top: 3px;
+	accent-color: #004f9c;
+}
+
+.consentText {
+	font-size: 0.86rem;
+	line-height: 1.6;
+	color: #243756;
+}
+
 /* Submit */
 .submitBtn {
 	@apply w-full text-white font-semibold text-sm transition-all duration-300 mt-4;
@@ -156,6 +239,7 @@
 	box-shadow:
 		4px 4px 12px rgba(0, 79, 156, 0.35),
 		-2px -2px 8px rgba(255, 255, 255, 0.3);
+	border: none;
 }
 
 .submitBtn:hover {
@@ -171,6 +255,15 @@
 	box-shadow:
 		2px 2px 6px rgba(0, 79, 156, 0.3),
 		-1px -1px 4px rgba(255, 255, 255, 0.2);
+}
+
+.submitBtn:disabled {
+	opacity: 0.72;
+	cursor: not-allowed;
+	transform: none;
+	box-shadow:
+		4px 4px 12px rgba(0, 79, 156, 0.25),
+		-2px -2px 8px rgba(255, 255, 255, 0.2);
 }
 
 /* ---- Sidebar ---- */
