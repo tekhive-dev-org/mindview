@@ -69,14 +69,23 @@
 /* ── Rating block ── */
 .ratingBlock {
 	display: flex;
-	flex-direction: row;
-	align-items: center;
-	gap: 16px;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 12px;
+}
+
+@screen laptop {
+	.ratingBlock {
+		flex-direction: row;
+		align-items: center;
+		gap: 16px;
+	}
 }
 
 .avatarRow {
 	display: flex;
 	align-items: center;
+	flex-shrink: 0;
 }
 
 .avatar {
@@ -96,6 +105,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 2px;
+	min-width: 0;
 }
 
 .stars {
