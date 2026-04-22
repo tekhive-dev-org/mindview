@@ -3,6 +3,7 @@ import AllServicesHero from "@/components/allServices/AllServicesHero/AllService
 import AllServicesCatalog from "@/components/allServices/AllServicesCatalog/AllServicesCatalog";
 import ServicesProcess from "@/components/services/ServicesProcess/ServicesProcess";
 import AboutTestimonials from "@/components/about/AboutTestimonials/AboutTestimonials";
+import RecentWorkCarousel from "@/components/shared/RecentWorkCarousel/RecentWorkCarousel";
 
 export default function Services() {
 	return (
@@ -17,6 +18,12 @@ export default function Services() {
 
 			<AllServicesHero />
 			<AllServicesCatalog />
+			<RecentWorkCarousel
+				variant="light"
+				title="Recent Work Across Our Service Lines"
+				description="These recent project snapshots show how Mindview delivers security systems, automation, access devices, and integrated engineering support across different client environments."
+				ctaLabel="Request Similar Work"
+			/>
 			<ServicesProcess />
 			<AboutTestimonials />
 		</>

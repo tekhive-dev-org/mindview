@@ -31,6 +31,20 @@ const OFFERINGS = [
 			"/assets/images/security.jpg",
 		alt: "Mounted surveillance camera for perimeter monitoring",
 	},
+	{
+		title: "Turnstiles & Perimeter Control",
+		description:
+			"Manage and regulate pedestrian access at secured entry points with flip glass, full height, and tripod turnstile systems built for reliable enforcement at commercial, hospitality, and institutional environments.",
+		bullets: [
+			"Flip glass and full height turnstile supply and installation",
+			"Integration with access control and credential readers",
+			"Boom barrier systems for vehicle lane management",
+			"Walkthrough metal detectors for checkpoint screening",
+		],
+		image:
+			"/assets/images/turnstile.jpg",
+		alt: "Turnstile system at a secured building entry point",
+	},
 ];
 
 export default function SecurityDetails() {

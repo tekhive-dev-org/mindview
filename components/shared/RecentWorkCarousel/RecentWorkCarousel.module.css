@@ -1,0 +1,274 @@
+.section {
+	padding: 64px 0;
+	position: relative;
+	overflow: hidden;
+}
+
+@screen laptop {
+	.section {
+		padding: 100px 0;
+	}
+}
+
+.inner {
+	@apply max-w-7xl mx-auto px-4 relative;
+}
+
+.dark {
+	background: linear-gradient(180deg, #081225 0%, #0c1c39 100%);
+}
+
+.light {
+	background:
+		radial-gradient(circle at top left, rgba(0, 79, 156, 0.08), transparent 36%),
+		linear-gradient(180deg, #f6f9fd 0%, #ffffff 100%);
+}
+
+.header {
+	@apply flex flex-col gap-6 mb-10;
+}
+
+@screen laptop {
+	.header {
+		@apply flex-row items-end justify-between;
+	}
+}
+
+.sectionLabel {
+	@apply inline-flex items-center text-xs font-semibold uppercase tracking-widest mb-4;
+	color: #4d9de0;
+}
+
+.title {
+	@apply text-[28px] font-extrabold tracking-tight leading-tight mb-4;
+}
+
+.dark .title {
+	color: #ffffff;
+}
+
+.light .title {
+	color: #0a1a3f;
+}
+
+@screen laptop {
+	.title {
+		@apply text-5xl;
+	}
+}
+
+.description {
+	@apply text-sm leading-relaxed max-w-2xl;
+}
+
+.dark .description {
+	color: rgba(255, 255, 255, 0.82);
+}
+
+.light .description {
+	color: #4b5563;
+}
+
+.cta {
+	@apply inline-flex items-center justify-center text-sm font-semibold transition-all duration-300;
+	min-width: 180px;
+	padding: 14px 28px;
+	border-radius: 999px;
+}
+
+.dark .cta {
+	color: #081225;
+	background: #ffffff;
+	box-shadow: 0 16px 32px rgba(0, 0, 0, 0.22);
+}
+
+.light .cta {
+	color: #ffffff;
+	background: #004f9c;
+	box-shadow: 0 16px 32px rgba(0, 79, 156, 0.22);
+}
+
+.cta:hover {
+	transform: translateY(-2px);
+}
+
+.stage {
+	@apply grid gap-6 items-start;
+}
+
+@screen laptop {
+	.stage {
+		grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.7fr);
+		gap: 24px;
+	}
+}
+
+.mediaPanel,
+.infoPanel {
+	border-radius: 28px;
+}
+
+.dark .mediaPanel,
+.dark .infoPanel {
+	background: rgba(255, 255, 255, 0.06);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	box-shadow: 0 22px 50px rgba(0, 0, 0, 0.28);
+}
+
+.light .mediaPanel,
+.light .infoPanel {
+	background: rgba(255, 255, 255, 0.86);
+	border: 1px solid rgba(12, 28, 57, 0.08);
+	box-shadow: 0 18px 40px rgba(17, 24, 39, 0.08);
+}
+
+.mediaPanel {
+	padding: 14px;
+}
+
+.infoPanel {
+	padding: 24px;
+}
+
+.imageWrap {
+	@apply overflow-hidden relative;
+	border-radius: 22px;
+}
+
+.image {
+	@apply w-full object-cover block;
+	aspect-ratio: 16 / 10;
+}
+
+.controls {
+	@apply flex gap-3 justify-end mt-4;
+}
+
+.controlButton {
+	@apply inline-flex items-center justify-center transition-all duration-300;
+	width: 46px;
+	height: 46px;
+	border-radius: 999px;
+}
+
+.dark .controlButton {
+	color: #ffffff;
+	background: rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.light .controlButton {
+	color: #004f9c;
+	background: #eef5fd;
+	border: 1px solid rgba(0, 79, 156, 0.1);
+}
+
+.controlButton:hover {
+	transform: translateY(-1px);
+}
+
+.counter {
+	@apply text-sm font-semibold mb-4;
+	letter-spacing: 0.16em;
+}
+
+.dark .counter {
+	color: #99c1eb;
+}
+
+.light .counter {
+	color: #004f9c;
+}
+
+.counterDivider {
+	margin: 0 8px;
+	opacity: 0.45;
+}
+
+.cardTitle {
+	@apply text-2xl font-bold mb-3;
+	line-height: 1.2;
+}
+
+.dark .cardTitle {
+	color: #ffffff;
+}
+
+.light .cardTitle {
+	color: #0a1a3f;
+}
+
+.cardDescription {
+	@apply text-sm leading-relaxed mb-6;
+}
+
+.dark .cardDescription {
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.light .cardDescription {
+	color: #4b5563;
+}
+
+.dotRow {
+	@apply flex flex-wrap gap-2 mb-6;
+}
+
+.dot {
+	width: 12px;
+	height: 12px;
+	border-radius: 999px;
+	transition: all 0.25s ease;
+}
+
+.dark .dot {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.light .dot {
+	background: rgba(0, 79, 156, 0.18);
+}
+
+.dotActive {
+	width: 36px;
+}
+
+.dark .dotActive {
+	background: #4d9de0;
+}
+
+.light .dotActive {
+	background: #004f9c;
+}
+
+.thumbnailGrid {
+	@apply grid gap-3;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.thumbnailButton {
+	@apply p-0 overflow-hidden transition-all duration-300;
+	border-radius: 16px;
+	border: 2px solid transparent;
+}
+
+.dark .thumbnailButton {
+	background: rgba(255, 255, 255, 0.04);
+}
+
+.light .thumbnailButton {
+	background: #f5f8fc;
+}
+
+.thumbnailButton:hover {
+	transform: translateY(-2px);
+}
+
+.thumbnailActive {
+	border-color: #4d9de0;
+}
+
+.thumbnailImage {
+	@apply w-full object-cover block;
+	aspect-ratio: 4 / 3;
+}

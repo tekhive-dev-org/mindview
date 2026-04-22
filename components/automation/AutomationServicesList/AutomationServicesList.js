@@ -10,20 +10,7 @@ const SERVICES = [
 		description:
 			"Secure and automate estate gates with remote access, timing logic, and dependable operator systems.",
 	},
-	{
-		title: "Door automation",
-		image:
-			"/assets/images/control.jpg",
-		description:
-			"Enable sensor-driven and access-controlled door systems for residential and commercial spaces.",
-	},
-	{
-		title: "Industry automation",
-		image:
-			"https://images.unsplash.com/photo-1567789884554-0b844b597180?w=1200&q=80",
-		description:
-			"Control production lines, panel systems, and connected machinery with resilient engineering design.",
-	},
+	
 	{
 		title: "Revolving Doors",
 		image:
@@ -32,7 +19,7 @@ const SERVICES = [
 			"Install premium entrance automation that blends aesthetics, safety, and high-traffic flow control.",
 	},
 	{
-		title: "Advanced elevator",
+		title: "Elevators",
 		image:
 			"/assets/images/elevator2.webp",
 		description:
@@ -45,6 +32,34 @@ const SERVICES = [
 		description:
 			"Connect lighting, entertainment, security, and utilities into a seamless home control experience.",
 	},
+	{
+		title: "Sliding Doors",
+		image:
+			"/assets/images/sliding.jpeg",
+		description:
+			"Install automatic sliding door systems for retail entrances, hospitals, offices, and high-traffic access points.",
+	},
+	{
+		title: "Swing Gates",
+		image:
+			"/assets/images/swing.jpg",
+		description:
+			"Automate swing gate entry for residential estates and commercial properties with reliable motor systems.",
+	},
+	{
+		title: "Garage Doors",
+		image:
+			"/assets/images/garage.jpg",
+		description:
+			"Supply and install automated garage door systems with remote or access-card operation for homes and facilities.",
+	},
+	{
+		title: "Shutter Doors",
+		image:
+			"/assets/images/shutter.jpg",
+		description:
+			"Deploy motorised shutter door systems for warehouses, shops, and secured storage areas requiring controlled access.",
+	},
 ];
 
 export default function AutomationServicesList() {
@@ -53,15 +68,15 @@ export default function AutomationServicesList() {
 			<div className={styles.inner}>
 				<div className={styles.header}>
 					<h2 className={styles.title}>
-						Discover Some Of Our Projects In
+						Our Full Range Of
 						<br />
-						Seamless Automation
+						Automation Systems
 					</h2>
 					<p className={styles.description}>
 						Mindview designs and installs automation systems for homes,
-						commercial spaces, and industrial sites. Explore some of the
-						projects and environments where our automation work is already in
-						motion.
+						commercial spaces, and industrial sites — from sliding doors, swing
+						gates, and garage doors to smart home control and advanced elevator
+						systems.
 					</p>
 					<Link href="/contact" className={styles.viewAllBtn}>
 						Get a Quote

@@ -45,6 +45,48 @@ const PROJECTS = [
 		image:
 			"/assets/images/surveillance.jpg",
 	},
+	{
+		title: "Turnstiles",
+		description:
+			"Regulate pedestrian access at secured entry points with flip glass, full height, and tripod turnstile systems.",
+		image:
+			"/assets/images/turnstile.jpg",
+	},
+	{
+		title: "Walkthrough Metal Detectors",
+		description:
+			"Screen individuals at checkpoints with walk-through detection systems for malls, offices, and institutions.",
+		image:
+			"/assets/images/walkthrough.webp",
+	},
+	{
+		title: "Boom Barriers",
+		description:
+			"Automate vehicle entry lanes at car parks, estates, and facility gates with reliable boom barrier systems.",
+		image:
+			"/assets/images/boom.jpg",
+	},
+	{
+		title: "Hotel Card Locks",
+		description:
+			"Secure hotel rooms and restricted areas with programmable card lock systems for hospitality environments.",
+		image:
+			"/assets/images/hotel.jpg",
+	},
+	{
+		title: "Car Trackers",
+		description:
+			"Monitor vehicle location and movement in real time with GPS tracking systems for fleets and personal vehicles.",
+		image:
+			"/assets/images/tracker.jpg",
+	},
+	{
+		title: "Road Blockers & Tire Spikes",
+		description:
+			"Secure perimeters and vehicle entry lanes with heavy-duty road blockers and tire killer spike systems.",
+		image:
+			"/assets/images/spikes.webp",
+	},
 ];
 
 export default function SecurityProjects() {
@@ -53,15 +95,15 @@ export default function SecurityProjects() {
 			<div className={styles.inner}>
 				<div className={styles.header}>
 					<h2 className={styles.title}>
-						Discover Some Of Our Projects In
+						Our Full Range Of
 						<br />
-						Smart Security Installations
+						Security Products &amp; Installations
 					</h2>
 					<p className={styles.description}>
-						Mindview deploys practical security infrastructure for checkpoints,
-						buildings, campuses, offices, and controlled facilities. These are
-						some of the environments where our smart security installations are
-						already in operation.
+						Mindview supplies, installs, programs, and integrates all kinds of
+						access and security devices for homes, offices, hotels, campuses, and
+						controlled facilities — from turnstiles and metal detectors to boom
+						barriers, car trackers, and perimeter protection systems.
 					</p>
 					<Link href="/contact" className={styles.viewAllBtn}>
 						Get a Quote

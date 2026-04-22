@@ -16,17 +16,35 @@ export default function Partners({ label }) {
 			<p className={styles.partnersLabel}>
 				{label || "Companies We Partner With"}
 			</p>
-			<div className={styles.partnersLogos}>
-				{PARTNERS.map((p) => (
-					<Image
-						key={p.name}
-						src={p.icon}
-						alt={p.name}
-						width={120}
-						height={36}
-						className={styles.partnerIcon}
-					/>
-				))}
+			<div className={styles.marqueeViewport}>
+				<div className={styles.partnersTrack}>
+					{PARTNERS.map((partner) => (
+						<div key={partner.name} className={styles.partnerCard}>
+							<Image
+								src={partner.icon}
+								alt={partner.name}
+								width={120}
+								height={36}
+								className={styles.partnerIcon}
+							/>
+						</div>
+					))}
+					{PARTNERS.map((partner) => (
+						<div
+							key={`${partner.name}-duplicate`}
+							className={styles.partnerCard}
+							aria-hidden="true"
+						>
+							<Image
+								src={partner.icon}
+								alt=""
+								width={120}
+								height={36}
+								className={styles.partnerIcon}
+							/>
+						</div>
+					))}
+				</div>
 			</div>
 		</section>
 	);

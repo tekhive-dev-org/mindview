@@ -12,11 +12,11 @@ const NAV_LINKS = [
 		href: "/services",
 		children: [
 			{label: "All Services", href: "/services"},
-			{ label: "Engineering Services", href: "/engineering" },
 			{ label: "Automation Solutions", href: "/automation" },
+			{ label: "Energy Solutions", href: "/energy" },
+			{ label: "Engineering Services", href: "/engineering" },
 			{ label: "Security Systems", href: "/security" },
 			{ label: "Vertical Transport & Access", href: "/vertical-transport" },
-			{ label: "Energy Solutions", href: "/energy" },
 			// { label: "Consultancy & Integration", href: "/services#consultancy-integration" },
 		],
 	},

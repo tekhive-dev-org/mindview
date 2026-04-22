@@ -1,38 +1,130 @@
-/* ---- Hero Section ---- */
+/* ══════════════════════════════
+   Hero — full-bleed slideshow
+══════════════════════════════ */
 
 .hero {
-	@apply max-w-7xl mx-auto px-4;
+	position: relative;
+	overflow: hidden;
+	min-height: 100vh;
+	min-height: 100svh;
 	display: flex;
-	align-items: center;
-	padding-top: 48px;
-	padding-bottom: 64px;
+	flex-direction: column;
+}
+
+/* ── Slideshow layer ── */
+
+.slidesContainer {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+}
+
+.slide {
+	position: absolute;
+	inset: 0;
+	opacity: 0;
+	transition: opacity 1.4s ease-in-out;
+}
+
+.slideActive {
+	opacity: 1;
+}
+
+.slideImage {
+	object-fit: cover;
+	object-position: center;
+}
+
+/* Ken Burns zoom on the active slide image */
+.slideActive .slideImage {
+	animation: kenburns 6.5s ease-out forwards;
+}
+
+@keyframes kenburns {
+	from { transform: scale(1); }
+	to   { transform: scale(1.09); }
+}
+
+/* ── Dark directional overlay ── */
+
+.overlay {
+	position: absolute;
+	inset: 0;
+	/* Mobile: bottom-to-top gradient so text sitting at bottom is always readable */
+	background:
+		linear-gradient(
+			to top,
+			rgba(5, 13, 30, 0.88) 0%,
+			rgba(5, 13, 30, 0.807) 50%,
+			rgba(5, 13, 30, 0.18) 100%
+		);
+}
+
+/* Desktop: switch to left-to-right + bottom vignette for the side-by-side layout */
+@screen laptop {
+	.overlay {
+		background:
+			linear-gradient(
+				to right,
+				rgba(5, 13, 30, 0.82) 0%,
+				rgba(5, 13, 30, 0.58) 50%,
+				rgba(5, 13, 30, 0.22) 100%
+			),
+			linear-gradient(
+				to top,
+				rgba(5, 13, 30, 0.55) 0%,
+				transparent 40%
+			);
+	}
+}
+
+/* ── Content wrapper ── */
+
+.heroInner {
+	@apply max-w-7xl mx-auto px-4 w-full relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 36px;
+	flex: 1;
+	padding-top: 20px;
+	padding-bottom: 52px;
 	min-height: calc(100vh - 77px);
 	min-height: calc(100svh - 77px);
 }
 
-
-
-.heroGrid {
-	@apply grid gap-10 items-center text-center;
-	grid-template-columns: 1fr;
+.heroContent {
+	max-width: 640px;
+	text-align: center;
+	margin: 0 auto;
 }
 
 @screen laptop {
-	.heroGrid {
-		grid-template-columns: 1fr 1fr;
-		gap: 56px;
+	.heroContent {
 		text-align: left;
+		margin: 0;
 	}
 }
 
+/* ── Badge ── */
+
 .heroBadge {
-	@apply inline-block text-xs font-semibold tracking-wide text-brand-blue rounded-full mb-6 shadow-neu-sm;
+	@apply inline-block text-xs font-semibold tracking-wide rounded-full mb-6;
 	padding: 10px 22px;
-	background: #ffffff;
+	color: #c9e0f8;
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
 }
 
+/* ── Headline ── */
+
 .heroTitle {
-	@apply text-[37px] font-extrabold tracking-tight text-navy leading-tight;
+	@apply text-[27px] font-extrabold tracking-tight leading-tight;
+	color: #ffffff;
+	/* text-shadow: 0 2px 24px rgba(0, 0, 0, 0.4); */
 }
 
 @screen laptop {
@@ -42,11 +134,17 @@
 }
 
 .heroHighlight {
-	@apply text-brand-blue;
+	/* background: linear-gradient(135deg, #008cff 0%, #307fd8 100%); */
+	-webkit-background-clip: text;
+	/* -webkit-text-fill-color: transparent; */
+	/* background-clip: text; */
 }
 
+/* ── Description ── */
+
 .heroDesc {
-	@apply mt-5 text-sm text-navy-400 font-normal leading-relaxed mx-auto;
+	@apply mt-5 text-sm mobile:text-[13px] font-normal leading-relaxed mx-auto;
+	color: rgba(255, 255, 255, 0.82);
 	max-width: 520px;
 }
 
@@ -56,37 +154,32 @@
 	}
 }
 
-.heroCtas {
-	@apply flex justify-center items-center gap-4 mt-8;
-}
+/* ── CTAs ── */
 
-@screen tablet {
-	.heroCtas {
-		@apply flex-row justify-center;
-	}
+.heroCtas {
+	@apply flex flex-wrap justify-center items-center gap-4 mt-8;
 }
 
 @screen laptop {
 	.heroCtas {
-		@apply flex-row justify-start;
+		@apply justify-start;
 	}
 }
 
 .ctaPrimary {
 	@apply bg-brand-blue text-white font-semibold text-sm transition-all duration-300;
-	padding: 14px 20px;
+	padding: 14px 28px;
 	border-radius: 999px;
-	box-shadow: 6px 6px 14px rgba(0, 79, 156, 0.35), -4px -4px 10px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 8px 24px rgba(0, 79, 156, 0.5);
 }
 
 .ctaPrimary:hover {
 	transform: translateY(-2px);
-	box-shadow: 8px 8px 18px rgba(0, 79, 156, 0.45), -6px -6px 14px rgba(255, 255, 255, 0.6);
+	box-shadow: 0 14px 32px rgba(0, 79, 156, 0.6);
 }
 
 .ctaPrimary:active {
-	transform: translateY(0.5px);
-	box-shadow: inset 4px 4px 8px rgba(0, 40, 80, 0.4), inset -4px -4px 8px rgba(80, 150, 220, 0.3);
+	transform: translateY(1px);
 }
 
 .ctaPrimary:focus-visible {
@@ -94,56 +187,88 @@
 }
 
 .ctaSecondary {
-	@apply text-navy font-semibold text-sm transition-all duration-300;
-	padding: 14px 20px;
+	@apply font-semibold text-sm transition-all duration-300;
+	padding: 13px 28px;
 	border-radius: 999px;
-	border: 1.5px solid #b0bdd6;
-	background: #ffffff;
-	box-shadow: 5px 5px 10px rgb(150 160 185 / 0.6), -5px -5px 10px rgba(255, 255, 255, 0.55);
+	color: #ffffff;
+	background: rgba(255, 255, 255, 0.08);
+	border: 1.5px solid rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
 }
 
 .ctaSecondary:hover {
-	@apply text-brand-blue;
-	border-color: #004f9c;
+	background: rgba(255, 255, 255, 0.16);
+	border-color: rgba(255, 255, 255, 0.7);
 	transform: translateY(-2px);
-	box-shadow: 7px 7px 14px rgb(150 160 185 / 0.7), -7px -7px 14px rgba(255, 255, 255, 0.65);
 }
 
-/* Hero image area */
+/* ── Stats pill ── */
 
-.heroImageWrapper {
-	@apply relative;
+.heroStats {
+	@apply flex justify-center mt-10;
 }
 
-.heroImage {
-	@apply w-full mobile:!min-h-full overflow-hidden shadow-neu object-cover;
-	border-radius: 14px;
-	display: block;
-	min-height: 556px;
-	height: 100%;
-}
-
-.heroStatsBadge {
-	@apply absolute flex flex-col items-center shadow-neu-sm;
-	bottom: 24px;
-	left: -100px;
-	padding: 20px 28px;
-	background: #ffffff;
-	border-radius: 10px;
-}
-
-@screen mobile {
-	.heroStatsBadge {
-		bottom: -16px;
-		left: 10px;
-		padding: 14px 20px;
+@screen laptop {
+	.heroStats {
+		@apply justify-start;
 	}
 }
 
+.heroStatsBadge {
+	@apply inline-flex flex-col items-center;
+	padding: 16px 28px;
+	border-radius: 14px;
+	background: rgba(255, 255, 255, 0.09);
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	backdrop-filter: blur(14px);
+	-webkit-backdrop-filter: blur(14px);
+}
+
 .statsNumber {
-	@apply text-3xl font-extrabold text-brand-blue mb-1;
+	@apply text-3xl font-extrabold mb-1;
+	color: #4d9de0;
 }
 
 .statsLabel {
-	@apply text-xs text-navy-400 font-medium leading-tight text-center;
+	@apply text-xs font-medium leading-tight text-center;
+	color: rgba(255, 255, 255, 0.75);
 }
+
+/* ── Slide dot indicators ── */
+
+.dotsRow {
+	@apply flex items-center justify-center gap-2;
+}
+
+@screen laptop {
+	.dotsRow {
+		@apply justify-start;
+	}
+}
+
+.dot {
+	height: 8px;
+	width: 8px;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.3);
+	transition: all 0.3s ease;
+	border: none;
+}
+
+.dotActive {
+	width: 28px;
+	background: #4d9de0;
+}
+
+/* ── Reduced motion ── */
+
+@media (prefers-reduced-motion: reduce) {
+	.slide {
+		transition: none;
+	}
+	.slideActive .slideImage {
+		animation: none;
+	}
+}
+

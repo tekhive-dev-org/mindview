@@ -13,7 +13,7 @@ export default function Automation() {
 				<title>Automation Solutions — Mindview Digital Solutions</title>
 				<meta
 					name="description"
-					content="Smart automation solutions for homes and businesses — home automation, industrial automation, gate and door systems, and more."
+					content="Mindview automation solutions for homes, offices, and industrial sites — automatic gates, sliding doors, swing gates, garage doors, shutter doors, revolving doors, smart home systems, and more."
 				/>
 			</Head>
 

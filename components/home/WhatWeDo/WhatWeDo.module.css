@@ -27,7 +27,7 @@
 }
 
 .title {
-	@apply text-[28px] font-extrabold tracking-tight text-navy leading-tight mb-5;
+	@apply text-[25px] font-extrabold tracking-tight text-navy leading-tight mb-5;
 }
 
 @screen laptop {
@@ -38,7 +38,7 @@
 
 .subtitle {
 	@apply text-sm text-navy-400 font-normal leading-relaxed mx-auto;
-	max-width: 640px;
+	max-width: 860px;
 }
 
 /* ── Service Rows ── */

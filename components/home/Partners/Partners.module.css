@@ -12,21 +12,47 @@
 	@apply text-sm text-navy-300 font-medium mb-8;
 }
 
-.partnersLogos {
-	@apply flex flex-wrap items-center justify-center gap-6;
+.marqueeViewport {
+	position: relative;
+	overflow: hidden;
+	padding: 8px 0;
+	mask-image: linear-gradient(
+		to right,
+		transparent 0,
+		black 8%,
+		black 92%,
+		transparent 100%
+	);
+	-webkit-mask-image: linear-gradient(
+		to right,
+		transparent 0,
+		black 8%,
+		black 92%,
+		transparent 100%
+	);
 }
 
-@screen laptop {
-	.partnersLogos {
-		@apply gap-6;
-	}
+.partnersTrack {
+	@apply flex items-center;
+	width: max-content;
+	gap: 24px;
+	animation: partners-marquee 24s linear infinite;
+}
+
+.marqueeViewport:hover .partnersTrack {
+	animation-play-state: paused;
+}
+
+.partnerCard {
+	flex: 0 0 auto;
 }
 
 .partnerIcon {
-	@apply select-none transition-all duration-300 ;
+	@apply select-none transition-all duration-300;
 	object-fit: contain;
-	
+	display: block;
 	width: auto;
+	height: 64px;
 	filter: grayscale(0);
 	opacity: 0.85;
 	padding: 14px 20px;
@@ -39,8 +65,23 @@
 
 .partnerIcon:hover {
 	opacity: 1;
-	/* transform: translateY(-3px); */
 	box-shadow:
 		6px 6px 14px rgb(150 160 185 / 0.3),
 		-6px -6px 14px rgba(255, 255, 255, 0.75);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.partnersTrack {
+		animation: none;
+	}
+}
+
+@keyframes partners-marquee {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(calc(-50% - 12px));
+	}
 }

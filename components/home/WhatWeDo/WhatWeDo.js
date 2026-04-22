@@ -11,12 +11,13 @@ const SERVICES = [
 		icon: <SecurityRoundedIcon className={styles.serviceTitleIcon} />,
 		title: "Security Systems",
 		image: "/assets/images/security.jpg",
-		desc: "We design and install layered security systems for homes, offices, facilities, and industrial environments where visibility, access control, and response speed matter.",
+		desc: "We supply, install, program, and integrate layered security systems for homes, offices, hotels, checkpoints, and industrial environments where visibility, controlled access, and response speed matter.",
 		reverse: false,
 		bullets: [
-			"CCTV and IP surveillance systems with live monitoring, recording, and incident visibility.",
-			"Access control setups using biometrics, RFID, intercoms, and controlled entry points.",
-			"Integrated alarm, detection, and perimeter systems tailored to real site conditions.",
+			"CCTV and IP camera systems with live monitoring, recording, and incident visibility.",
+			"Access control, access software, hotel card locks, and EAS systems for managed entry and loss prevention.",
+			"Turnstiles, luggage scanners, walkthrough metal detectors, boom barriers, and checkpoint screening systems.",
+			"Bollards, road blockers, tire spikes, and car trackers for perimeter and vehicle security.",
 		],
 		href: "/security",
 	},
@@ -24,12 +25,13 @@ const SERVICES = [
 		icon: <SmartToyRoundedIcon className={styles.serviceTitleIcon} />,
 		title: "Automation Systems",
 		image: "/assets/images/automation.webp",
-		desc: "Our automation work improves control, convenience, and operational efficiency across residential, commercial, and industrial environments.",
+		desc: "Our automation work improves movement, convenience, and operational efficiency across residential, commercial, hospitality, and industrial environments.",
 		reverse: true,
 		bullets: [
-			"Smart home and building automation for lighting, climate, access, and coordinated control.",
-			"Industrial automation support for process improvement, monitoring, and dependable operations.",
-			"Gate, door, and entrance automation for secure and efficient movement across sites.",
+			"Automatic gates, sliding doors, swing gates, and entrance automation for secure daily access.",
+			"Garage doors, shutter doors, and door operators integrated with remotes, sensors, and access devices.",
+			"Smart home and building automation for lighting, climate, utilities, security, and coordinated control.",
+			"System programming and integration for connected controls, operators, and mobile visibility.",
 		],
 		href: "/automation",
 	},
@@ -37,11 +39,12 @@ const SERVICES = [
 		icon: <EngineeringRoundedIcon className={styles.serviceTitleIcon} />,
 		title: "Engineering Support",
 		image: "/assets/images/engineering.png",
-		desc: "From engineering support to energy and vertical transport coordination, we help clients deliver technical systems that are practical to install, run, and maintain.",
+		desc: "From engineering support to energy and vertical transport coordination, we help clients deliver technical systems that are practical to install, operate, and maintain across facilities.",
 		reverse: false,
 		bullets: [
-			"Mechanical, electrical, and instrumentation support for facilities and live operations.",
+			"Passenger and home elevator solutions with vertical transport planning, modernization, and integration.",
 			"Solar energy and backup power systems designed around reliability and site demand.",
+			"Field maintenance, technical coordination, and utility support for dependable site performance.",
 			"Vertical transport and access infrastructure planned for safe daily use and uptime.",
 		],
 		href: "/engineering",
@@ -60,10 +63,12 @@ export default function WhatWeDo() {
 						Install, And Support
 					</h2>
 					<p className={styles.subtitle}>
-						Mindview delivers practical security, automation, engineering, energy,
-						and vertical transport solutions for residential, commercial, and
-						industrial environments. Our work is built around site conditions,
-						reliability, safe execution, and long-term performance after handover.
+						Mindview delivers practical security, automation, access-device,
+						engineering, energy, and vertical transport solutions for residential,
+						commercial, hospitality, retail, and industrial environments. Our work
+						covers supply, installation, programming, and integration, with a
+						focus on site conditions, reliability, safe execution, and long-term
+						performance after handover.
 					</p>
 				</div>
 

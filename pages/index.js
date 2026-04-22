@@ -6,6 +6,7 @@ import Projects from "@/components/home/Projects/Projects";
 import ExpertsBanner from "@/components/home/ExpertsBanner/ExpertsBanner";
 import WhyChooseUs from "@/components/home/WhyChooseUs/WhyChooseUs";
 import AboutTestimonials from "@/components/about/AboutTestimonials/AboutTestimonials";
+import RecentWorkCarousel from "@/components/shared/RecentWorkCarousel/RecentWorkCarousel";
 
 export default function Home() {
 	return (
@@ -14,13 +15,14 @@ export default function Home() {
 				<title>Mindview — From Mindview To Solutions</title>
 				<meta
 					name="description"
-					content="Mindview digital solutions — where innovation meets opportunity. We bridge the gap."
+					content="Mindview delivers integrated security, automation, access control, screening, energy, and elevator solutions for homes, businesses, hotels, and industrial facilities."
 				/>
 			</Head>
 
 			<Hero />
 			<WhatWeDo />
 			<Projects />
+			<RecentWorkCarousel />
 			<ExpertsBanner />
 			<WhyChooseUs />
 			<AboutTestimonials />

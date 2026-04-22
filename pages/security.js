@@ -13,7 +13,7 @@ export default function Security() {
 				<title>Security Systems — Mindview Digital Solutions</title>
 				<meta
 					name="description"
-					content="Explore Mindview security services across CCTV, surveillance, luggage scanners, access control, bollards, and smart security installations for commercial and industrial facilities."
+					content="Mindview is a professional security, safety, and automation technology company. We supply, install, program, and integrate all kinds of access devices — CCTV, turnstiles, boom barriers, access control, hotel card locks, car trackers, metal detectors, luggage scanners, bollards, road blockers, and more."
 				/>
 			</Head>
 

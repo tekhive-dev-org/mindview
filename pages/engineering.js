@@ -20,7 +20,7 @@ export default function Engineering() {
 
 			<ServicesHero />
 			<ServicesEngineeringBanner />
-			<ServicesItems />
+			{/* <ServicesItems /> */}
 			<ServicesStats />
 			<ServicesFeatures />
 			<ServicesProcess />
