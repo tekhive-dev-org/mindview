@@ -41,7 +41,7 @@ export default function AutomationBooking() {
 					<span className={styles.pill}>What we offer</span>
 					<h2 className={styles.title}>Stressfree Aids Designed For You</h2>
 					<p className={styles.subtitle}>
-						Mindview delivers reliable automation systems for homes and
+						Mindview Automation delivers reliable automation systems for homes and
 						businesses, combining modern hardware, practical control design, and
 						clean user experiences.
 					</p>

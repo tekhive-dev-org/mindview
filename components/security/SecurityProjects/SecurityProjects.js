@@ -100,7 +100,7 @@ export default function SecurityProjects() {
 						Security Products &amp; Installations
 					</h2>
 					<p className={styles.description}>
-						Mindview supplies, installs, programs, and integrates all kinds of
+						Mindview Automation supplies, installs, programs, and integrates all kinds of
 						access and security devices for homes, offices, hotels, campuses, and
 						controlled facilities — from turnstiles and metal detectors to boom
 						barriers, car trackers, and perimeter protection systems.

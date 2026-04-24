@@ -45,7 +45,7 @@ export default function ServicesFeatures() {
 					Engineering Services
 				</h2>
 				<p className={styles.desc}>
-					Mindview engineering support is structured to keep assets stable,
+					Mindview Automation engineering support is structured to keep assets stable,
 					improve reliability, and help facilities respond faster to operating
 					issues without sacrificing safety or execution quality.
 				</p>

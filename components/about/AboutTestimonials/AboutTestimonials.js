@@ -4,13 +4,13 @@ import styles from "./AboutTestimonials.module.css";
 
 const TESTIMONIALS = [
 	{
-		text: "Mindview helped us consolidate surveillance and access control into one practical setup. The installation was clean, the team was responsive, and the final system fits how our site actually operates.",
+		text: "Mindview Automation helped us consolidate surveillance and access control into one practical setup. The installation was clean, the team was responsive, and the final system fits how our site actually operates.",
 		author: "Operations Manager",
 		role: "Commercial security project",
 		avatar: "/assets/test/1.jpg",
 	},
 	{
-		text: "The automation upgrade made daily control much easier for our team. Mindview focused on what we needed, not on adding unnecessary features that would complicate operations.",
+		text: "The automation upgrade made daily control much easier for our team. Mindview Automation focused on what we needed, not on adding unnecessary features that would complicate operations.",
 		author: "Facility Supervisor",
 		role: "Automation systems project",
 		avatar: "/assets/test/2.avif",
@@ -22,13 +22,13 @@ const TESTIMONIALS = [
 		avatar: "/assets/test/3.webp",
 	},
 	{
-		text: "Our solar and backup setup is far more dependable now. Mindview assessed the real load properly and delivered a solution that supports critical use without constant power anxiety.",
+		text: "Our solar and backup setup is far more dependable now. Mindview Automation assessed the real load properly and delivered a solution that supports critical use without constant power anxiety.",
 		author: "Property Owner",
 		role: "Energy solutions project",
 		avatar: "/assets/test/4.jpg",
 	},
 	{
-		text: "Mindview approached the lift work with attention to safety, finish quality, and long-term performance. The result feels reliable in daily use and the handover process was handled professionally.",
+		text: "Mindview Automation approached the lift work with attention to safety, finish quality, and long-term performance. The result feels reliable in daily use and the handover process was handled professionally.",
 		author: "Site Administrator",
 		role: "Vertical transport project",
 		avatar: "/assets/test/5.jpg",
@@ -82,7 +82,7 @@ export default function AboutTestimonials() {
 						<p className={styles.subtitle}>
 							We deliver practical technology systems that are thoughtfully
 							designed, carefully installed, and dependable after handover. Here
-							is what clients say after working with the Mindview team.
+							is what clients say after working with the Mindview Automation team.
 						</p>
 
 						<div className={styles.ratingBlock}>
@@ -117,7 +117,7 @@ export default function AboutTestimonials() {
 										<path d={STAR_PATH} fill="url(#half)" />
 									</svg>
 								</div>
-								<p className={styles.happyCount}><strong>Client feedback</strong> across core Mindview service lines</p>
+								<p className={styles.happyCount}><strong>Client feedback</strong> across core Mindview Automation service lines</p>
 								<p className={styles.ratingsCount}><strong>Security, automation, engineering, energy, and lifts</strong></p>
 							</div>
 						</div>

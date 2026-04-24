@@ -18,7 +18,7 @@ export default function ContactHero() {
 					Request A Project Quote
 				</h1>
 				<p className={styles.heroDesc}>
-					Share your project scope, timeline, and service needs so the Mindview
+					Share your project scope, timeline, and service needs so the Mindview Automation
 					team can review the opportunity and respond with the right next steps
 					for delivery, site assessment, or commercial discussion.
 				</p>

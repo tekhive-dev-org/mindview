@@ -13,7 +13,7 @@ export default function ExpertsBanner() {
 					Not Generic Specifications
 				</h2>
 				<p className={styles.expertsDesc}>
-					Mindview approaches every project with technical review, careful system
+					Mindview Automation approaches every project with technical review, careful system
 					selection, disciplined installation, and practical after-support so the
 					final result works reliably in the environment it was built for.
 				</p>

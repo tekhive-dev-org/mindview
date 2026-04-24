@@ -20,7 +20,7 @@ const OFFERINGS = [
 	{
 		title: "Battery Backup And Inverter Integration",
 		description:
-			"Mindview integrates energy storage and inverter systems that keep homes, offices, and critical circuits powered during outages without the noise and fuel dependency of constant generator use.",
+			"Mindview Automation integrates energy storage and inverter systems that keep homes, offices, and critical circuits powered during outages without the noise and fuel dependency of constant generator use.",
 		bullets: [
 			"Hybrid inverter configuration",
 			"Battery bank sizing and installation",

@@ -9,10 +9,10 @@ export default function Services() {
 	return (
 		<>
 			<Head>
-				<title>All Services — Mindview Digital Solutions</title>
+				<title>All Services — Mindview Automation</title>
 				<meta
 					name="description"
-					content="Explore all Mindview services across engineering, automation, security systems, vertical transport, energy solutions, and integration support."
+					content="Explore all Mindview Automation services across engineering, automation, security systems, vertical transport, energy solutions, and integration support."
 				/>
 			</Head>
 
@@ -21,7 +21,7 @@ export default function Services() {
 			<RecentWorkCarousel
 				variant="light"
 				title="Recent Work Across Our Service Lines"
-				description="These recent project snapshots show how Mindview delivers security systems, automation, access devices, and integrated engineering support across different client environments."
+				description="These recent project snapshots show how Mindview Automation delivers security systems, automation, access devices, and integrated engineering support across different client environments."
 				ctaLabel="Request Similar Work"
 			/>
 			<ServicesProcess />

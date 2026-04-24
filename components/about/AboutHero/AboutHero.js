@@ -14,12 +14,12 @@ export default function AboutHero() {
 			/>
 			<div className={styles.heroOverlay} />
 			<div className={styles.heroInner}>
-				<span className={styles.heroBadge}>About Mindview</span>
+				<span className={styles.heroBadge}>About Mindview Automation</span>
 				<h1 className={styles.heroTitle}>
 					A Technical Partner Focused On Practical Systems Delivery
 				</h1>
 				<p className={styles.heroDesc}>
-					Mindview Digital Solutions delivers security, automation,
+					Mindview Automation delivers security, automation,
 					engineering, energy, and vertical transport solutions with a strong
 					focus on installation quality, reliability, and long-term support for
 					real operating environments.

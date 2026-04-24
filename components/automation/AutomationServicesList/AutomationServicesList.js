@@ -73,7 +73,7 @@ export default function AutomationServicesList() {
 						Automation Systems
 					</h2>
 					<p className={styles.description}>
-						Mindview designs and installs automation systems for homes,
+						Mindview Automation designs and installs automation systems for homes,
 						commercial spaces, and industrial sites — from sliding doors, swing
 						gates, and garage doors to smart home control and advanced elevator
 						systems.

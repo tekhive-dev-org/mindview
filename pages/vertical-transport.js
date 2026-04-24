@@ -10,10 +10,10 @@ export default function VerticalTransport() {
 	return (
 		<>
 			<Head>
-				<title>Vertical Transport & Access — Mindview Digital Solutions</title>
+				<title>Vertical Transport & Access — Mindview Automation</title>
 				<meta
 					name="description"
-					content="Explore Mindview vertical transport and access solutions across elevators, escalators, moving walkways, lift modernization, and access infrastructure for commercial and public spaces."
+					content="Explore Mindview Automation vertical transport and access solutions across elevators, escalators, moving walkways, lift modernization, and access infrastructure for commercial and public spaces."
 				/>
 			</Head>
 

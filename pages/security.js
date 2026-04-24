@@ -10,10 +10,10 @@ export default function Security() {
 	return (
 		<>
 			<Head>
-				<title>Security Systems — Mindview Digital Solutions</title>
+				<title>Security Systems — Mindview Automation</title>
 				<meta
 					name="description"
-					content="Mindview is a professional security, safety, and automation technology company. We supply, install, program, and integrate all kinds of access devices — CCTV, turnstiles, boom barriers, access control, hotel card locks, car trackers, metal detectors, luggage scanners, bollards, road blockers, and more."
+					content="Mindview Automation is a professional security, safety, and automation technology company. We supply, install, program, and integrate all kinds of access devices — CCTV, turnstiles, boom barriers, access control, hotel card locks, car trackers, metal detectors, luggage scanners, bollards, road blockers, and more."
 				/>
 			</Head>
 

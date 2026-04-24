@@ -60,7 +60,7 @@ export default function Projects() {
 						</span>
 					</h2>
 					<p className={styles.projectsDesc}>
-					These case-study snapshots reflect Mindview work across engineering
+					These case-study snapshots reflect Mindview Automation work across engineering
 					support, security systems, solar energy, surveillance, and vertical
 					transport. Each project is approached around site needs,
 					installation quality, system reliability, and long-term use.

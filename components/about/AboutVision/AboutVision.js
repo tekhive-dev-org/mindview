@@ -4,7 +4,7 @@ import styles from "./AboutVision.module.css";
 const BLOCKS = [
   {
     title: "Practical Recommendations From The Start",
-    text: "Every Mindview project begins with a clear understanding of site conditions, usage demands, and the systems that already exist. That helps us recommend solutions that are realistic to install, operate, and maintain.",
+    text: "Every Mindview Automation project begins with a clear understanding of site conditions, usage demands, and the systems that already exist. That helps us recommend solutions that are realistic to install, operate, and maintain.",
     bullets: [
       "Recommendations shaped by site constraints and operating requirements",
       "Technical planning that prioritizes safety, uptime, and maintainability",
@@ -15,7 +15,7 @@ const BLOCKS = [
   },
   {
     title: "Integrated Expertise Across Critical Systems",
-    text: "Mindview works across security, automation, engineering support, energy, and vertical transport, giving clients one team that understands how technical systems interact across a property or facility.",
+    text: "Mindview Automation works across security, automation, engineering support, energy, and vertical transport, giving clients one team that understands how technical systems interact across a property or facility.",
     bullets: [
       "Cross-functional delivery across multiple infrastructure categories",
       "Better coordination between design, installation, and support teams",
@@ -49,7 +49,7 @@ export default function AboutVision() {
       <div className={styles.visionInner}>
         <div className={styles.header}>
           <span className={styles.pill}>How we work</span>
-          <h2 className={styles.title}>The Standards Behind Every Mindview Project</h2>
+          <h2 className={styles.title}>The Standards Behind Every Mindview Automation Project</h2>
           <p className={styles.subtitle}>
             The same pattern drives our work across service lines: understand the
             environment, recommend the right fit, execute carefully, and support

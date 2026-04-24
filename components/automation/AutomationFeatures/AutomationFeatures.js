@@ -45,7 +45,7 @@ export default function AutomationFeatures() {
 					Your Comfortability
 				</h2>
 				<p className={styles.desc}>
-					Mindview combines practical engineering, installation quality, and
+					Mindview Automation combines practical engineering, installation quality, and
 					user-friendly control design to make automation dependable in real
 					living and working environments.
 				</p>

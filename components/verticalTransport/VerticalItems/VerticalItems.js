@@ -58,7 +58,7 @@ export default function VerticalItems() {
 						Vertical Transport Systems
 					</h2>
 					<p className={styles.description}>
-						Mindview vertical transport work supports lifts, escalators,
+						Mindview Automation vertical transport work supports lifts, escalators,
 						modernization programs, accessibility systems, and service access for
 						properties where safe movement and reliable performance are essential.
 					</p>

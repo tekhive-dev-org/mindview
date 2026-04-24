@@ -55,7 +55,7 @@ export default function SecurityDetails() {
 					<span className={styles.pill}>What we offer</span>
 					<h2 className={styles.title}>Providing Runtime Security Always</h2>
 					<p className={styles.subtitle}>
-						Mindview builds security solutions for sites that need dependable
+						Mindview Automation builds security solutions for sites that need dependable
 						visibility, controlled access, and equipment that performs under
 						real daily operating conditions.
 					</p>

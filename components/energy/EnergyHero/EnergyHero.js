@@ -22,7 +22,7 @@ export default function EnergyHero() {
           <div className={styles.heroDescWrap}>
             <p className={styles.heroDesc}>
               From rooftop solar and inverter backup to hybrid systems for
-              homes, offices, and commercial facilities, Mindview builds
+              homes, offices, and commercial facilities, Mindview Automation builds
               practical energy infrastructure that reduces grid dependence and
               protects critical loads. We assess your demand, recommend the
               right generation and storage mix, and deliver installations built
@@ -49,7 +49,7 @@ export default function EnergyHero() {
                 <Image
                   key={reviewer}
                   src={reviewer}
-                  alt="Mindview energy solutions client"
+                  alt="Mindview Automation energy solutions client"
                   className={styles.avatar}
                   width={46}
                   height={46}

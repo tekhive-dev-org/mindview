@@ -11,7 +11,7 @@ const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KE
 
 function getResponseEmailConfig() {
 	return {
-		from: process.env.RESEND_FROM_EMAIL || "Mindview <quotes@mindviewautomation.com>",
+		from: process.env.RESEND_FROM_EMAIL || "Mindview Automation <quotes@mindviewautomation.com>",
 		to: process.env.RESEND_QUOTE_TO_EMAIL || "mindviewauto@gmail.com",
 	};
 }

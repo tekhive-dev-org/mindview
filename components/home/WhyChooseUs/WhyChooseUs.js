@@ -40,7 +40,7 @@ export default function WhyChooseUs() {
 	return (
 		<section className={styles.whyChoose}>
 			<h2 className={styles.whyChooseTitle}>
-				Why Teams Choose Mindview
+				Why Teams Choose Mindview Automation
 			</h2>
 			<p className={styles.whyChooseSubtitle}>
 				We focus on technical fit, disciplined delivery, and dependable support

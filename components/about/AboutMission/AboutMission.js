@@ -15,7 +15,7 @@ export default function AboutMission() {
 					<span className={styles.pill}>Who we are</span>
 					<h2 className={styles.title}>Built Around Delivery Quality And Site Reality</h2>
 					<p className={styles.subtitle}>
-						Mindview works as a delivery partner for clients that need more than
+						Mindview Automation works as a delivery partner for clients that need more than
 						generic recommendations. We plan around operating conditions,
 						installation quality, maintainability, and how each system will
 						perform after handover.
@@ -37,7 +37,7 @@ export default function AboutMission() {
 					</div>
 
 					<div className={styles.content}>
-						<h3 className={styles.cardTitle}>How Mindview Approaches Every Project</h3>
+						<h3 className={styles.cardTitle}>How Mindview Automation Approaches Every Project</h3>
 						<p className={styles.cardText}>
 							Our team combines engineering support, coordinated execution, and
 							cross-system thinking to deliver technical solutions that fit the

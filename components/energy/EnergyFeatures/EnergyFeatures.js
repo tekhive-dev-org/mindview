@@ -9,7 +9,7 @@ const FEATURES = [
 	{
 		icon: "02",
 		title: "Solar and storage integration",
-		desc: "Mindview combines panels, inverters, batteries, and protection devices into systems that are practical to run and maintain.",
+		desc: "Mindview Automation combines panels, inverters, batteries, and protection devices into systems that are practical to run and maintain.",
 	},
 	{
 		icon: "03",
@@ -45,7 +45,7 @@ export default function EnergyFeatures() {
 					Energy Systems For You
 				</h2>
 				<p className={styles.desc}>
-					Mindview energy solutions are structured to improve power reliability,
+					Mindview Automation energy solutions are structured to improve power reliability,
 					reduce avoidable downtime, and give homes and facilities a clearer path
 					to stable long-term energy performance.
 				</p>

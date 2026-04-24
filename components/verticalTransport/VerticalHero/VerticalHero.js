@@ -21,7 +21,7 @@ export default function VerticalHero() {
           </h1>
           <div className={styles.heroDescWrap}>
             <p className={styles.heroDesc}>
-              Mindview provides elevators, escalators, moving walkways, freight
+              Mindview Automation provides elevators, escalators, moving walkways, freight
               lifts, and access infrastructure for buildings where passenger
               movement, accessibility, and uptime matter every day. We help
               clients plan, install, modernize, and maintain systems that move
@@ -48,7 +48,7 @@ export default function VerticalHero() {
                 <Image
                   key={reviewer}
                   src={reviewer}
-                  alt="Mindview vertical transport client"
+                  alt="Mindview Automation vertical transport client"
                   className={styles.avatar}
                   width={46}
                   height={46}

@@ -6,9 +6,9 @@ export const BLOG_POSTS = [
 		slug: "designing-smarter-security-rollouts",
 		title: "Designing Smarter Security Rollouts for Growing Facilities",
 		excerpt:
-			"Short security projects fail when planning stops at hardware. This note breaks down how Mindview scopes access control, camera coverage, power backup, and user training together so deployments stay reliable after handover.",
+			"Short security projects fail when planning stops at hardware. This note breaks down how Mindview Automation scopes access control, camera coverage, power backup, and user training together so deployments stay reliable after handover.",
 		category: "Security Systems",
-		author: "Mindview Editorial",
+		author: "Mindview Automation Editorial",
 		datePublished: "2026-04-18",
 		readTime: "3 min read",
 		image: "/assets/images/security.jpg",
@@ -19,7 +19,7 @@ export const BLOG_POSTS = [
 		slug: "automation-that-removes-friction",
 		title: "Automation That Removes Friction Instead of Adding Complexity",
 		excerpt:
-			"Good automation should simplify repetitive work, tighten response times, and make control clearer. This short article explains how Mindview prioritizes operator experience, maintenance access, and measurable efficiency gains in every automation brief.",
+			"Good automation should simplify repetitive work, tighten response times, and make control clearer. This short article explains how Mindview Automation prioritizes operator experience, maintenance access, and measurable efficiency gains in every automation brief.",
 		category: "Automation Solutions",
 		author: "Chidi British",
 		datePublished: "2026-04-14",
@@ -47,7 +47,7 @@ export const BLOG_POSTS = [
 		excerpt:
 			"Power resilience is not only about adding storage or an inverter. This journal entry covers load profiling, critical circuit mapping, runtime expectations, and maintenance planning so backup systems actually support operations when they are needed.",
 		category: "Energy Solutions",
-		author: "Mindview Editorial",
+		author: "Mindview Automation Editorial",
 		datePublished: "2026-04-05",
 		readTime: "3 min read",
 		image: "/assets/images/storage.jpg",
@@ -57,7 +57,7 @@ export const BLOG_POSTS = [
 		slug: "engineering-scopes-that-age-well",
 		title: "Engineering Scopes That Age Well After Installation",
 		excerpt:
-			"The strongest engineering scopes account for service access, spare parts, future expansion, and documentation from day one. Here is how Mindview frames deliverables so systems remain practical long after project closeout.",
+			"The strongest engineering scopes account for service access, spare parts, future expansion, and documentation from day one. Here is how Mindview Automation frames deliverables so systems remain practical long after project closeout.",
 		category: "Engineering Services",
 		author: "Kelvin Esho",
 		datePublished: "2026-03-29",
@@ -71,7 +71,7 @@ export const BLOG_POSTS = [
 		excerpt:
 			"Solar systems underperform when cleaning cycles, battery health checks, and connection inspections are ignored. This short checklist helps operators keep renewable systems safer, cleaner, and closer to expected output.",
 		category: "Energy Solutions",
-		author: "Mindview Editorial",
+		author: "Mindview Automation Editorial",
 		datePublished: "2026-03-21",
 		readTime: "2 min read",
 		image: "/assets/images/solar-maintenance.jpg",
@@ -107,7 +107,7 @@ export const BLOG_POSTS = [
 		excerpt:
 			"Control rooms need clarity, serviceability, and enough capacity for tomorrow's integrations. We summarize the layout, visibility, power planning, and network considerations that keep command spaces useful over time.",
 		category: "Automation Solutions",
-		author: "Mindview Editorial",
+		author: "Mindview Automation Editorial",
 		datePublished: "2026-02-27",
 		readTime: "3 min read",
 		image: "/assets/images/control.jpg",
@@ -133,12 +133,12 @@ export default function BlogJournal() {
 			<section className={styles.hero}>
 				<div className={styles.heroGlow} />
 				<div className={styles.heroInner}>
-					<p className={styles.eyebrow}>Mindview Journal</p>
+					<p className={styles.eyebrow}>Mindview Automation Journal</p>
 					<h1 className={styles.title}>
-						Inside Mindview: stories, notes, and project insights.
+						Inside Mindview Automation: stories, notes, and project insights.
 					</h1>
 					<p className={styles.intro}>
-						A clean collection of short reads from across Mindview's work in
+						A clean collection of short reads from across Mindview Automation's work in
 						security, automation, engineering, energy, and transport.
 					</p>
 				</div>

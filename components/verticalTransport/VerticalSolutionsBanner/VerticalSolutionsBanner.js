@@ -20,7 +20,7 @@ const OFFERINGS = [
 	{
 		title: "Escalators And Moving Walkways",
 		description:
-			"For malls, transport hubs, and public spaces, Mindview supports escalator and moving walkway systems that improve passenger flow, support accessibility, and keep high-traffic environments moving.",
+			"For malls, transport hubs, and public spaces, Mindview Automation supports escalator and moving walkway systems that improve passenger flow, support accessibility, and keep high-traffic environments moving.",
 		bullets: [
 			"Escalator systems for retail and transit spaces",
 			"Moving walkway support for public circulation",

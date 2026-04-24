@@ -12,10 +12,10 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>Mindview — From Mindview To Solutions</title>
+				<title>Mindview Automation — From Mindview Automation To Solutions</title>
 				<meta
 					name="description"
-					content="Mindview delivers integrated security, automation, access control, screening, energy, and elevator solutions for homes, businesses, hotels, and industrial facilities."
+					content="Mindview Automation delivers integrated security, automation, access control, screening, energy, and elevator solutions for homes, businesses, hotels, and industrial facilities."
 				/>
 			</Head>
 

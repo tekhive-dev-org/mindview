@@ -239,12 +239,12 @@ export default function Footer() {
 							<div className={styles.footerLogo}>
 								<Image
 									src="/mindviewLogo2.png"
-									alt="Mindview"
+									alt="Mindview Automation"
 									width={48}
 									height={48}
 								/>
 								<div className={styles.footerLogoTextGroup}>
-									<span className={styles.footerLogoText}>Mindview</span>
+									<span className={styles.footerLogoText}>Mindview Automation</span>
 									<span className={styles.footerLogoSubtext}>
 										A Journey of automation
 										<br />
@@ -333,7 +333,7 @@ export default function Footer() {
 			<div className={styles.divider} />
 			<div className={styles.bottomBar}>
 				<p className={styles.copyright}>
-					&copy; {new Date().getFullYear()} Mindview. All Rights Reserved.
+					&copy; {new Date().getFullYear()} Mindview Automation. All Rights Reserved.
 				</p>
 			</div>
 		</footer>

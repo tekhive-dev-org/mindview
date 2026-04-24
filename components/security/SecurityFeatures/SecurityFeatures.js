@@ -45,7 +45,7 @@ export default function SecurityFeatures() {
 					Is Our Utmost Priority
 				</h2>
 				<p className={styles.desc}>
-					Mindview security solutions are designed to improve visibility,
+					Mindview Automation security solutions are designed to improve visibility,
 					strengthen access control, reduce blind spots, and help teams operate
 					with more confidence across homes, offices, and critical sites.
 				</p>

@@ -58,7 +58,7 @@ export default function ServicesItems() {
 						Engineering Services
 					</h2>
 					<p className={styles.description}>
-						Mindview engineering teams handle plant support, electrical systems,
+						Mindview Automation engineering teams handle plant support, electrical systems,
 						instrumentation, maintenance, and field execution across demanding
 						sites. These are some of the project environments where that work
 						delivers measurable value.

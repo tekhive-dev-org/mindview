@@ -21,7 +21,7 @@ export default function ServicesHero() {
 					</h1>
 					<div className={styles.heroDescWrap}>
 						<p className={styles.heroDesc}>
-							Mindview delivers mechanical, electrical, instrumentation, and
+							Mindview Automation delivers mechanical, electrical, instrumentation, and
 							operations support for industrial plants, commercial facilities, and
 							utility environments. From field execution and troubleshooting to
 							maintenance planning and system review, we help teams keep assets
@@ -48,7 +48,7 @@ export default function ServicesHero() {
 								<Image
 									key={reviewer}
 									src={reviewer}
-									alt="Mindview engineering client"
+									alt="Mindview Automation engineering client"
 									className={styles.avatar}
 									width={46}
 									height={46}

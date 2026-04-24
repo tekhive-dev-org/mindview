@@ -443,7 +443,7 @@ export default function ContactForm() {
 								required
 							/>
 							<span className={styles.consentText}>
-								I confirm that Mindview can contact me about this quote request and that the information provided is accurate.
+								I confirm that Mindview Automation can contact me about this quote request and that the information provided is accurate.
 							</span>
 						</label>
 						{errors.consent ? <span className={styles.errorText}>{errors.consent}</span> : null}

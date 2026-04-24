@@ -9,10 +9,10 @@ export default function About() {
 	return (
 		<>
 			<Head>
-				<title>About — Mindview Digital Solutions</title>
+				<title>About — Mindview Automation</title>
 				<meta
 					name="description"
-					content="Learn about Mindview Digital Solutions, a technical systems company delivering security, automation, engineering, energy, and vertical transport solutions for homes, facilities, and industrial environments."
+					content="Learn about Mindview Automation, a technical systems company delivering security, automation, engineering, energy, and vertical transport solutions for homes, facilities, and industrial environments."
 				/>
 			</Head>
 

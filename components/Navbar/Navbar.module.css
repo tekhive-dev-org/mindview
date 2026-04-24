@@ -20,11 +20,11 @@
 }
 
 .logoText {
-	@apply text-navy font-bold text-xl tracking-tight;
+	@apply text-navy font-bold text-xl tracking-tight mobile:text-base;
 }
 
 .logoSubtext {
-	@apply text-navy-300 font-medium tracking-wide;
+	@apply text-navy-300 font-medium tracking-wide ;
 	font-size: 9px;
 }
 

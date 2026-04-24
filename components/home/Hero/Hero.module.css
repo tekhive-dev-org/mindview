@@ -5,8 +5,7 @@
 .hero {
 	position: relative;
 	overflow: hidden;
-	min-height: 100vh;
-	min-height: 100svh;
+	min-height: calc(100dvh - 76px);
 	display: flex;
 	flex-direction: column;
 }
@@ -88,10 +87,10 @@
 	justify-content: center;
 	gap: 36px;
 	flex: 1;
-	padding-top: 20px;
-	padding-bottom: 52px;
-	min-height: calc(100vh - 77px);
-	min-height: calc(100svh - 77px);
+	/* padding-top: 20px; */
+	/* padding-bottom: 52px; */
+	/* min-height: calc(100dvh - 77px); */
+	/* min-height: calc(100svh - 77px); */
 }
 
 .heroContent {
@@ -110,7 +109,7 @@
 /* ── Badge ── */
 
 .heroBadge {
-	@apply inline-block text-xs font-semibold tracking-wide rounded-full mb-6;
+	@apply inline-block text-xs font-semibold tracking-wide mobile:!px-2 rounded-full mb-6;
 	padding: 10px 22px;
 	color: #c9e0f8;
 	background: rgba(255, 255, 255, 0.1);
@@ -122,7 +121,7 @@
 /* ── Headline ── */
 
 .heroTitle {
-	@apply text-[27px] font-extrabold tracking-tight leading-tight;
+	@apply text-[32px] font-extrabold tracking-tight leading-tight;
 	color: #ffffff;
 	/* text-shadow: 0 2px 24px rgba(0, 0, 0, 0.4); */
 }

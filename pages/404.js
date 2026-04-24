@@ -5,7 +5,7 @@ import styles from "./404.module.css";
 const QUICK_LINKS = [
 	{ href: "/", label: "Home" },
 	{ href: "/services", label: "All Services" },
-	{ href: "/about", label: "About Mindview" },
+	{ href: "/about", label: "About Mindview Automation" },
 	{ href: "/contact", label: "Request a Quote" },
 ];
 
@@ -13,10 +13,10 @@ export default function Custom404() {
 	return (
 		<>
 			<Head>
-				<title>Page Not Found — Mindview Digital Solutions</title>
+				<title>Page Not Found — Mindview Automation</title>
 				<meta
 					name="description"
-					content="The page you requested could not be found. Return to Mindview services, home, or contact the team for help."
+					content="The page you requested could not be found. Return to Mindview Automation services, home, or contact the team for help."
 				/>
 			</Head>
 

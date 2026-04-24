@@ -11,10 +11,10 @@ export default function Engineering() {
 	return (
 		<>
 			<Head>
-				<title>Engineering Services — Mindview Digital Solutions</title>
+				<title>Engineering Services — Mindview Automation</title>
 				<meta
 					name="description"
-					content="Explore Mindview engineering services across mechanical, electrical, instrumentation, and operations support for industrial and commercial environments."
+					content="Explore Mindview Automation engineering services across mechanical, electrical, instrumentation, and operations support for industrial and commercial environments."
 				/>
 			</Head>
 

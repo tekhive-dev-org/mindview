@@ -45,7 +45,7 @@ export default function VerticalFeatures() {
 					For Everyday Comfort
 				</h2>
 				<p className={styles.desc}>
-					Mindview vertical transport solutions are designed to make movement
+					Mindview Automation vertical transport solutions are designed to make movement
 					through buildings safer, smoother, and easier to support over time,
 					whether the priority is passenger convenience, accessibility, or
 					high-traffic performance.

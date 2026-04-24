@@ -75,7 +75,7 @@ const ENERGY_AND_VERTICAL = [
 const ENGINEERING = {
 	title: "Engineering - Beyond Critical Thinking",
 	description:
-		"Mindview engineering services support electrical, mechanical, instrumentation, and site execution work for facilities that need dependable technical delivery. From utility systems and field coordination to maintenance planning and troubleshooting, we help projects move from drawings to working operations.",
+		"Mindview Automation engineering services support electrical, mechanical, instrumentation, and site execution work for facilities that need dependable technical delivery. From utility systems and field coordination to maintenance planning and troubleshooting, we help projects move from drawings to working operations.",
 	bullets: [
 		"Mechanical and electrical engineering support",
 		"Plant troubleshooting and field execution",

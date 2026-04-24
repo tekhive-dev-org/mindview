@@ -58,7 +58,7 @@ export default function EnergyItems() {
 						Energy Solutions
 					</h2>
 					<p className={styles.description}>
-						Mindview energy teams handle residential solar rollouts, inverter and
+						Mindview Automation energy teams handle residential solar rollouts, inverter and
 						battery integration, commercial installations, and performance support
 						for sites that need dependable power. These are some of the project
 						environments where that work creates measurable value.

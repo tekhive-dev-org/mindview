@@ -42,6 +42,7 @@ const SERVICES = [
 		desc: "From engineering support to energy and vertical transport coordination, we help clients deliver technical systems that are practical to install, operate, and maintain across facilities.",
 		reverse: false,
 		bullets: [
+			"Sales, installation, programming, and integration of access control systems for managed entry across facilities.",
 			"Passenger and home elevator solutions with vertical transport planning, modernization, and integration.",
 			"Solar energy and backup power systems designed around reliability and site demand.",
 			"Field maintenance, technical coordination, and utility support for dependable site performance.",
@@ -63,7 +64,7 @@ export default function WhatWeDo() {
 						Install, And Support
 					</h2>
 					<p className={styles.subtitle}>
-						Mindview delivers practical security, automation, access-device,
+						Mindview Automation delivers practical security, automation, access-device,
 						engineering, energy, and vertical transport solutions for residential,
 						commercial, hospitality, retail, and industrial environments. Our work
 						covers supply, installation, programming, and integration, with a

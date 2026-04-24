@@ -11,10 +11,10 @@ export default function Energy() {
 	return (
 		<>
 			<Head>
-				<title>Energy Solutions — Mindview Digital Solutions</title>
+				<title>Energy Solutions — Mindview Automation</title>
 				<meta
 					name="description"
-					content="Explore Mindview energy solutions across solar power systems, inverter and battery backup, hybrid energy infrastructure, and energy reliability services for homes and facilities."
+					content="Explore Mindview Automation energy solutions across solar power systems, inverter and battery backup, hybrid energy infrastructure, and energy reliability services for homes and facilities."
 				/>
 			</Head>
 

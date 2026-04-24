@@ -76,10 +76,10 @@ export default function Hero() {
 						</span>
 					</h1>
 					<p className={styles.heroDesc}>
-						Mindview delivers security systems, automation, engineering support,
-						energy solutions, and vertical transport services for homes,
-						commercial facilities, and industrial environments. We design,
-						install, and support dependable systems that improve safety,
+					Mindview Automation delivers security systems, automation, access control sales and installation, engineering support,
+					energy solutions, and vertical transport services for homes,
+					commercial facilities, and industrial environments. We design,
+					install, program, and integrate dependable systems that improve safety,
 						efficiency, uptime, and day-to-day operational control.
 					</p>
 					<div className={styles.heroCtas}>

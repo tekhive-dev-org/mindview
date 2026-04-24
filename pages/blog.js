@@ -2,21 +2,21 @@ import Head from "next/head";
 import BlogJournal, { BLOG_POSTS } from "@/components/blog/BlogJournal/BlogJournal";
 
 const BLOG_URL = "https://mindview.com/blog";
-const BLOG_TITLE = "Mindview Journal | Stories, Notes and Updates";
+const BLOG_TITLE = "Mindview Automation Journal | Stories, Notes and Updates";
 const BLOG_DESCRIPTION =
-	"Read the Mindview Journal for clean, short updates and insights from across Mindview projects and services.";
+	"Read the Mindview Automation Journal for clean, short updates and insights from across Mindview Automation projects and services.";
 const SOCIAL_IMAGE = "https://mindview.com/assets/images/mindviewHero.webp";
 
 export default function BlogPage() {
 	const structuredData = {
 		"@context": "https://schema.org",
 		"@type": "Blog",
-		name: "Mindview Journal",
+			name: "Mindview Automation Journal",
 		description: BLOG_DESCRIPTION,
 		url: BLOG_URL,
 		publisher: {
 			"@type": "Organization",
-			name: "Mindview",
+				name: "Mindview Automation",
 			url: "https://mindview.com",
 			logo: {
 				"@type": "ImageObject",
@@ -33,7 +33,7 @@ export default function BlogPage() {
 				name: post.author,
 			},
 			image: [`https://mindview.com${post.image}`],
-			keywords: [post.category, "Mindview", "technology insights"],
+			keywords: [post.category, "Mindview Automation", "technology insights"],
 			mainEntityOfPage: BLOG_URL,
 		})),
 	};
@@ -45,14 +45,14 @@ export default function BlogPage() {
 				<meta name="description" content={BLOG_DESCRIPTION} />
 				<meta name="robots" content="index,follow,max-image-preview:large" />
 				<link rel="canonical" href={BLOG_URL} />
-				<meta name="keywords" content="Mindview blog, security systems blog, automation insights, engineering services articles, energy solutions journal, vertical transport updates" />
+				<meta name="keywords" content="Mindview Automation blog, security systems blog, automation insights, engineering services articles, energy solutions journal, vertical transport updates" />
 				<meta property="og:type" content="website" />
 				<meta property="og:title" content={BLOG_TITLE} />
 				<meta property="og:description" content={BLOG_DESCRIPTION} />
 				<meta property="og:url" content={BLOG_URL} />
-				<meta property="og:site_name" content="Mindview" />
+				<meta property="og:site_name" content="Mindview Automation" />
 				<meta property="og:image" content={SOCIAL_IMAGE} />
-				<meta property="og:image:alt" content="Mindview journal overview with technology project imagery" />
+				<meta property="og:image:alt" content="Mindview Automation journal overview with technology project imagery" />
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:title" content={BLOG_TITLE} />
 				<meta name="twitter:description" content={BLOG_DESCRIPTION} />

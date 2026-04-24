@@ -10,7 +10,7 @@ export default function AboutCTA() {
 					<div className={styles.content}>
 						<span className={styles.pill}>Start a conversation</span>
 						<h2 className={styles.heading}>
-							Plan Your Next Technical Rollout With <span className={styles.highlight}>Mindview</span>
+							Plan Your Next Technical Rollout With <span className={styles.highlight}>Mindview Automation</span>
 						</h2>
 						<p className={styles.description}>
 							If you need a dependable partner for security, automation,

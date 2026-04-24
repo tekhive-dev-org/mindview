@@ -68,7 +68,7 @@ const RECENT_WORK = [
 
 export default function RecentWorkCarousel({
 	title = "Recent Work From Live Installations",
-	description = "A quick look at recent Mindview field work across security systems, automation, access devices, and integrated site solutions.",
+	description = "A quick look at recent Mindview Automation field work across security systems, automation, access devices, and integrated site solutions.",
 	variant = "dark",
 	ctaHref = "/contact",
 	ctaLabel = "Start Your Project",

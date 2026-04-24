@@ -21,7 +21,7 @@ export default function AutomationHero() {
 					</h1>
 					<div className={styles.heroDescWrap}>
 						<p className={styles.heroDesc}>
-							Mindview designs and installs automation solutions that improve
+							Mindview Automation designs and installs automation solutions that improve
 							comfort, access, control, and operational efficiency across homes,
 							offices, and industrial sites. From smart home integration and gate
 							automation to door systems, connected controls, and industrial

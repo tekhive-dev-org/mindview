@@ -6,7 +6,7 @@ const OFFERINGS = [
 	{
 		title: "Engineering Service",
 		description:
-			"Mindview provides front-end engineering support, execution planning, technical supervision, and systems review for facilities that demand reliable performance under real operating conditions.",
+			"Mindview Automation provides front-end engineering support, execution planning, technical supervision, and systems review for facilities that demand reliable performance under real operating conditions.",
 		bullets: [
 			"Plant and utility engineering assessments",
 			"Mechanical design review and troubleshooting",
@@ -55,7 +55,7 @@ export default function ServicesEngineeringBanner() {
 					<span className={styles.pill}>What we offer</span>
 					<h2 className={styles.title}>24/7 Vetted Engineers At Your Service</h2>
 					<p className={styles.subtitle}>
-						Mindview Engineering Services works across industrial plants,
+						Mindview Automation Engineering Services works across industrial plants,
 						commercial facilities, and utility environments to provide skilled
 						engineering support exactly where operations need it most.
 					</p>

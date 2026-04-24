@@ -60,13 +60,13 @@ export default function Navbar() {
 				<a href="/" className={styles.logo}>
 					<Image
 						src="/mindviewLogo0.png"
-						alt="Mindview"
+						alt="Mindview Automation"
 						width={40}
 						height={40}
 						priority
 					/>
 					<div className={styles.logoTextGroup}>
-						<span className={styles.logoText}>Mindview</span>
+						<span className={styles.logoText}>Mindview Automation</span>
 						<span className={styles.logoSubtext}>A Journey of automation<br />and technology</span>
 					</div>
 				</a>

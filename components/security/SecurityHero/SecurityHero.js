@@ -23,7 +23,7 @@ export default function SecurityHero() {
 						<p className={styles.heroDesc}>
 							Protect people, facilities, and critical assets with CCTV,
 							surveillance, access control, screening equipment, and perimeter
-							protection designed for live environments. Mindview helps teams
+							protection designed for live environments. Mindview Automation helps teams
 							improve visibility, control entry points, and respond faster across
 							commercial, residential, and industrial sites.
 						</p>
@@ -48,7 +48,7 @@ export default function SecurityHero() {
 								<Image
 									key={reviewer}
 									src={reviewer}
-									alt="Mindview security client"
+									alt="Mindview Automation security client"
 									className={styles.avatar}
 									width={46}
 									height={46}
